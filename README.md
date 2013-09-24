@@ -1,0 +1,4 @@
+wpstartersetup
+==============
+
+WP Starter Setup
