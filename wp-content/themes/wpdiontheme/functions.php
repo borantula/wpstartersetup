@@ -16,12 +16,13 @@ require DION_THEME_DIR.'/inc/vendor/autoload.php';
 
 
 //setting up the theme
-\Dion\ThemeSetup::getInstance();
+Dion\ThemeSetup::getInstance();
 
-$dionAjax = \Dion\Ajax::hooks();
+//start ajax
+Dion\Ajax::hooks();
 
 //example usage of ajax class
-\Dion\Ajax::register('tester-event',function(){
+Dion\Ajax::register('tester-event',function(){
 
 	$success = 'successful request';
 	$fail = 'failed request';

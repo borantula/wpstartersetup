@@ -10,6 +10,5 @@ return array(
     'Illuminate\\Events' => array($vendorDir . '/illuminate/events'),
     'Illuminate\\Database' => array($vendorDir . '/illuminate/database'),
     'Illuminate\\Container' => array($vendorDir . '/illuminate/container'),
-    'DionThemeSetup' => array($baseDir . '/'),
     'Carbon' => array($vendorDir . '/nesbot/carbon/src'),
 );

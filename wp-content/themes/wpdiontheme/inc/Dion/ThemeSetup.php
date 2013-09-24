@@ -10,7 +10,7 @@ namespace Dion;
 class ThemeSetup {
 
 
-	public static $instance;
+	private static $instance;
 
 	/**
 	 * Constructor. add_action and add_filters for class are here
@@ -43,7 +43,7 @@ class ThemeSetup {
 
 		// If the single instance hasn't been set, set it now.
 		if ( null == self::$instance ) {
-			self::$instance = new self;
+			self::$instance = new ThemeSetup;
 		}
 
 		return self::$instance;

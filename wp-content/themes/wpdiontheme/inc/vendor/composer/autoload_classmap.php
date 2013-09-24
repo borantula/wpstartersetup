@@ -6,7 +6,8 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'Dion\\Ajax' => $baseDir . '/dion/Ajax.php',
-    'Dion\\Mail\\Content' => $baseDir . '/dion/mail/Content.php',
-    'Dion\\Mail\\Sender' => $baseDir . '/dion/mail/Sender.php',
+    'Dion\\Ajax' => $baseDir . '/Dion/Ajax.php',
+    'Dion\\Mail\\Content' => $baseDir . '/Dion/Mail/Content.php',
+    'Dion\\Mail\\Sender' => $baseDir . '/Dion/Mail/Sender.php',
+    'Dion\\ThemeSetup' => $baseDir . '/Dion/ThemeSetup.php',
 );
