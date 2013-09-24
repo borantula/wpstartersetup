@@ -1,0 +1,15 @@
+{
+    "require": {
+        "illuminate/database": "*",
+        "illuminate/container": "*"
+
+    },
+    "autoload": {
+        "psr-0": { 
+            "DionThemeSetup": ""
+        },
+        "classmap": [
+            "dion"
+        ]
+    }
+}
