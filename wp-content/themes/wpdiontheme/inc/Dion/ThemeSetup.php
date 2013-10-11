@@ -129,6 +129,8 @@ class ThemeSetup {
 		if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 			wp_enqueue_script( 'comment-reply' );
 		}
+		//put modernizr as late as possible
+		wp_enqueue_script('modernizr',DION_THEME_URL.'/js/vendor/modernizr.js');
 	}
 
 	/**
