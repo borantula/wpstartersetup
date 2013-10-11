@@ -1,0 +1,53 @@
+body.inline-preview #wpwrap {
+	width: auto;
+	padding-right: 0;
+}
+
+#inline-preview-container {
+	height: 100%;
+	width: 0;
+	position: fixed;
+		right: 0;
+		top: 0;
+	text-align: center;
+}
+
+#inline-preview-container iframe {
+	border-left: 1px solid #cc;
+	box-shadow: 0 0 1em #ccc;
+	height: 133%;
+	-moz-transform: scale( 0.75, 0.75 );
+	-webkit-transform: scale( 0.75, 0.75 );
+	-ms-transform: scale( 0.75, 0.75 );
+	transform: scale( 0.75, 0.75 );
+	-moz-transform-origin: top left;
+	-webkit-transform-origin: top left;
+	-ms-transform-origin: top left;
+	transform-origin: top left;
+	width: 133%;
+}
+
+#inline-preview-close {
+	position: absolute;
+	top: 40px;
+	right: 40px;
+	width: 40px;
+	height: 40px;
+	background-color: #000;
+	border-radius: 5px;
+	color: #fff;
+	cursor: pointer;
+	text-align: center;
+	font-size: 25px;
+	line-height: 45px;
+	opacity: 0.3;
+	z-index: 99999;
+}
+
+#inline-preview-close:hover {
+	opacity: 0.6;
+}
+
+#inline-preview-hidden-iframe {
+	display: none;
+}

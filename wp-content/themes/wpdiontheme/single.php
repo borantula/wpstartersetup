@@ -21,8 +21,10 @@ get_header(); ?>
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 
-
-
+	<h1><?php the_title();?></h1>
+	<div>
+		<?php the_content();?>
+	</div>
 	<?php
 		// If comments are open or we have at least one comment, load up the comment template
 		if ( comments_open() || '0' != get_comments_number() )
