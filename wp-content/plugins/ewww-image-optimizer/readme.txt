@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: images, image, attachments, attachment, optimize, optimization, nextgen, buddypress, flagallery, flash-gallery, lossless, photos, photo, picture, pictures, seo, compression, image-store, imstore, slider, image editor, gmagick, wp-symposium, meta-slider, metaslider
 Requires at least: 3.1
 Tested up to: 3.7.1
-Stable tag: 1.7.2
+Stable tag: 1.7.3
 License: GPLv3
 
 Reduce file sizes for images within WordPress including NextGEN, GRAND FlAGallery and more. Uses jpegtran, optipng, pngout, and gifsicle.
@@ -165,6 +165,11 @@ That's not a question, but since I made it up, I'll answer it. See the Image Opt
 * SunOS (Solaris/OpenIndiana) support
 * Bulk restoration of converted images
 * FlaGallery optimize on upload does not work with plupload (only the browser-based method works properly). This will be implemented in a future release.
+
+= 1.7.3 =
+* fixed: some security plugins disable Optimize More - use install_themes permission instead of edit_themes
+* fixed: table schema changes not firing on upgrade
+* changed: bulk_attachment variables are not autoloaded to improve performance
 
 = 1.7.2 =
 * added: internationalization - need volunteers to provide translations. If interested, post a support thread with the language you would like to help with.
@@ -499,3 +504,12 @@ List of known bad webhosts where the plugin will only work in cloud mode or only
 * ipower
 * Gandi
 * ipage (JPG only)
+
+== Translations ==
+
+Translators: 
+
+1. Please post in the support forums announcing your intent to translate the plugin into a particular language. 
+1. Download ewww-image-optimizer.pot from the plugin /languages/ folder.
+1. Fill in the message strings and header information and save it as a .po file.
+1. Submit it via the form at http://www.shanebishop.net/contact-me/
