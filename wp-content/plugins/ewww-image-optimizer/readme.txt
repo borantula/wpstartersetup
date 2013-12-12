@@ -1,10 +1,10 @@
 === EWWW Image Optimizer ===
 Contributors: nosilver4u
-Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QFXCW38HE24NY
+Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=MKMQKCBFFG3WW
 Tags: images, image, attachments, attachment, optimize, optimization, nextgen, buddypress, flagallery, flash-gallery, lossless, photos, photo, picture, pictures, seo, compression, image-store, imstore, slider, image editor, gmagick, wp-symposium, meta-slider, metaslider
 Requires at least: 3.1
-Tested up to: 3.7.1
-Stable tag: 1.7.4
+Tested up to: 3.8
+Stable tag: 1.7.5
 License: GPLv3
 
 Reduce file sizes for images within WordPress including NextGEN, GRAND FlAGallery and more. Uses jpegtran, optipng, pngout, and gifsicle.
@@ -118,11 +118,11 @@ Yes, but only if the optimized version is smaller. The plugin should NEVER creat
 
 = Can I resize my images with this plugin? =
 
-No, that would be a lossy operation, and we try to avoid that.
+No, that would be a lossy operation, and we try to avoid that. Use Imsanity.
 
 = Can I lower the compression setting for JPGs to save more space? =
 
-Again, that would be a lossy operation, and we try to avoid that.
+Again, that would be a lossy operation, and we try to avoid that. Use Imsanity.
 
 = The bulk optimizer doesn't seem to be working, what can I do? =
 
@@ -130,7 +130,7 @@ Each image is given 50 seconds to complete (which actually doesn't include time 
 
 = What are the supported operating systems? =
 
-I've tested it on Windows (with Apache), Linux, Mac OSX, and FreeBSD. The cloud service will run on any OS.
+I've tested it on Windows (with Apache), Linux, Mac OSX, FreeBSD, and Solaris (v10). The cloud service will run on any OS.
 
 = How are JPGs optimized? =
 
@@ -163,6 +163,18 @@ That's not a question, but since I made it up, I'll answer it. See the Image Opt
 = future =
 * these are possible future bugfixes and/or feature requests, if you see a feature you like here, go vote for it in the support forum
 * FlaGallery optimize on upload does not work with plupload (only the browser-based method works properly). This will be implemented in a future release.
+
+= 1.7.5 =
+* new version of gifsicle (1.7.8), for more detail, see http://www.lcdf.org/gifsicle/changes.html
+* proper detection of Cloudinary images instead of error message
+* plays nicer with Imsanity, detect when a newly uploaded image has been modified and optimized already (instead of re-optimizing)
+* Dutch translation - nl_NL
+* Romanian translation - ro_RO
+* Spanish translation - es_ES
+* Cloudinary integration: auto-upload after optimization when uploading to Media Library, must be enabled in settings
+* debugging output for Media Library (let's you see resizes)
+* visual tweaking for upcoming WP 3.8
+* better checking for safe_mode
 
 = 1.7.4 =
 * fixed: some settings were set to incorrect defaults after enabling and disabling cloud features
@@ -434,6 +446,9 @@ That's not a question, but since I made it up, I'll answer it. See the Image Opt
 
 == Upgrade Notice ==
 
+= 1.7.5 =
+* New version of gifsicle that has quite a few improvements. If you have restricted permissions on the wp-content/ewww/ folder, you may need to temporarily change them to allow the plugin to perform the gifsicle upgrade automatically.
+
 = 1.7.2 =
 * Optimize More table format has changed, make sure to visit Optimize More and Convert your table immediately after upgrade if you are running it in scheduled mode.
 
@@ -497,11 +512,12 @@ Known good webhosts where things work out of the box.
 * [Bluehost](http://www.bluehost.com)
 * [Dreamhost](http://www.dreamhost.com)
 * [GoDaddy](http://www.godaddy.com) (only with PHP 5.3)
-* [WebFaction](http://www.webfaction.com)
-* [Hosterdam](http://www.hosterdam.com) (FreeBSD)
-* [OVH](http://www.ovh.co.uk)
+* [HostGator](http://www.hostgator.com)
 * [Hetzner Online](http://www.hetzner.de)
+* [Hosterdam](http://www.hosterdam.com) (FreeBSD)
 * [Namecheap](http://www.namecheap.com)
+* [OVH](http://www.ovh.co.uk)
+* [WebFaction](http://www.webfaction.com)
 
 List of known bad webhosts where the plugin will only work in cloud mode or only some tools are installed locally.
 
