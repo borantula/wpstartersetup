@@ -1,14 +1,14 @@
 <?php
 /*
-Plugin Name:  User Switching
-Description:  Instant switching between user accounts in WordPress
-Version:      0.8.4
-Plugin URI:   https://lud.icro.us/wordpress-plugin-user-switching/
-Author:       John Blackbourn
-Author URI:   https://johnblackbourn.com/
-Text Domain:  user-switching
-Domain Path:  /languages/
-License:      GPL v2 or later
+Plugin Name: User Switching
+Description: Instant switching between user accounts in WordPress
+Version:     0.8.5
+Plugin URI:  https://lud.icro.us/wordpress-plugin-user-switching/
+Author:      John Blackbourn
+Author URI:  https://johnblackbourn.com/
+Text Domain: user-switching
+Domain Path: /languages/
+License:     GPL v2 or later
 
 Copyright © 2013 John Blackbourn
 
@@ -32,24 +32,24 @@ class user_switching {
 	public function __construct() {
 
 		# Required functionality:
-		add_filter( 'user_has_cap',                 array( $this, 'filter_user_has_cap' ), 10, 3 );
-		add_filter( 'map_meta_cap',                 array( $this, 'filter_map_meta_cap' ), 10, 4 );
-		add_filter( 'user_row_actions',             array( $this, 'filter_user_row_actions' ), 10, 2 );
-		add_action( 'plugins_loaded',               array( $this, 'action_plugins_loaded' ) );
-		add_action( 'init',                         array( $this, 'action_init' ) );
-		add_action( 'all_admin_notices',            array( $this, 'action_admin_notices' ), 1 );
-		add_action( 'wp_logout',                    'wp_clear_olduser_cookie' );
-		add_action( 'wp_login',                     'wp_clear_olduser_cookie' );
-    
+		add_filter( 'user_has_cap',                    array( $this, 'filter_user_has_cap' ), 10, 3 );
+		add_filter( 'map_meta_cap',                    array( $this, 'filter_map_meta_cap' ), 10, 4 );
+		add_filter( 'user_row_actions',                array( $this, 'filter_user_row_actions' ), 10, 2 );
+		add_action( 'plugins_loaded',                  array( $this, 'action_plugins_loaded' ) );
+		add_action( 'init',                            array( $this, 'action_init' ) );
+		add_action( 'all_admin_notices',               array( $this, 'action_admin_notices' ), 1 );
+		add_action( 'wp_logout',                       'wp_clear_olduser_cookie' );
+		add_action( 'wp_login',                        'wp_clear_olduser_cookie' );
+
 		# Nice-to-haves:
-		add_filter( 'ms_user_row_actions',          array( $this, 'filter_user_row_actions' ), 10, 2 );
-		add_action( 'wp_footer',                    array( $this, 'action_wp_footer' ) );
-		add_action( 'personal_options',             array( $this, 'action_personal_options' ) );
-		add_action( 'admin_bar_menu',               array( $this, 'action_admin_bar_menu' ), 11 );
-		add_action( 'bp_adminbar_menus',            array( $this, 'action_bp_menus' ), 9 );
-		add_action( 'bp_member_header_actions',     array( $this, 'action_bp_button' ), 11 );
-		add_filter( 'login_message',                array( $this, 'filter_login_message' ), 1 );
-		add_action( 'bp_directory_members_actions', array( $this, 'action_bp_button' ), 11 );
+		add_filter( 'ms_user_row_actions',             array( $this, 'filter_user_row_actions' ), 10, 2 );
+		add_filter( 'login_message',                   array( $this, 'filter_login_message' ), 1 );
+		add_action( 'wp_footer',                       array( $this, 'action_wp_footer' ) );
+		add_action( 'personal_options',                array( $this, 'action_personal_options' ) );
+		add_action( 'admin_bar_menu',                  array( $this, 'action_admin_bar_menu' ), 11 );
+		add_action( 'bp_member_header_actions',        array( $this, 'action_bp_button' ), 11 );
+		add_action( 'bp_directory_members_actions',    array( $this, 'action_bp_button' ), 11 );
+		add_action( 'bbp_template_after_user_details', array( $this, 'action_bbpress_button' ) );
 
 	}
 
@@ -102,7 +102,7 @@ class user_switching {
 
 	/**
 	 * Load localisation files and route actions depending on the 'action' query var.
-	 * 
+	 *
 	 * @return null
 	 */
 	public function action_init() {
@@ -113,7 +113,7 @@ class user_switching {
 			return;
 
 		if ( isset( $_REQUEST['redirect_to'] ) and !empty( $_REQUEST['redirect_to'] ) )
-			$redirect_to = remove_query_arg( self::remove_query_args(), $_REQUEST['redirect_to'] );
+			$redirect_to = self::remove_query_args( $_REQUEST['redirect_to'] );
 		else
 			$redirect_to = false;
 
@@ -348,23 +348,6 @@ class user_switching {
 	}
 
 	/**
-	 * Adds a 'Switch back to {user}' link to the BuddyPress admin bar.
-	 *
-	 * @return null
-	 */
-	public function action_bp_menus() {
-
-		if ( !is_admin() and $old_user = self::get_old_user() ) {
-
-			echo '<li id="bp-adminbar-userswitching-menu" style="background-image:none"><a href="' . self::switch_back_url() . '">';
-			printf( __( 'Switch back to %1$s (%2$s)', 'user-switching' ), $old_user->display_name, $old_user->user_login );
-			echo '</a></li>';
-
-		}
-
-	}
-
-	/**
 	 * Adds a 'Switch To' link to each member's profile page and profile listings in BuddyPress.
 	 *
 	 * @return null
@@ -394,10 +377,34 @@ class user_switching {
 
 		echo bp_get_button( array(
 			'id'         => 'user_switching',
-			'component'  => $component, 
+			'component'  => $component,
 			'link_href'  => $link,
 			'link_text'  => __( 'Switch&nbsp;To', 'user-switching' )
 		) );
+
+	}
+
+	/**
+	 * Adds a 'Switch To' link to each member's profile page in bbPress.
+	 *
+	 * @return null
+	 */
+	public function action_bbpress_button() {
+
+		$id = bbp_get_user_id();
+
+		if ( ! $link = self::maybe_switch_url( $id ) )
+			return;
+
+		$link = add_query_arg( array(
+			'redirect_to' => urlencode( bbp_get_user_profile_url( $id ) )
+		), $link );
+
+		?>
+		<ul>
+			<li><a href="<?php echo $link; ?>"><?php _e( 'Switch&nbsp;To', 'user-switching' ); ?></a></li>
+		</ul>
+		<?php
 
 	}
 
@@ -465,17 +472,18 @@ class user_switching {
 	}
 
 	/**
-	 * Helper function. Returns an array of query args to remove from the query string when doing a redirect.
-	 * 
-	 * @return array Query args to remove from query string.
+	 * Helper function. Removes a list of common confirmation-style query args from a URL.
+	 *
+	 * @param string $url A URL
+	 * @return string The URL with the listed query args removed
 	 */
-	public static function remove_query_args() {
-		return array(
+	public static function remove_query_args( $url ) {
+		return remove_query_arg( array(
 			'user_switched', 'switched_off', 'switched_back',
 			'message', 'updated', 'settings-updated', 'saved',
 			'activated', 'activate', 'deactivate',
 			'locked', 'skipped', 'deleted', 'trashed', 'untrashed'
-		);
+		), $url );
 	}
 
 	/**

@@ -1,10 +1,10 @@
 === User Switching ===
 
 Contributors: johnbillion  
-Tags: user, users, profiles, switching, wpmu, multisite, buddypress, become, user control, user management, user access, developer  
+Tags: user, users, profiles, switching, wpmu, multisite, buddypress, bbpress, become, user control, user management, user access, developer  
 Requires at least: 3.1  
-Tested up to: 3.7  
-Stable tag: 0.8.4  
+Tested up to: 3.8  
+Stable tag: 0.8.5  
 License: GPL v2 or later  
 
 Instant switching between user accounts in WordPress.
@@ -19,7 +19,7 @@ This plugin allows you to quickly swap between user accounts in WordPress at the
  * Switch back: Instantly switch back to your originating account.
  * Switch off: Log out of your account but retain the ability to instantly switch back in again.
  * It's completely secure (see the *Security* section below).
- * Compatible with WordPress, WordPress Multisite and BuddyPress.
+ * Compatible with WordPress, WordPress Multisite, BuddyPress and bbPress.
 
 = Security =
 
@@ -80,6 +80,10 @@ Yes, and you'll also be able to switch users from the Users screen in Network Ad
 
 Yes, and you'll also be able to switch users from member profile screens and the member listing screen.
 
+= Does this plugin work with bbPress? =
+
+Yes, and you'll also be able to switch users from member profile screens.
+
 = Does this work as a mu-plugin? =
 
 Yes, but you'll need to install `user-switching.php` into the root of your `mu-plugins` directory, not in the `user-switching` subdirectory. This is a restriction of WordPress.
@@ -102,11 +106,13 @@ When a user switches off, the `switch_off_user` hook is called with the old user
 
 == Upgrade Notice ==
 
-= 0.8.4 =
-* Show admin notices on all possible admin screens.
-* Tweak the redirect location for BuddyPress user profiles.
+= 0.8.5 =
+* Add a 'Switch To' link to bbPress profile screens.
 
 == Changelog ==
+
+= 0.8.5 =
+* Add a 'Switch To' link to bbPress profile screens.
 
 = 0.8.4 =
 * Revert a change in 0.8.3 which switched to using the `login_init` hook. This hook is fired too late.
