@@ -1,0 +1,363 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: WP Caregiver v0.2.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2013-11-20 19:12:19+0000\n"
+"Last-Translator: blintux <blintux@gmail.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: CSL v1.x\n"
+"X-Poedit-Language: Hungarian\n"
+"X-Poedit-Country: HUNGARY\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;\n"
+"X-Poedit-Basepath: ../\n"
+"X-Poedit-Bookmarks: \n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Textdomain-Support: yes"
+
+#. translators: plugin header field 'Name'
+#: wp-caregiver.php:0
+#@ wpcg
+msgid "WP Caregiver"
+msgstr ""
+
+#. translators: plugin header field 'Description'
+#: wp-caregiver.php:0
+#@ wpcg
+msgid "With this plugin you can turn on/off some services of Wordpress or even you can customize it too."
+msgstr ""
+
+#. translators: plugin header field 'Author'
+#: wp-caregiver.php:0
+#@ wpcg
+msgid "Blintux"
+msgstr ""
+
+#. translators: plugin header field 'AuthorURI'
+#: wp-caregiver.php:0
+#@ wpcg
+msgid "http://blintdesign.hu"
+msgstr ""
+
+#: wp-caregiver.php:74
+#@ wpcg
+msgid "This site is undergoing maintenance. Please check back later."
+msgstr "Jelenleg az oldal karbantartás alatt áll. Kérjük látogasson vissza később."
+
+#: class-functions.php:295
+#@ wpcg
+msgid "System information"
+msgstr "Rendszer információ"
+
+#: class-functions.php:300
+#@ wpcg
+msgid "Server time"
+msgstr "Szerver idő"
+
+#: class-functions.php:304
+#@ wpcg
+msgid "Memory usage"
+msgstr "Memória használat"
+
+#: class-functions.php:308
+#@ wpcg
+msgid "SQL Queries"
+msgstr "SQL lekérdezések"
+
+#: class-functions.php:312
+#@ wpcg
+msgid "Post revisions"
+msgstr "Bejegyzés revíziók"
+
+#: class-functions.php:317
+#@ wpcg
+msgid "Delete All"
+msgstr "Törlés"
+
+#: wp-caregiver.php:253
+#@ wpcg
+msgid "Information"
+msgstr "Információk"
+
+#: wp-caregiver.php:260
+#@ wpcg
+msgid "Frontend"
+msgstr "Felhasználódói oldal"
+
+#: wp-caregiver.php:264
+#@ wpcg
+msgid "Theme tweaks"
+msgstr "Sablon finomhangolása"
+
+#: wp-caregiver.php:267
+#@ wpcg
+msgid "Theme Head"
+msgstr "Sablon fejléc"
+
+#: wp-caregiver.php:270
+#@ wpcg
+msgid "Theme layout"
+msgstr "Sablon szerkezet"
+
+#: wp-caregiver.php:281
+#@ wpcg
+msgid "Backend"
+msgstr "Adminisztrátori oldal"
+
+#: wp-caregiver.php:285
+#@ wpcg
+msgid "Admin tweaks"
+msgstr "Adminisztrátori oldal finomhangolása"
+
+#: wp-caregiver.php:305
+#@ wpcg
+msgid "These settings overwrite the default output of the template."
+msgstr "Az alábbi beállítások a jelenleg beállított sablon kimenetére lesznek hatással."
+
+#: wp-caregiver.php:308
+#@ wpcg
+msgid "These settings change the core functions of Wordpress."
+msgstr "Az alábbi beállítások a Wordpress fő funkcióira lesznek hatással."
+
+#: wp-caregiver.php:321
+#@ wpcg
+msgid "Remove generator meta tag"
+msgstr "Generator meta tag eltávolítása"
+
+#: wp-caregiver.php:325
+#@ wpcg
+msgid "Remove RSD (Really Simple Discovery ) link"
+msgstr "RSD (Really Simple Discovery ) link eltávolítása"
+
+#: wp-caregiver.php:329
+#@ wpcg
+msgid "Remove Windows Live Writer link"
+msgstr "Windows Live Writer link eltávolítása"
+
+#: wp-caregiver.php:333
+#@ wpcg
+msgid "Remove post relational links (prev, next)"
+msgstr "Post relational linkek (prev, next) eltávolítása"
+
+#: wp-caregiver.php:337
+#@ wpcg
+msgid "Remove canonical link"
+msgstr "Canonical link eltávolítása"
+
+#: wp-caregiver.php:341
+#@ wpcg
+msgid "Remove RSS feed links"
+msgstr "RSS linkek eltávolítása"
+
+#: wp-caregiver.php:351
+#@ wpcg
+msgid "Remove admin bar"
+msgstr "Admin sáv eltávolítása"
+
+#: wp-caregiver.php:355
+#@ wpcg
+msgid "Remove the Website URL field from the comment form"
+msgstr "Weboldal URL mező eltávolítása a hozzászólások ürlapról"
+
+#: wp-caregiver.php:378
+#@ wpcg
+msgid "Force login (Redirect users to the login page)"
+msgstr "Bejelentkezés kényszerítése (Felhasználó átírásnyitása a bejelentkező oldalra)"
+
+#: wp-caregiver.php:436
+#@ wpcg
+msgid "Disable plugins update notification"
+msgstr "Plugin frissítésék értesítésének kikapcsolása"
+
+#: wp-caregiver.php:440
+#@ wpcg
+msgid "Disable themes update notification"
+msgstr "Sablon frissítésék értesítésének kikapcsolása"
+
+#: wp-caregiver.php:463
+#@ wpcg
+msgid "Enable \"All Settings\" item in Settings menu"
+msgstr "\"Összes beállítás\" almenü megjelenítése a Beállítások menüben"
+
+#: wp-caregiver.php:467
+#@ wpcg
+msgid "Enable Link Manager feature"
+msgstr "Hivatkozás kezelő szolgáltatás engedélyezése"
+
+#: wp-caregiver.php:471
+#@ wpcg
+msgid "Enable Featured image support"
+msgstr "Kiemelt kép engedélyezése az Oldalakhoz"
+
+#: wp-caregiver.php:475
+#@ wpcg
+msgid "Enable excerpt field for pages"
+msgstr "Kivonat mező az Oldalakhoz"
+
+#: wp-caregiver.php:479
+#@ wpcg
+msgid "Enable TinyMCE Editor for excerpt"
+msgstr "TinyMCE szerkesztő engedélyezése a kivonathoz"
+
+#: wp-caregiver.php:483
+#@ wpcg
+msgid "Display IDs in post/page list"
+msgstr "Bejegyzés és Oldal ID-k megjelenítése a listákban"
+
+#: wp-caregiver.php:294
+#: wp-caregiver.php:497
+#@ wpcg
+msgid "Customize WP Mail"
+msgstr "WP Mail testreszabása"
+
+#: wp-caregiver.php:501
+#@ wpcg
+msgid "Sender name:"
+msgstr "Küldő neve:"
+
+#: wp-caregiver.php:507
+#@ wpcg
+msgid "Sender E-mail:"
+msgstr "Küldő e-mail címe:"
+
+#: wp-caregiver.php:522
+#@ wpcg
+msgid "Remove Wordpress version from footer"
+msgstr "Wordpress verzió elrejtése a láblécben"
+
+#: wp-caregiver.php:535
+#@ wpcg
+msgid "WP Caregiver Settings"
+msgstr "WP Caregiver beállítások"
+
+#: wp-caregiver.php:368
+#@ wpcg
+msgid "Maintenance text:"
+msgstr "Karbantartási üzenet a látogatóknak:"
+
+#: wp-caregiver.php:389
+#@ wpcg
+msgid "Enable Open Graph tags generator"
+msgstr "Automatikus Open Graph meta adat generálás"
+
+#: wp-caregiver.php:393
+#@ wpcg
+msgid "Facebook App ID:"
+msgstr "Facebook App ID:"
+
+#: wp-caregiver.php:396
+#@ wpcg
+msgid "Optional"
+msgstr "Opcionális"
+
+#: wp-caregiver.php:399
+#@ wpcg
+msgid "Facebook Admins:"
+msgstr "Facebook Adminok:"
+
+#: wp-caregiver.php:402
+#@ wpcg
+msgid "Recommended"
+msgstr "Ajánlott"
+
+#: wp-caregiver.php:405
+#@ wpcg
+msgid "Default image URL:"
+msgstr "Alapértelmezett kép URL:"
+
+#: wp-caregiver.php:409
+#@ wpcg
+msgid "Upload image"
+msgstr "Kép feltöltés"
+
+#: wp-caregiver.php:413
+#@ wpcg
+msgid "Test in Facebook debuger"
+msgstr "Tesztelés a Facebook debugerben"
+
+#: class-functions.php:322
+#@ wpcg
+msgid "Disc usage"
+msgstr "Lemez használat"
+
+#: class-functions.php:324
+#@ default
+msgid "N/A"
+msgstr ""
+
+#: class-functions.php:327
+#@ wpcg
+msgid "Calculate"
+msgstr "Számolás"
+
+#: wp-caregiver.php:273
+#@ wpcg
+msgid "Open Graph Meta"
+msgstr "Open Graph Meta adatok"
+
+#: wp-caregiver.php:288
+#@ wpcg
+msgid "Update notifications"
+msgstr "Frissítési értesítések"
+
+#: wp-caregiver.php:291
+#@ wpcg
+msgid "Admin features"
+msgstr "Admin funkciók"
+
+#: class-functions.php:127
+#@ wpcg
+msgid "Admin login"
+msgstr "Admin belépés"
+
+#: wp-caregiver.php:297
+#@ wpcg
+msgid "Customize Admin interface"
+msgstr "Admin interfész testreszabások"
+
+#: wp-caregiver.php:364
+#@ wpcg
+msgid "Quick maintenance mode"
+msgstr "Karbantartási mód bekapcsolása"
+
+#: wp-caregiver.php:432
+#@ wpcg
+msgid "Disable Wordpress update notification"
+msgstr "Wordpress frissítésék értesítésének kikapcsolása"
+
+#: wp-caregiver.php:524
+#@ wpcg
+msgid "Custom footer text:"
+msgstr "Egyéni lábléc szöveg:"
+
+#. translators: plugin header field 'Version'
+#: wp-caregiver.php:0
+#@ wpcg
+msgid "0.2.1"
+msgstr ""
+
+#: wp-caregiver.php:359
+#@ wpcg
+msgid "Remove allowed HTML tags text from the comment form"
+msgstr "Engedélyezett HTML elemek szöveg eltávolítása a hozzászólás ürlapról"
+
+#: wp-caregiver.php:444
+#@ wpcg
+msgid "Custom login error message"
+msgstr "Egyéni hibaüzenet bejelentkezésnél"
+
+#: wp-caregiver.php:448
+#@ wpcg
+msgid "Custom message:"
+msgstr "Egyéni üzenet:"
+
+#: wp-caregiver.php:487
+#@ wpcg
+msgid "Enable categories for pages"
+msgstr "Kategóriák engedélyezése az oldalakhoz"
+

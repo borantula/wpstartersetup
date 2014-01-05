@@ -1,0 +1,28 @@
+.wpcg_settings_table {
+	margin:5px 0 5px 30px;
+}
+
+	.wpcg_settings_table td {
+		margin:0;
+		padding:2px 5px;
+		vertical-align:top;
+	}
+
+.wpcg_sysinfo .first {
+	width:300px;
+}
+
+	.wpcg_data_space {
+		display:inline-block;
+		min-width:80px;
+	}
+
+.wpcg_footer {
+	margin:20px 0;
+	padding:10px 0;
+	border-top:1px #dfdfdf solid;
+}
+
+.wpcg_footer a {
+	float:right;
+}
