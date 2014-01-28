@@ -1,8 +1,66 @@
 ### ChangeLog for GitHub Updater
 
-#### 2.1.x
+#### 2.4.4
+
+ * forgot to include markdown.php - damn
+
+#### 2.4.2
+
+ * removed PHP Markdown Lib as it required PHP >= 5.3 and that's higher than required by WordPress core.
+
+#### 2.4.1
+
+ * switched from PHP Markdown Classic to the new PHP Markdown Lib to prevent collisions with other plugins, like Markdown On Save/Improved that also load PHP Markdown or PHP MarkdownExtra.
+
+#### 2.4.0
+
+ * fixed transient assignment for tags returning empty array.
+ * added transient for `CHANGES.md` to themes, should further cut down on API 403 errors.
+ * new feature: theme rollback to previous version thanks @scarstens
+ * changed update methodology to use most recent tag first. If not tagged update from default branch.
+
+#### 2.3.3
+
+ * fixed download link to have correct base URI for Repository Contents API. Oops.
+
+#### 2.3.2
+ 
+ * rewrite of `GitHub_Update_GitHub_API::construct_download_link` to download zipball and provide appropriate endpoint.
+
+#### 2.3.1
+
+ * now saving transient and adding early return if API returns 404, this should speed up plugin when repo doesn't have `CHANGES.md` file and provide for early return in no tags have been created. If no tags have been created the API is still hit.
+
+#### 2.3.0
+
+ * moved action hook to remove `after_theme_row_$stylesheet` to `class GitHub_Theme_Updater`
+ * added feature: if branch other than `master` is specified then tagged version will be ignored. This should make it much easier for beta testing to groups. See [README.md](https://github.com/afragen/github-updater/blob/develop/README.md)
+ * converted `class GitHub_Update_GitHub_API` to extension of `class GitHub_Updater`
+ * combined `description` and `changelog` to show in theme detail view. Rough formatting. Multisite only.
+ * greatly simplified bug fix from 2.2.2, now using Themes API.
+
+#### 2.2.2
+
+ * bug fix for removing update notice for WP.org repo themes. Oops.
+
+#### 2.2.1
+
+ * minor code simplifications
+ * many thanks to @grappler for solving how to remove default `after_theme_row_$stylesheet`
+
+#### 2.2.0
 
  * moved check and load for `markdown.php` into only function that uses it.
+ * minor README updates
+ * added abort if this plugin called directly
+ * added additional data to update available screen in both plugins and themes - issue #8
+ * removed requirement for tags in theme updating
+ * removed extra line endings from `remote_version`
+ * added ratings function for creating star ratings based upon GitHub repo data.
+ * bring parts of `class GitHub_Theme_Updater` code on par with `class GitHub_Plugin_Updater`
+ * added 'ghu-' prefix to transients
+ * ripped out theme rollback code. Moved to it's own branch on GitHub.
+ * add custom `after_theme_update_{$stylesheet}` detail.
 
 #### 2.1.1
 

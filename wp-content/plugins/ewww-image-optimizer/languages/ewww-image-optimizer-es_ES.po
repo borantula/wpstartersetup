@@ -2,13 +2,13 @@
 # This file is distributed under the same license as the EWWW Image Optimizer package.
 msgid ""
 msgstr ""
-"Project-Id-Version: EWWW Image Optimizer 1.7.5\n"
+"Project-Id-Version: EWWW Image Optimizer 1.7.6\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tag/ewww-image-optimizer\n"
-"POT-Creation-Date: 2013-11-14 00:05:24+00:00\n"
+"POT-Creation-Date: 2013-12-20 23:49:19+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2013-12-05 15:32+0100\n"
+"PO-Revision-Date: 2014-01-08 15:32+0100\n"
 "Last-Translator: jelena kovacevic <jecajeca260@gmail.com>\n"
 "X-Generator: Poedit 1.5.5\n"
 
@@ -142,6 +142,10 @@ msgstr "Nombre de la Fila"
 #: aux-optimize.php:251
 msgid "Image Type"
 msgstr "Tipo de imagen"
+
+#: aux-optimize.php:269
+msgid "Remove from table"
+msgstr "Eliminar de la tabla"
 
 #: aux-optimize.php:251 ewww-image-optimizer.php:1068
 #: ewww-image-optimizer.php:1100 flag-integration.php:299
@@ -774,8 +778,8 @@ msgid "Optimization Settings"
 msgstr "Ajustes de Optimización"
 
 #: ewww-image-optimizer.php:3043
-msgid "Remove JPG metadata"
-msgstr "Quite los metadatos JPG"
+msgid "Remove metadata"
+msgstr "Eliminar metadatos"
 
 #: ewww-image-optimizer.php:3044
 msgid "This wil remove ALL metadata: EXIF and comments."
@@ -1042,14 +1046,6 @@ msgstr "Tamaño completo -%s"
 msgid "Thumbnail - %s"
 msgstr "Miniatura - %s"
 
-#. Plugin Name of the plugin/theme
-msgid "EWWW Image Optimizer"
-msgstr "EWWW Image Optimizer"
-
-#. Plugin URI of the plugin/theme
-msgid "http://www.shanebishop.net/ewww-image-optimizer/"
-msgstr "http://www.shanebishop.net/ewww-image-optimizer/"
-
 #. Description of the plugin/theme
 msgid ""
 "Reduce file sizes for images within WordPress including NextGEN Gallery and "
@@ -1058,11 +1054,3 @@ msgstr ""
 "Reducir el tamaño de los archivos de imágenes dentro de WordPress incluyendo "
 "NextGEN Gallery y GRAND FlAGallery. Utiliza jpegtran, optipng/pngout y "
 "gifsicle."
-
-#. Author of the plugin/theme
-msgid "Shane Bishop"
-msgstr "Shane Bishop"
-
-#. Author URI of the plugin/theme
-msgid "http://www.shanebishop.net/"
-msgstr "http://www.shanebishop.net/"
