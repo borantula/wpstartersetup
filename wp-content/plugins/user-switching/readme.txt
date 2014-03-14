@@ -3,8 +3,8 @@
 Contributors: johnbillion  
 Tags: user, users, profiles, switching, wpmu, multisite, buddypress, bbpress, become, user control, user management, user access, developer  
 Requires at least: 3.1  
-Tested up to: 3.8  
-Stable tag: 0.8.6  
+Tested up to: 3.9  
+Stable tag: 0.8.7  
 License: GPL v2 or later  
 
 Instant switching between user accounts in WordPress.
@@ -106,10 +106,13 @@ When a user switches off, the `switch_off_user` hook is called with the old user
 
 == Upgrade Notice ==
 
-= 0.8.6 =
-* Correctly encode the `redirect_to` parameter in the login screen message.
+= 0.8.7 =
+* Respect the `secure_logged_in_cookie` and `login_redirect` filters.
 
 == Changelog ==
+
+= 0.8.7 =
+* Respect the `secure_logged_in_cookie` and `login_redirect` filters.
 
 = 0.8.6 =
 * Correctly encode the `redirect_to` parameter in the login screen message.

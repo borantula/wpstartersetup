@@ -3,8 +3,8 @@ Contributors: evasivesoftware
 Donate link: http://evasivesoftware.com/
 Tags: publishing, posting, live, preview, post interface, ghost, markdown
 Requires at least: 3.5
-Tested up to: 3.8.1
-Stable tag: 1.0.4
+Tested up to: 3.9 Beta 1
+Stable tag: 1.0.7
 License: MIT
 License URI: http://opensource.org/licenses/MIT
 
@@ -62,6 +62,17 @@ We're working on that.
 
 == Changelog ==
 
+= 1.0.7 =
+* Minor future proofing for 3.9 Beta 1
+
+= 1.0.6 =
+* Further bug fixes that affected losing posts whilst markdown tab was active
+* Fixed javascript and stylesheet links to prevent caching issues on updates
+* Changed javascript from local embeds, to utilize wp_register_script.
+
+= 1.0.5 =
+* Fixed bug where pressing "save" from PrettyPress screen on markdown tab would lose post.
+
 = 1.0.0 =
 * Markdown mode has been added and is considered in beta mode.
 * Fixed various hooks for custom post types
@@ -90,6 +101,17 @@ Our latest shipment of PrettyPress now includes a markdown editor, publishing me
 This version fixed styling issues with Wordpress 3.8, as well as window resizing performance.
 
 == Arbitrary section ==
+
+List of PrettyPress contributors
+
+Richard Denton - @richard_ddenton
+Richard Tape - @richardtape
+
+eMarketeer Australia
+http://www.emarketeer.com.au
+
+Evasive Software
+http://www.evasivesoftware.com
 
 Other libraries used in this project.
 

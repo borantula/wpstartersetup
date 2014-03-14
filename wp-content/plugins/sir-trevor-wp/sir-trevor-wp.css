@@ -1,0 +1,40 @@
+/* Sizing */
+.st-outer {
+	font-size: inherit!important;
+}
+.st-block__inner {
+	padding: .2em 1em!important;
+}
+.st-text-block--heading {
+	font-size:1.8em;
+}
+
+/* Hide Stuff */
+#wp-content-editor-tools, #ed_toolbar, #wp-word-count, .wp-editor-tools, .CodeMirror {
+	display: none !important;
+}
+
+/* Center Images */
+.st-blocks img {
+	width: inherit!important;
+	max-width: 300px;
+}
+.st-block .st-block__editor {
+	text-align: center;
+}
+
+/* Shrink Video Tiles */
+.st-block[data-type="video"] .st-block__inner {
+	max-height:200px;
+}
+.st-block[data-type="video"] iframe{
+	max-height:200px;
+}
+.st-block[data-type="video"] input[type="file"], .st-block[data-type="video"] .st-upload-btn {
+	display: none;
+}
+
+/* Fade Loading Images */
+.st--is-loading img {
+	opacity: .4;
+}

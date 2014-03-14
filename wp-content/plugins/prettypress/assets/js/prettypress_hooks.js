@@ -4,7 +4,7 @@
 /*
 The MIT License (MIT)
 
-Copyright (c) 2013 evasivesoftware.com
+Copyright (c) 2014 evasivesoftware.com
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -69,7 +69,7 @@ jQuery(document).ready(function() {
 	
 	//Publish menu publish button.
 	jQuery("#pp-btn-publish").click(function(e){
-		jQuery("#publish").click();
+		prettypress.publish();
 	});
 	
 });

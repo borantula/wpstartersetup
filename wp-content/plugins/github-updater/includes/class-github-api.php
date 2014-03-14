@@ -95,8 +95,8 @@ class GitHub_Updater_GitHub_API extends GitHub_Updater {
 	 * @since 1.0.0
 	 */
 	public function get_remote_info( $file ) {
-
 		$response = get_site_transient( 'ghu-' . md5( $this->type->repo . $file ) );
+
 		if ( ! $response ) {
 			$response = $this->api( '/repos/:owner/:repo/contents/' . $file );
 
@@ -107,7 +107,7 @@ class GitHub_Updater_GitHub_API extends GitHub_Updater {
 
 		$this->type->branch = $this->get_default_branch( $response );
 
-		if ( ! $response ) return;
+		if ( ! $response ) return false;
 		if ( isset( $response->message ) ) return false;
 
 		$this->type->transient = $response;
@@ -133,7 +133,7 @@ class GitHub_Updater_GitHub_API extends GitHub_Updater {
 			return $this->type->branch;
 
 		// If we can't contact GitHub API, then assume a sensible default in case the non-API part of GitHub is working.
-		if ( ! $response || isset( $response->message ) )
+		if ( ! $response )
 			return 'master';
 
 		// Assuming we've got some remote info, parse the 'url' field to get the last bit of the ref query string
@@ -156,14 +156,18 @@ class GitHub_Updater_GitHub_API extends GitHub_Updater {
 
 		if ( ! $response ) {
 			$response = $this->api( '/repos/:owner/:repo/tags' );
-			if ( ! $response ) { $response = 'no tags here'; }
+
+			if ( ! $response ) {
+				$response['message'] = 'No tags found';
+				$response = (object) $response;
+			}
 
 			if ( $response ) {
 				set_site_transient( 'ghu-' . md5( $this->type->repo . 'tags' ), $response, ( GitHub_Updater::$hours * HOUR_IN_SECONDS ) );
 			}
 		}
 
-		if ( ! $response || 'no tags here' === $response ) return false;
+		if ( ! $response ) return false;
 		if ( isset( $response->message ) ) return false;
 
 		// Sort and get newest tag
@@ -177,7 +181,7 @@ class GitHub_Updater_GitHub_API extends GitHub_Updater {
 				}
 			}
 
-		if ( empty( $tags ) ) return;  // no tags are present, exit early
+		if ( empty( $tags ) ) return false;  // no tags are present, exit early
 
 		usort( $tags, 'version_compare' );
 
@@ -201,7 +205,6 @@ class GitHub_Updater_GitHub_API extends GitHub_Updater {
 	 * @return URI
 	 */
 	public function construct_download_link( $rollback = false ) {
-
 		$download_link_base = 'https://api.github.com/repos/' . trailingslashit( $this->type->owner ) . $this->type->repo . '/zipball/';
 		$endpoint = '';
 
@@ -248,10 +251,16 @@ class GitHub_Updater_GitHub_API extends GitHub_Updater {
 		if ( ! $response ) return false;
 		if ( isset( $response->message ) ) return false;
 
-		if ( function_exists( 'Markdown' ) ) {
-			$changelog = Markdown( base64_decode( $response->content ) );
-		} else {
-			$changelog = '<pre>' . base64_decode( $response->content ) . '</pre>';
+		$changelog = '';
+		$changelog = get_site_transient( 'ghu-' . md5( $this->type->repo . 'changelog' ), $changelog, ( GitHub_Updater::$hours * HOUR_IN_SECONDS ) );
+
+		if ( ! $changelog ) {
+			if ( function_exists( 'Markdown' ) ) {
+				$changelog = Markdown( base64_decode( $response->content ) );
+			} else {
+				$changelog = '<pre>' . base64_decode( $response->content ) . '</pre>';
+			}
+			set_site_transient( 'ghu-' . md5( $this->type->repo . 'changelog' ), $changelog, ( GitHub_Updater::$hours * HOUR_IN_SECONDS ) );
 		}
 
 		$this->type->sections['changelog'] = $changelog;

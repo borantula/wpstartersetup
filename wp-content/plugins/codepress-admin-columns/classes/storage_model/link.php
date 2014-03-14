@@ -20,10 +20,10 @@ class CPAC_Storage_Model_Link extends CPAC_Storage_Model {
 		add_action( 'admin_init', array( $this, 'set_columns' ) );
 
 		// headings
-		add_filter( "manage_{$this->page}_columns",  array( $this, 'add_headings' ) );
+		add_filter( "manage_{$this->page}_columns",  array( $this, 'add_headings' ), 100 );
 
 		// values
-		add_action( 'manage_link_custom_column', array( $this, 'manage_value' ), 10, 2 );
+		add_action( 'manage_link_custom_column', array( $this, 'manage_value' ), 100, 2 );
 	}
 
 	/**

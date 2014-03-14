@@ -251,6 +251,9 @@ class HMBKP_Requirement_PHP_User extends HMBKP_Requirement {
 	 */
 	protected function test() {
 
+		if ( ! HM_Backup::is_shell_exec_available() )
+			return '';
+
 		return shell_exec( 'whoami' );
 
 	}
@@ -273,6 +276,9 @@ class HMBKP_Requirement_PHP_Group extends HMBKP_Requirement {
 	 * @return string
 	 */
 	protected function test() {
+
+		if ( ! HM_Backup::is_shell_exec_available() )
+			return '';
 
 		return shell_exec( 'groups' );
 
@@ -557,9 +563,13 @@ class HMBKP_Requirement_Calculated_Size extends HMBKP_Requirement {
 	 */
 	protected function test() {
 
-		$schedule = new HMBKP_Scheduled_Backup( 'support' );
+		$schedules = HMBKP_Schedules::get_instance();
 
-		return $schedule->get_formatted_file_size();
+		foreach ( $schedules->get_schedules() as $schedule )
+			if ( $schedule->is_filesize_cached() )
+				$backup_sizes[$schedule->get_id()] = $schedule->get_formatted_file_size();
+
+		return $backup_sizes;
 
 	}
 
@@ -612,29 +622,6 @@ class HMBKP_Requirement_PHP_API extends HMBKP_Requirement {
 }
 
 HMBKP_Requirements::register( 'HMBKP_Requirement_PHP_API', 'PHP' );
-
-/**
- * Class HMBKP_Requirement_SERVER
- */
-class HMBKP_Requirement_SERVER extends HMBKP_Requirement {
-
-	/**
-	 * @var string
-	 */
-	var $name = '$_SERVER';
-
-	/**
-	 * @return mixed
-	 */
-	protected function test() {
-
-		return $_SERVER;
-
-	}
-
-}
-
-HMBKP_Requirements::register( 'HMBKP_Requirement_SERVER', 'PHP' );
 
 /**
  * Class HMBKP_Requirement_Server_Software
@@ -958,3 +945,23 @@ class HMBKP_Requirement_Site_Url extends HMBKP_Requirement {
 }
 
 HMBKP_Requirements::register( 'HMBKP_Requirement_Site_Url', 'Site' );
+
+class HMBKP_Requirement_Plugin_Version extends HMBKP_Requirement {
+	var $name = 'Plugin Version';
+
+	protected function test() {
+		return HMBKP_VERSION;
+	}
+}
+HMBKP_Requirements::register( 'HMBKP_Requirement_Plugin_Version', 'constants' );
+
+class HMBKP_Requirement_Max_Exec extends HMBKP_Requirement {
+
+	var $name = 'Max execution time';
+
+	protected function test(){
+
+		return @ini_get( 'max_execution_time' );
+	}
+}
+HMBKP_Requirements::register( 'HMBKP_Requirement_Max_Exec', 'PHP' );

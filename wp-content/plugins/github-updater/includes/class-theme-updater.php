@@ -47,14 +47,17 @@ class GitHub_Theme_Updater extends GitHub_Updater {
 
 		foreach ( (array) $this->config as $theme ) {
 
-			switch( $this->type ) {
+			switch( $theme->type ) {
 				case 'github_theme':
 					$repo_api = new GitHub_Updater_GitHub_API( $theme );
 					break;
+				case 'bitbucket_theme':
+					$repo_api = new GitHub_Updater_BitBucket_API( $theme );
+					break;
 			}
 
-			$this->{$this->type} = $theme;
-			$this->set_defaults();
+			$this->{$theme->type} = $theme;
+			$this->set_defaults( $theme->type );
 			$repo_api->get_remote_info( 'style.css' );
 			$repo_api->get_repo_meta();
 			$repo_api->get_remote_tag();
@@ -97,7 +100,6 @@ class GitHub_Theme_Updater extends GitHub_Updater {
 		if ( ! is_multisite() ) {
 			add_filter('wp_prepare_themes_for_js', array( $this, 'customize_theme_update_html' ) );
 		}
-
 	}
 
 	/**
@@ -193,10 +195,10 @@ class GitHub_Theme_Updater extends GitHub_Updater {
 	 */
 	public static function remove_after_theme_row( $theme_key, $theme ) {
 
-		$repositories = array( 'GitHub Theme URI' );
+		$repositories = array( 'GitHub Theme URI', 'Bitbucket Theme URI' );
 		foreach ( (array) $repositories as $repository ) {
 			$repo_uri = $theme->get( $repository );
-			if ( empty( $repo_uri ) ) return;
+			if ( empty( $repo_uri ) ) continue;
 			remove_action( "after_theme_row_$theme_key", 'wp_theme_update_row', 10 );
 		}
 	}
@@ -237,7 +239,8 @@ class GitHub_Theme_Updater extends GitHub_Updater {
 		$details_url            = self_admin_url( "theme-install.php?tab=theme-information&theme=$theme->repo&TB_iframe=true&width=270&height=400" );                
 		$theme_update_transient = get_site_transient( 'update_themes' );
 
-		// if theme is not present in theme_update transient response ( theme is not up to date )
+		//if the theme is outdated, display the custom theme updater content
+		//if theme is not present in theme_update transient response ( theme is not up to date )
 		if ( empty( $theme_update_transient->up_to_date[$theme->repo] ) ) {
 			$update_url = wp_nonce_url( self_admin_url( 'update.php?action=upgrade-theme&theme=' ) . urlencode( $theme->repo ), 'upgrade-theme_' . $theme->repo );
 			ob_start();

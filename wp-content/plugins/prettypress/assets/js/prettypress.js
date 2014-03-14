@@ -4,7 +4,7 @@
 /*
 The MIT License (MIT)
 
-Copyright (c) 2013 evasivesoftware.com
+Copyright (c) 2014 evasivesoftware.com
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -33,7 +33,8 @@ prettypress = new function() {
 	this.hooked_text = "no";
 	this.markdown_active = "no";
 	this.publish_menu_active = "no";
-	
+	this.initial_editor_width = jQuery("#wp-content-wrap").width();
+
 	this.toggle = function() {
 		
 		//Check if the post has been saved before launching.
@@ -79,9 +80,9 @@ prettypress = new function() {
 			jQuery("#content-markdown").hide();
 			jQuery("#prettypress_wrapper").fadeOut(500);
 			jQuery("#wp-content-wrap").removeClass("prettypress_entry_field");
-			jQuery("#wp-content-wrap").css("width", "auto");
+			jQuery("#wp-content-wrap").css("width", prettypress.initial_editor_width + "px");
 			jQuery("#titlewrap").removeClass("prettypress_title");
-			jQuery("#titlewrap").css("width", "auto");
+			jQuery("#titlewrap").css("width", prettypress.initial_editor_width + "px");
 			
 			if ( prettypress.markdown_active === "yes" ) {
 				//Hide the markdown window.
@@ -103,6 +104,20 @@ prettypress = new function() {
 			//There is a title. Perform the auto-save.
 			//But first, add a prettypress hidden post field.
 			jQuery("form#post").append('<input type="hidden" name="prettypress_active" value="1" />');
+			
+			//Get the current post data and set it to TinyMCE to ensure a clean save.
+			var rawhtml = this.getactivecontent();
+			
+			if ( typeof tinymce != "undefined" ) {
+				if ( tinymce.activeEditor != null ) {
+					tinymce.activeEditor.setContent( rawhtml );
+				} else {
+					jQuery("textarea#content").val( rawhtml );
+				}
+			} else {
+				jQuery("textarea#content").val( rawhtml );
+			}
+			
 			//Now, submit the form.
 			jQuery("#save-post").click();
 			return true;
@@ -113,6 +128,26 @@ prettypress = new function() {
 			return true;
 			
 		}
+		
+	}
+	
+	this.publish = function() {
+		
+		//Ensure we set the data to TinyMCE so we don't lose posts.
+		var rawhtml = this.getactivecontent();
+		
+		if ( typeof tinymce != "undefined" ) {
+			if ( tinymce.activeEditor != null ) {
+				tinymce.activeEditor.setContent( rawhtml );
+			} else {
+				jQuery("textarea#content").val( rawhtml );
+			}
+		} else {
+			jQuery("textarea#content").val( rawhtml );
+		}
+		
+		jQuery("#publish").click();
+		
 		
 	}
 	

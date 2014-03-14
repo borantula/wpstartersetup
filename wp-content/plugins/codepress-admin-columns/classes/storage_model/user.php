@@ -20,10 +20,10 @@ class CPAC_Storage_Model_User extends CPAC_Storage_Model {
 		add_action( 'admin_init', array( $this, 'set_columns' ) );
 
 		// headings
-		add_filter( "manage_{$this->page}_columns",  array( $this, 'add_headings' ) );
+		add_filter( "manage_{$this->page}_columns",  array( $this, 'add_headings' ), 100 );
 
 		// values
-		add_filter( 'manage_users_custom_column', array( $this, 'manage_value_callback' ), 10, 3 );
+		add_filter( 'manage_users_custom_column', array( $this, 'manage_value_callback' ), 100, 3 );
 	}
 
 	/**

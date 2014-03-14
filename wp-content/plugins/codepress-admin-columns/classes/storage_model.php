@@ -264,12 +264,34 @@ abstract class CPAC_Storage_Model {
 			$columns[ $class_name ] = $leaf->getPathname();
 		}
 
-		// cac/columns/custom - filter to register column
-		$this->columns_filepath = apply_filters( 'cac/columns/custom', $columns, $this );
+		/**
+		 * Filter the available custom column types
+		 * Use this to register a custom column type
+		 *
+		 * @since 2.0.0
+		 *
+		 * @param array $columns Available custom columns ([class_name] => [class file path])
+		 * @param CPAC_Storage_Model $storage_model Storage model class instance
+		 */
+		$columns = apply_filters( 'cac/columns/custom', $columns, $this );
 
-		// cac/columns/custom/type={$type} - filter to register column based on it's content type
-		// type can be either a posttype or wp-users/wp-comments/wp-links/wp-media
-		$this->columns_filepath = apply_filters( 'cac/columns/custom/type=' . $this->type, $columns, $this );
+		/**
+		 * Filter the available custom column types for a specific type
+		 *
+		 * @since 2.0.0
+		 * @see Filter cac/columns/custom
+		 */
+		$columns = apply_filters( 'cac/columns/custom/type=' . $this->type, $columns, $this );
+
+		/**
+		 * Filter the available custom column types for a specific type
+		 *
+		 * @since 2.0.0
+		 * @see Filter cac/columns/custom
+		 */
+		$columns = apply_filters( 'cac/columns/custom/post_type=' . $this->key, $columns, $this );
+
+		$this->columns_filepath = $columns;
 	}
 
 	/**
