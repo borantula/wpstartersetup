@@ -19,7 +19,7 @@ function itro_db_init()
 	PRIMARY KEY(option_id),
 	option_name varchar(255),
 	option_val varchar(255)
-	)";
+	) CHARACTER SET=utf8 COLLATE utf8_general_ci";
 	require_once( ABSPATH . 'wp-admin/includes/upgrade.php' );
 	dbDelta( $sql );
 	
@@ -31,7 +31,7 @@ function itro_db_init()
 	PRIMARY KEY(field_id),
 	field_name varchar(255),
 	field_value TEXT
-	)";
+	) CHARACTER SET=utf8 COLLATE utf8_general_ci";
 	require_once( ABSPATH . 'wp-admin/includes/upgrade.php' );
 	dbDelta( $sql );	
 }

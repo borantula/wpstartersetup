@@ -4,7 +4,7 @@ Donate link: http://www.itro.eu/index.php/donate/
 Tags: popup, popup message, popup box, popup ads, popup advertising, jquery popup, popup jquery, automatic popup, age restriction, popup block, popup violence, age validation popup, adult, adult content, content warning, content warning popup, fancy box, fancy popup, custom popup, advertising popup, pop-up, lightbox, lightbox popup
 Requires at least: 3.0.1
 Tested up to: 3.8.1
-Stable tag: 4.6
+Stable tag: 4.6.1
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -91,13 +91,12 @@ DONATE NOW! - HELP US TO DEVELOP FOR YOU! [DONATE NOW](http://www.itro.eu/?page_
 
 == Screenshots ==
 
-FOR TUTORIAL AND FAQ VISIT THE OFFICIAL SITE [CLICK HERE!](http://www.itro.eu/?page_id=390)
-
-DONATE NOW! - HELP US TO DEVELOP FOR YOU! [DONATE NOW](http://www.itro.eu/?page_id=396)
-
-no screenshot avaliable
+VIEW NOW DEMOS ON OUR OFFICIAL SITE - [CLICK HERE!](http://www.itro.eu/?page_id=3056)
 
 == Changelog ==
+= 4.6.1 =
+database collate problem fixed
+
 = 4.6 =
 database error fixed
 
@@ -276,6 +275,9 @@ bug fixed: color table now works in admin pannel.
 First released version.
 
 == Upgrade Notice ==
+= 4.6.1 =
+database collate problem fixed
+
 = 4.6 =
 database error fixed
 

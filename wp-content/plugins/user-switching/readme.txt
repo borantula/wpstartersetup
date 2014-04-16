@@ -4,7 +4,7 @@ Contributors: johnbillion
 Tags: user, users, profiles, switching, wpmu, multisite, buddypress, bbpress, become, user control, user management, user access, developer  
 Requires at least: 3.1  
 Tested up to: 3.9  
-Stable tag: 0.8.7  
+Stable tag: 0.8.9  
 License: GPL v2 or later  
 
 Instant switching between user accounts in WordPress.
@@ -38,15 +38,22 @@ See the [FAQ](http://wordpress.org/plugins/user-switching/faq/) for information 
 
 = Translations Included =
 
- * Arabic by Hassan Hisham
- * Chinese Simplified by Tunghsiao Liu
- * Farsi (Persian) by Amin Ab
- * German by Ralph Stenzel
- * Japanese by Yusuke Hayasaki
- * Lithuanian by Tommixoft
- * Polish by Bartosz Arendt
- * Russian by R J
- * Slovak by Max Samael
+ * العربية (Arabic)
+ * 中文 (Chinese Simplified)
+ * Français (French)
+ * Deutsch (German)
+ * עִבְרִית (Hebrew)
+ * Bahasa Indonesia (Indonesian)
+ * 日本語 (Japanese)
+ * Lietuvių kalba (Lithuanian)
+ * فارسی (Persian)
+ * Polski (Polish)
+ * Português do Brasil (Brazilian Portuguese)
+ * Русский (Russian)
+ * Slovenčina (Slovak)
+ * Español (Spanish)
+
+Thanks to translations by Hassan Hisham, Tunghsiao Liu, Fx Bénard, Ralph Stenzel, Rami Y, Yusuke Hayasaki, Tommixoft, Amin Ab, Bartosz Arendt, Raphael Mendonça, R J, Max Samael, Eko Ikhyar, and Marcelo Pedra!
 
 == Screenshots ==
 
@@ -106,10 +113,20 @@ When a user switches off, the `switch_off_user` hook is called with the old user
 
 == Upgrade Notice ==
 
-= 0.8.7 =
-* Respect the `secure_logged_in_cookie` and `login_redirect` filters.
+= 0.8.9 =
+* Translations for French, Hebrew, Indonesian, and Portuguese.
 
 == Changelog ==
+
+= 0.8.9 =
+* French translation by Fx Bénard
+* Hebrew translation by Rami Y
+* Indonesian translation by Eko Ikhyar
+* Portuguese translation by Raphael Mendonça
+
+= 0.8.8 =
+* Spanish Translation by Marcelo Pedra.
+* User Switching is now a network-only plugin when used on Multisite.
 
 = 0.8.7 =
 * Respect the `secure_logged_in_cookie` and `login_redirect` filters.
