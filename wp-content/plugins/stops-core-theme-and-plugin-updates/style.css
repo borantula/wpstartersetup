@@ -1,4 +1,4 @@
-/* Tooltips CSS */
+/* Tooltips CSS */ 
 
     .showonhover {
     position: relative;
@@ -7,13 +7,17 @@
 	.showonhover .hovertext {
 	opacity: 0;
  	top: -99999px;
- 	position:absolute;
- 	z-index:1000;
- 	border:1px solid #ffd971;
- 	background-color:#fffdce;
- 	padding:7.5px;
- 	width:170px;
- 	font-size: 0.90em;
+ 	position: absolute;
+ 	z-index: 1000;
+ 	border: 1px solid #ffd971;
+ 	background-color: #fffdce;
+	padding-top: 1.5px; 
+	padding-bottom: 1.5px; 
+    padding-right: 7.5px; 
+	padding-left: 7.5px;
+ 	width: auto;
+	height: auto; 
+ 	font-size: 0.85em;
  	-webkit-transition: opacity 0.3s ease;
  	-moz-transition: opacity 0.3s ease;
  	-o-transition: opacity 0.3s ease;
@@ -21,7 +25,8 @@
  	}
 	
  	.showonhover:hover .hovertext {
-    opacity:1;top:0;
+    opacity: 1;
+	top: 0;
 	}
 	
  	a.viewdescription {
