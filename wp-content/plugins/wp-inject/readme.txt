@@ -1,8 +1,8 @@
 ﻿=== WP Inject ===
 Contributors: thoefter
-Tags: insert, wpinject, pictures, flickr, api, images, editor, photos, photo, image, inject, creative commons, creative, commons, gallery, media, thumbnail, seo
-Tested up to: 3.9
-Stable tag: 0.53
+Tags: insert, wpinject, pictures, flickr, api, images, editor, photos, photo, image, inject, creative commons, creative, commons, gallery, media, thumbnail, seo, pixabay
+Tested up to: 3.8.1
+Stable tag: 1.02
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -17,6 +17,11 @@ No further setup is required after installing WP Inject. You can start inserting
 Advanced users can head to the WP Inject settings page and fine tune the plugin. A lot of different options let you control most aspects of how WP Inject finds and inserts images into your posts. By editing the templates you can control exactly how the photos and automatic attribution will look on your blog!
 
 **Have a look at my [tutorial on how to install and use WP Inject](http://wpinject.com/tutorial/ "How to insert images with WP Inject") to get started with the plugin.** Besides explaining the basics the tutorial also contains details on all the available settings in WP Inject and how the plugin works together with WordPress SEO by Yoast. 
+
+= Supported Image Sources: =
+*  **Flickr** - Over 200 million creative commons images. Attribution is automatically added where required.
+*  **Pixabay** - More than 150,000 high quality public domain photos. No attribution required for any of them!
+*  More sources will be added in the future, including support for injecting videos, ads and other types of content!
 
 = Features: =
 *  Search thousands of creative commons photos and include any into your posts.
@@ -34,12 +39,21 @@ Advanced users can head to the WP Inject settings page and fine tune the plugin.
 
 I will update WP Inject regularly. The first feature update was released only a week after the initial launch of WP Inject and more will certainly follow soon! 
 
-I plan to add more image sources besides Flickr to the plugin in the future and eventually make it possible to inject much more than just images with WP Inject, e.g. videos, ads, products and news stories. Stay tuned! 
-
 If you find any bugs please report them! General feedback or feature requests are also welcome. 
 
 
 == Changelog ==  
+
+= 1.02 =
+- Adds large image size (1280px) to Pixabay results
+- Fixes a bug that caused unnecessary API requests being sent and prevented new images from getting added when repeating a search.
+- Updates the Flickr API to use SSL for all requests.
+
+= 1.01 =
+- Pixabay does not require you to enter an API key and username anymore! You can now use Pixabay right away after installing WP Inject.
+
+= 1.00 =
+- Adds Pixabay as an additional image source, providing over 150,000 high quality photos for your posts. 
 
 = 0.53 =
 - Adds possibility to get more than 100 images per search to the Settings page

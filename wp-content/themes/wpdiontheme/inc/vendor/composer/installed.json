@@ -1,23 +1,26 @@
 [
     {
         "name": "nesbot/carbon",
-        "version": "1.4.0",
-        "version_normalized": "1.4.0.0",
+        "version": "1.9.0",
+        "version_normalized": "1.9.0.0",
         "source": {
             "type": "git",
             "url": "https://github.com/briannesbitt/Carbon.git",
-            "reference": "06f0b8a99a90c5392ceccb09b75b74ff6c08ec07"
+            "reference": "b94de7192b01d0e80794eae984dcc773220ab0dc"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/06f0b8a99a90c5392ceccb09b75b74ff6c08ec07",
-            "reference": "06f0b8a99a90c5392ceccb09b75b74ff6c08ec07",
+            "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/b94de7192b01d0e80794eae984dcc773220ab0dc",
+            "reference": "b94de7192b01d0e80794eae984dcc773220ab0dc",
             "shasum": ""
         },
         "require": {
             "php": ">=5.3.0"
         },
-        "time": "2013-09-09 02:39:19",
+        "require-dev": {
+            "phpunit/phpunit": "3.7.*"
+        },
+        "time": "2014-05-13 02:29:30",
         "type": "library",
         "installation-source": "dist",
         "autoload": {
@@ -46,33 +49,34 @@
     },
     {
         "name": "illuminate/support",
-        "version": "v4.0.7",
-        "version_normalized": "4.0.7.0",
+        "version": "v4.1.29",
+        "version_normalized": "4.1.29.0",
         "target-dir": "Illuminate/Support",
         "source": {
             "type": "git",
             "url": "https://github.com/illuminate/support.git",
-            "reference": "5ba934d9c27b456202f3ae495971e467fb9a3f73"
+            "reference": "7716337401e573ba69923d335c0ee01fd5448df7"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/illuminate/support/zipball/5ba934d9c27b456202f3ae495971e467fb9a3f73",
-            "reference": "5ba934d9c27b456202f3ae495971e467fb9a3f73",
+            "url": "https://api.github.com/repos/illuminate/support/zipball/7716337401e573ba69923d335c0ee01fd5448df7",
+            "reference": "7716337401e573ba69923d335c0ee01fd5448df7",
             "shasum": ""
         },
         "require": {
             "php": ">=5.3.0"
         },
         "require-dev": {
-            "mockery/mockery": "0.7.2",
+            "jeremeamia/superclosure": "1.0.*",
+            "mockery/mockery": "0.9.*",
             "patchwork/utf8": "1.1.*",
-            "phpunit/phpunit": "3.7.*"
+            "phpunit/phpunit": "4.0.*"
         },
-        "time": "2013-08-27 16:09:54",
+        "time": "2014-05-02 18:11:11",
         "type": "library",
         "extra": {
             "branch-alias": {
-                "dev-master": "4.0-dev"
+                "dev-master": "4.1-dev"
             }
         },
         "installation-source": "dist",
@@ -93,37 +97,37 @@
                 "name": "Taylor Otwell",
                 "email": "taylorotwell@gmail.com",
                 "homepage": "https://github.com/taylorotwell",
-                "role": "Developer"
+                "role": "Creator of Laravel"
             }
         ]
     },
     {
         "name": "illuminate/container",
-        "version": "v4.0.7",
-        "version_normalized": "4.0.7.0",
+        "version": "v4.1.29",
+        "version_normalized": "4.1.29.0",
         "target-dir": "Illuminate/Container",
         "source": {
             "type": "git",
             "url": "https://github.com/illuminate/container.git",
-            "reference": "da34bc87ffba84ae1a466cfee78b0b18a9d15a3d"
+            "reference": "1bc5798b2241219ec76c57736ab139527cc2d3ad"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/illuminate/container/zipball/da34bc87ffba84ae1a466cfee78b0b18a9d15a3d",
-            "reference": "da34bc87ffba84ae1a466cfee78b0b18a9d15a3d",
+            "url": "https://api.github.com/repos/illuminate/container/zipball/1bc5798b2241219ec76c57736ab139527cc2d3ad",
+            "reference": "1bc5798b2241219ec76c57736ab139527cc2d3ad",
             "shasum": ""
         },
         "require": {
             "php": ">=5.3.0"
         },
         "require-dev": {
-            "phpunit/phpunit": "3.7.*"
+            "phpunit/phpunit": "4.0.*"
         },
-        "time": "2013-07-31 14:49:48",
+        "time": "2014-04-21 18:20:26",
         "type": "library",
         "extra": {
             "branch-alias": {
-                "dev-master": "4.0-dev"
+                "dev-master": "4.1-dev"
             }
         },
         "installation-source": "dist",
@@ -141,40 +145,40 @@
                 "name": "Taylor Otwell",
                 "email": "taylorotwell@gmail.com",
                 "homepage": "https://github.com/taylorotwell",
-                "role": "Developer"
+                "role": "Creator of Laravel"
             }
         ]
     },
     {
         "name": "illuminate/events",
-        "version": "v4.0.7",
-        "version_normalized": "4.0.7.0",
+        "version": "v4.1.29",
+        "version_normalized": "4.1.29.0",
         "target-dir": "Illuminate/Events",
         "source": {
             "type": "git",
             "url": "https://github.com/illuminate/events.git",
-            "reference": "d3b84d3024f3671a33eb9388b3ff58e4b407c6ac"
+            "reference": "4e83ee4f255ec084d510e533ef8e98961aae8729"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/illuminate/events/zipball/d3b84d3024f3671a33eb9388b3ff58e4b407c6ac",
-            "reference": "d3b84d3024f3671a33eb9388b3ff58e4b407c6ac",
+            "url": "https://api.github.com/repos/illuminate/events/zipball/4e83ee4f255ec084d510e533ef8e98961aae8729",
+            "reference": "4e83ee4f255ec084d510e533ef8e98961aae8729",
             "shasum": ""
         },
         "require": {
-            "illuminate/container": "4.0.x",
-            "illuminate/support": "4.0.x",
+            "illuminate/container": "4.1.*",
+            "illuminate/support": "4.1.*",
             "php": ">=5.3.0"
         },
         "require-dev": {
-            "mockery/mockery": "0.7.2",
-            "phpunit/phpunit": "3.7.*"
+            "mockery/mockery": "0.9.*",
+            "phpunit/phpunit": "4.0.*"
         },
-        "time": "2013-08-01 14:26:36",
+        "time": "2014-03-22 20:12:48",
         "type": "library",
         "extra": {
             "branch-alias": {
-                "dev-master": "4.0-dev"
+                "dev-master": "4.1-dev"
             }
         },
         "installation-source": "dist",
@@ -192,47 +196,47 @@
                 "name": "Taylor Otwell",
                 "email": "taylorotwell@gmail.com",
                 "homepage": "https://github.com/taylorotwell",
-                "role": "Developer"
+                "role": "Creator of Laravel"
             }
         ]
     },
     {
         "name": "illuminate/database",
-        "version": "v4.0.7",
-        "version_normalized": "4.0.7.0",
+        "version": "v4.1.29",
+        "version_normalized": "4.1.29.0",
         "target-dir": "Illuminate/Database",
         "source": {
             "type": "git",
             "url": "https://github.com/illuminate/database.git",
-            "reference": "afec05d1be04f1d7682ba4a39cbd36faa22f1ab1"
+            "reference": "00babb09abdb2115c5380c3c1090ca8f533bd30b"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/illuminate/database/zipball/afec05d1be04f1d7682ba4a39cbd36faa22f1ab1",
-            "reference": "afec05d1be04f1d7682ba4a39cbd36faa22f1ab1",
+            "url": "https://api.github.com/repos/illuminate/database/zipball/00babb09abdb2115c5380c3c1090ca8f533bd30b",
+            "reference": "00babb09abdb2115c5380c3c1090ca8f533bd30b",
             "shasum": ""
         },
         "require": {
-            "illuminate/container": "4.0.x",
-            "illuminate/events": "4.0.x",
-            "illuminate/support": "4.0.x",
+            "illuminate/container": "4.1.*",
+            "illuminate/events": "4.1.*",
+            "illuminate/support": "4.1.*",
             "nesbot/carbon": "1.*",
             "php": ">=5.3.0"
         },
         "require-dev": {
-            "illuminate/cache": "4.0.x",
-            "illuminate/console": "4.0.x",
-            "illuminate/filesystem": "4.0.x",
-            "illuminate/pagination": "4.0.x",
-            "illuminate/support": "4.0.x",
-            "mockery/mockery": "0.7.2",
-            "phpunit/phpunit": "3.7.*"
+            "illuminate/cache": "4.1.*",
+            "illuminate/console": "4.1.*",
+            "illuminate/filesystem": "4.1.*",
+            "illuminate/pagination": "4.1.*",
+            "illuminate/support": "4.1.*",
+            "mockery/mockery": "0.9.*",
+            "phpunit/phpunit": "4.0.*"
         },
-        "time": "2013-09-07 04:31:12",
+        "time": "2014-05-20 13:21:41",
         "type": "library",
         "extra": {
             "branch-alias": {
-                "dev-master": "4.0-dev"
+                "dev-master": "4.1-dev"
             }
         },
         "installation-source": "dist",
@@ -250,7 +254,7 @@
                 "name": "Taylor Otwell",
                 "email": "taylorotwell@gmail.com",
                 "homepage": "https://github.com/taylorotwell",
-                "role": "Developer"
+                "role": "Creator of Laravel"
             }
         ],
         "keywords": [

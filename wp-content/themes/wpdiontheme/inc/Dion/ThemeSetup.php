@@ -130,7 +130,7 @@ class ThemeSetup {
 			wp_enqueue_script( 'comment-reply' );
 		}
 		//put modernizr as late as possible
-		wp_enqueue_script('modernizr',DION_THEME_URL.'/js/vendor/modernizr.js');
+		wp_enqueue_script('modernizr',DION_COMPONENTS_URL.'/modernizr/modernizr.js');
 	}
 
 	/**

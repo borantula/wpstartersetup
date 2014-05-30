@@ -2,24 +2,24 @@
 /**
  * @package Disable Updates Manager
  * @author Websiteguy
- * @version 4.0
+ * @version 4.0.3
 */
 /*
 Plugin Name: Disable Updates Manager
 Plugin URI: http://wordpress.org/plugins/stops-core-theme-and-plugin-updates/
-Version: 4.0
-Description: Pick which type of updates you would like to disable. Just use the settings.
+Version: 4.0.3
+Description: A configurable plugin that disables updates for you. Easy, clean and helpful. 
 Author: Websiteguy
 Author URI: http://profiles.wordpress.org/kidsguide/
 License: GPL2
 Text Domain: stops-core-theme-and-plugin-updates
 Domain Path: /lang
-Tested up to WordPress 3.9
+Tested up to WordPress: 3.9.1
 */
 /*
 License:
 
-@Copyright 2013 - 2014 Websiteguy (email : mpsparrow@cogeco.ca)
+@Copyright 2013 - 2014 Websiteguy (email: mpsparrow@cogeco.ca)
 
 This program is free software; you can redistribute it and/or modify
 it under the terms of the GNU General Public License, version 2, as 
@@ -34,12 +34,12 @@ You should have received a copy of the GNU General Public License
 along with this program; if not, write to the Free Software
 Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 
-or go to the license.txt in the trunk.
+Go to the license.txt in the trunk for more information.
 */
 
 // Define version.
 
-	define("DISABLEUPDATESMANAGERVERSION", "4.0");
+	define("DISABLEUPDATESMANAGERVERSION", "4.0.3");
 
     class Disable_Updates {
 	    // Set status in array
@@ -524,7 +524,7 @@ break;
 	</span>
 	<div class="showonhover">
 							<label for="wpv_notify">
-									<input type="checkbox" <?php checked(1, (int)$this->status['wpv'], true); ?> value="1" id="wpv_notify" name="_disable_updates[wpv]"> <?php _e('Remove WordPress Core Version', 'disable-updates-manager') ?>
+									<input type="checkbox" <?php checked(1, (int)$this->status['wpv'], true); ?> value="1" id="wpv_notify" name="_disable_updates[wpv]"> <?php _e('Remove WordPress Core Version from Footer', 'disable-updates-manager') ?>
 							</label>
  	<span>
  	<a href="#" class="viewdescription">?</a>

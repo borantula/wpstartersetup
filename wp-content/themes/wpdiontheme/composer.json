@@ -1,0 +1,15 @@
+{
+    "config": {
+        "vendor-dir": "inc/vendor"
+    },
+    "require": {
+        "illuminate/database": "*",
+        "illuminate/container": "*"
+
+    },
+    "autoload": {
+        "classmap": [
+            "inc/"
+        ]
+    }
+}

@@ -1,10 +1,6 @@
 <?php namespace Illuminate\Database\Migrations;
 
-use Closure;
-use Illuminate\Events\Dispatcher;
-use Illuminate\Database\Connection;
 use Illuminate\Filesystem\Filesystem;
-use Symfony\Component\Console\Output\OutputInterface;
 use Illuminate\Database\ConnectionResolverInterface as Resolver;
 
 class Migrator {
@@ -76,7 +72,7 @@ class Migrator {
 
 		// Once we grab all of the migration files for the path, we will compare them
 		// against the migrations that have already been run for this package then
-		// run all of the oustanding migrations against the database connection.
+		// run each of the outstanding migrations against a database connection.
 		$ran = $this->repository->getRan();
 
 		$migrations = array_diff($files, $ran);
@@ -87,8 +83,8 @@ class Migrator {
 	/**
 	 * Run an array of migrations.
 	 *
-	 * @param  array   $migrations
-	 * @param  bool    $pretend
+	 * @param  array  $migrations
+	 * @param  bool   $pretend
 	 * @return void
 	 */
 	public function runMigrationList($migrations, $pretend = false)
@@ -147,7 +143,7 @@ class Migrator {
 	/**
 	 * Rollback the last migration operation.
 	 *
-	 * @param  bool   $pretend
+	 * @param  bool  $pretend
 	 * @return int
 	 */
 	public function rollback($pretend = false)
@@ -180,8 +176,8 @@ class Migrator {
 	/**
 	 * Run "down" a migration instance.
 	 *
-	 * @param  \StdClass  $migration
-	 * @param  bool  $pretend
+	 * @param  object  $migration
+	 * @param  bool    $pretend
 	 * @return void
 	 */
 	protected function runDown($migration, $pretend)

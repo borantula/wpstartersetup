@@ -1,0 +1,739 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="17656e48-0c7c-4e9d-a452-3d825e246632" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/wordpress.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/.bowerrc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/bower.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/twentyfourteen/404.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/twentyfourteen/archive.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/twentyfourteen/author.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/twentyfourteen/category.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/twentyfourteen/comments.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/twentyfourteen/content-aside.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/twentyfourteen/content-audio.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/twentyfourteen/content-featured-post.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/twentyfourteen/content-gallery.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/twentyfourteen/content-image.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/twentyfourteen/content-link.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/twentyfourteen/content-none.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/twentyfourteen/content-page.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/twentyfourteen/content-quote.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/twentyfourteen/content-video.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/twentyfourteen/content.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/twentyfourteen/css/editor-style.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/twentyfourteen/css/ie.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/twentyfourteen/featured-content.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/twentyfourteen/footer.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/twentyfourteen/functions.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/twentyfourteen/genericons/COPYING.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/twentyfourteen/genericons/Genericons-Regular.otf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/twentyfourteen/genericons/LICENSE.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/twentyfourteen/genericons/README.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/twentyfourteen/genericons/example.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/twentyfourteen/genericons/font/genericons-regular-webfont.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/twentyfourteen/genericons/font/genericons-regular-webfont.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/twentyfourteen/genericons/font/genericons-regular-webfont.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/twentyfourteen/genericons/font/genericons-regular-webfont.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/twentyfourteen/genericons/genericons.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/twentyfourteen/header.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/twentyfourteen/image.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/twentyfourteen/images/pattern-dark.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/twentyfourteen/images/pattern-light.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/twentyfourteen/inc/back-compat.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/twentyfourteen/inc/custom-header.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/twentyfourteen/inc/customizer.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/twentyfourteen/inc/featured-content.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/twentyfourteen/inc/template-tags.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/twentyfourteen/inc/widgets.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/twentyfourteen/index.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/twentyfourteen/js/customizer.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/twentyfourteen/js/featured-content-admin.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/twentyfourteen/js/functions.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/twentyfourteen/js/html5.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/twentyfourteen/js/keyboard-image-navigation.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/twentyfourteen/js/slider.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/twentyfourteen/languages/twentyfourteen.pot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/twentyfourteen/page-templates/contributors.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/twentyfourteen/page-templates/full-width.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/twentyfourteen/page.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/twentyfourteen/rtl.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/twentyfourteen/screenshot.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/twentyfourteen/search.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/twentyfourteen/sidebar-content.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/twentyfourteen/sidebar-footer.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/twentyfourteen/sidebar.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/twentyfourteen/single.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/twentyfourteen/style.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/twentyfourteen/tag.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/twentyfourteen/taxonomy-post_format.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/twentythirteen/404.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/twentythirteen/archive.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/twentythirteen/author-bio.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/twentythirteen/author.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/twentythirteen/category.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/twentythirteen/comments.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/twentythirteen/content-aside.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/twentythirteen/content-audio.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/twentythirteen/content-chat.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/twentythirteen/content-gallery.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/twentythirteen/content-image.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/twentythirteen/content-link.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/twentythirteen/content-none.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/twentythirteen/content-quote.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/twentythirteen/content-status.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/twentythirteen/content-video.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/twentythirteen/content.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/twentythirteen/css/editor-style.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/twentythirteen/css/ie.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/twentythirteen/fonts/COPYING.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/twentythirteen/fonts/LICENSE.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/twentythirteen/fonts/genericons-regular-webfont.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/twentythirteen/fonts/genericons-regular-webfont.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/twentythirteen/fonts/genericons-regular-webfont.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/twentythirteen/fonts/genericons-regular-webfont.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/twentythirteen/fonts/genericons.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/twentythirteen/footer.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/twentythirteen/functions.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/twentythirteen/header.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/twentythirteen/image.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/twentythirteen/images/dotted-line-2x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/twentythirteen/images/dotted-line-light-2x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/twentythirteen/images/dotted-line-light.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/twentythirteen/images/dotted-line.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/twentythirteen/images/headers/circle-thumbnail.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/twentythirteen/images/headers/circle.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/twentythirteen/images/headers/diamond-thumbnail.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/twentythirteen/images/headers/diamond.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/twentythirteen/images/headers/star-thumbnail.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/twentythirteen/images/headers/star.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/twentythirteen/images/search-icon-2x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/twentythirteen/images/search-icon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/twentythirteen/inc/back-compat.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/twentythirteen/inc/custom-header.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/twentythirteen/index.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/twentythirteen/js/functions.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/twentythirteen/js/html5.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/twentythirteen/js/theme-customizer.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/twentythirteen/languages/twentythirteen.pot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/twentythirteen/page.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/twentythirteen/rtl.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/twentythirteen/screenshot.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/twentythirteen/search.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/twentythirteen/sidebar-main.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/twentythirteen/sidebar.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/twentythirteen/single.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/twentythirteen/style.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/twentythirteen/tag.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/twentythirteen/taxonomy-post_format.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/twentytwelve/404.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/twentytwelve/archive.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/twentytwelve/author.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/twentytwelve/category.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/twentytwelve/comments.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/twentytwelve/content-aside.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/twentytwelve/content-image.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/twentytwelve/content-link.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/twentytwelve/content-none.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/twentytwelve/content-page.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/twentytwelve/content-quote.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/twentytwelve/content-status.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/twentytwelve/content.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/twentytwelve/css/ie.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/twentytwelve/editor-style-rtl.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/twentytwelve/editor-style.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/twentytwelve/footer.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/twentytwelve/functions.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/twentytwelve/header.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/twentytwelve/image.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/twentytwelve/inc/custom-header.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/twentytwelve/index.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/twentytwelve/js/html5.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/twentytwelve/js/navigation.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/twentytwelve/js/theme-customizer.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/twentytwelve/languages/twentytwelve.pot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/twentytwelve/page-templates/front-page.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/twentytwelve/page-templates/full-width.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/twentytwelve/page.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/twentytwelve/rtl.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/twentytwelve/screenshot.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/twentytwelve/search.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/twentytwelve/sidebar-front.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/twentytwelve/sidebar.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/twentytwelve/single.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/twentytwelve/style.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/twentytwelve/tag.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme.zip" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/database/Illuminate/Database/Console/Migrations/MakeCommand.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/nesbot/carbon/.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/nesbot/carbon/.travis.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/nesbot/carbon/readme.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/nesbot/carbon/readme.src.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/js/vendor/modernizr.js" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/composer.json" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/composer.json" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/composer.lock" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/composer.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/support/Illuminate/Support/Facades/App.php" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/support/Illuminate/Support/Facades/App.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/support/Illuminate/Support/Contracts/ArrayableInterface.php" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/support/Illuminate/Support/Contracts/ArrayableInterface.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/support/Illuminate/Support/Facades/Artisan.php" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/support/Illuminate/Support/Facades/Artisan.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/support/Illuminate/Support/Facades/Auth.php" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/support/Illuminate/Support/Facades/Auth.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/database/Illuminate/Database/Console/Migrations/BaseCommand.php" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/database/Illuminate/Database/Console/Migrations/BaseCommand.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/database/Illuminate/Database/Eloquent/Relations/BelongsTo.php" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/database/Illuminate/Database/Eloquent/Relations/BelongsTo.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/database/Illuminate/Database/Eloquent/Relations/BelongsToMany.php" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/database/Illuminate/Database/Eloquent/Relations/BelongsToMany.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/support/Illuminate/Support/Facades/Blade.php" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/support/Illuminate/Support/Facades/Blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/database/Illuminate/Database/Schema/Blueprint.php" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/database/Illuminate/Database/Schema/Blueprint.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/database/Illuminate/Database/Eloquent/Builder.php" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/database/Illuminate/Database/Eloquent/Builder.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/database/Illuminate/Database/Query/Builder.php" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/database/Illuminate/Database/Query/Builder.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/database/Illuminate/Database/Schema/Builder.php" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/database/Illuminate/Database/Schema/Builder.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/support/Illuminate/Support/Facades/Cache.php" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/support/Illuminate/Support/Facades/Cache.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/nesbot/carbon/src/Carbon/Carbon.php" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/nesbot/carbon/src/Carbon/Carbon.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/composer/ClassLoader.php" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/composer/ClassLoader.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/support/Illuminate/Support/ClassLoader.php" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/support/Illuminate/Support/ClassLoader.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/database/Illuminate/Database/Eloquent/Collection.php" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/database/Illuminate/Database/Eloquent/Collection.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/support/Illuminate/Support/Collection.php" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/support/Illuminate/Support/Collection.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/nesbot/carbon/tests/ComparisonTest.php" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/nesbot/carbon/tests/ComparisonTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/support/Illuminate/Support/Facades/Config.php" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/support/Illuminate/Support/Facades/Config.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/database/Illuminate/Database/Connection.php" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/database/Illuminate/Database/Connection.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/database/Illuminate/Database/Connectors/ConnectionFactory.php" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/database/Illuminate/Database/Connectors/ConnectionFactory.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/database/Illuminate/Database/ConnectionInterface.php" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/database/Illuminate/Database/ConnectionInterface.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/database/Illuminate/Database/ConnectionResolver.php" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/database/Illuminate/Database/ConnectionResolver.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/database/Illuminate/Database/ConnectionResolverInterface.php" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/database/Illuminate/Database/ConnectionResolverInterface.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/database/Illuminate/Database/Connectors/Connector.php" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/database/Illuminate/Database/Connectors/Connector.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/database/Illuminate/Database/Connectors/ConnectorInterface.php" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/database/Illuminate/Database/Connectors/ConnectorInterface.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/nesbot/carbon/tests/ConstructTest.php" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/nesbot/carbon/tests/ConstructTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/container/Illuminate/Container/Container.php" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/container/Illuminate/Container/Container.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/support/Illuminate/Support/Facades/Cookie.php" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/support/Illuminate/Support/Facades/Cookie.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/support/Illuminate/Support/Facades/Crypt.php" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/support/Illuminate/Support/Facades/Crypt.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/support/Illuminate/Support/Facades/DB.php" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/support/Illuminate/Support/Facades/DB.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/database/Illuminate/Database/DatabaseManager.php" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/database/Illuminate/Database/DatabaseManager.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/database/Illuminate/Database/Migrations/DatabaseMigrationRepository.php" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/database/Illuminate/Database/Migrations/DatabaseMigrationRepository.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/database/Illuminate/Database/DatabaseServiceProvider.php" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/database/Illuminate/Database/DatabaseServiceProvider.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/nesbot/carbon/tests/DayOfWeekModifiersTest.php" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/nesbot/carbon/tests/DayOfWeekModifiersTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/nesbot/carbon/tests/DiffTest.php" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/nesbot/carbon/tests/DiffTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/events/Illuminate/Events/Dispatcher.php" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/events/Illuminate/Events/Dispatcher.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/support/Illuminate/Support/Facades/Event.php" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/support/Illuminate/Support/Facades/Event.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/events/Illuminate/Events/EventServiceProvider.php" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/events/Illuminate/Events/EventServiceProvider.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/database/Illuminate/Database/Query/Expression.php" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/database/Illuminate/Database/Query/Expression.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/support/Illuminate/Support/Facades/Facade.php" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/support/Illuminate/Support/Facades/Facade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/support/Illuminate/Support/Facades/File.php" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/support/Illuminate/Support/Facades/File.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/support/Illuminate/Support/Fluent.php" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/support/Illuminate/Support/Fluent.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/support/Illuminate/Support/Facades/Form.php" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/support/Illuminate/Support/Facades/Form.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/nesbot/carbon/tests/GettersTest.php" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/nesbot/carbon/tests/GettersTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/database/Illuminate/Database/Grammar.php" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/database/Illuminate/Database/Grammar.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/database/Illuminate/Database/Query/Grammars/Grammar.php" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/database/Illuminate/Database/Query/Grammars/Grammar.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/database/Illuminate/Database/Schema/Grammars/Grammar.php" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/database/Illuminate/Database/Schema/Grammars/Grammar.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/support/Illuminate/Support/Facades/HTML.php" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/support/Illuminate/Support/Facades/HTML.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/database/Illuminate/Database/Eloquent/Relations/HasMany.php" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/database/Illuminate/Database/Eloquent/Relations/HasMany.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/database/Illuminate/Database/Eloquent/Relations/HasOne.php" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/database/Illuminate/Database/Eloquent/Relations/HasOne.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/database/Illuminate/Database/Eloquent/Relations/HasOneOrMany.php" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/database/Illuminate/Database/Eloquent/Relations/HasOneOrMany.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/support/Illuminate/Support/Facades/Hash.php" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/support/Illuminate/Support/Facades/Hash.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/support/Illuminate/Support/Facades/Input.php" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/support/Illuminate/Support/Facades/Input.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/database/Illuminate/Database/Console/Migrations/InstallCommand.php" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/database/Illuminate/Database/Console/Migrations/InstallCommand.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/database/Illuminate/Database/Query/JoinClause.php" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/database/Illuminate/Database/Query/JoinClause.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/support/Illuminate/Support/Contracts/JsonableInterface.php" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/support/Illuminate/Support/Contracts/JsonableInterface.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/support/Illuminate/Support/Facades/Lang.php" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/support/Illuminate/Support/Facades/Lang.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/support/Illuminate/Support/Facades/Log.php" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/support/Illuminate/Support/Facades/Log.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/support/Illuminate/Support/Facades/Mail.php" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/support/Illuminate/Support/Facades/Mail.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/database/Illuminate/Database/Capsule/Manager.php" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/database/Illuminate/Database/Capsule/Manager.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/support/Illuminate/Support/Manager.php" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/support/Illuminate/Support/Manager.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/database/Illuminate/Database/Eloquent/MassAssignmentException.php" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/database/Illuminate/Database/Eloquent/MassAssignmentException.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/support/Illuminate/Support/MessageBag.php" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/support/Illuminate/Support/MessageBag.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/support/Illuminate/Support/Contracts/MessageProviderInterface.php" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/support/Illuminate/Support/Contracts/MessageProviderInterface.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/database/Illuminate/Database/Console/Migrations/MigrateCommand.php" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/database/Illuminate/Database/Console/Migrations/MigrateCommand.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/database/Illuminate/Database/Migrations/Migration.php" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/database/Illuminate/Database/Migrations/Migration.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/database/Illuminate/Database/Migrations/MigrationCreator.php" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/database/Illuminate/Database/Migrations/MigrationCreator.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/database/Illuminate/Database/Migrations/MigrationRepositoryInterface.php" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/database/Illuminate/Database/Migrations/MigrationRepositoryInterface.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/database/Illuminate/Database/MigrationServiceProvider.php" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/database/Illuminate/Database/MigrationServiceProvider.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/database/Illuminate/Database/Migrations/Migrator.php" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/database/Illuminate/Database/Migrations/Migrator.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/database/Illuminate/Database/Eloquent/Model.php" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/database/Illuminate/Database/Eloquent/Model.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/database/Illuminate/Database/Eloquent/ModelNotFoundException.php" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/database/Illuminate/Database/Eloquent/ModelNotFoundException.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/database/Illuminate/Database/Eloquent/Relations/MorphMany.php" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/database/Illuminate/Database/Eloquent/Relations/MorphMany.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/database/Illuminate/Database/Eloquent/Relations/MorphOne.php" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/database/Illuminate/Database/Eloquent/Relations/MorphOne.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/database/Illuminate/Database/Eloquent/Relations/MorphOneOrMany.php" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/database/Illuminate/Database/Eloquent/Relations/MorphOneOrMany.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/database/Illuminate/Database/Schema/MySqlBuilder.php" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/database/Illuminate/Database/Schema/MySqlBuilder.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/database/Illuminate/Database/MySqlConnection.php" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/database/Illuminate/Database/MySqlConnection.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/database/Illuminate/Database/Connectors/MySqlConnector.php" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/database/Illuminate/Database/Connectors/MySqlConnector.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/database/Illuminate/Database/Query/Grammars/MySqlGrammar.php" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/database/Illuminate/Database/Query/Grammars/MySqlGrammar.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/database/Illuminate/Database/Schema/Grammars/MySqlGrammar.php" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/database/Illuminate/Database/Schema/Grammars/MySqlGrammar.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/support/Illuminate/Support/NamespacedItemResolver.php" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/support/Illuminate/Support/NamespacedItemResolver.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/support/Illuminate/Support/Facades/Paginator.php" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/support/Illuminate/Support/Facades/Paginator.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/support/Illuminate/Support/Facades/Password.php" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/support/Illuminate/Support/Facades/Password.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/database/Illuminate/Database/Eloquent/Relations/Pivot.php" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/database/Illuminate/Database/Eloquent/Relations/Pivot.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/support/Illuminate/Support/Pluralizer.php" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/support/Illuminate/Support/Pluralizer.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/database/Illuminate/Database/PostgresConnection.php" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/database/Illuminate/Database/PostgresConnection.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/database/Illuminate/Database/Connectors/PostgresConnector.php" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/database/Illuminate/Database/Connectors/PostgresConnector.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/database/Illuminate/Database/Query/Grammars/PostgresGrammar.php" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/database/Illuminate/Database/Query/Grammars/PostgresGrammar.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/database/Illuminate/Database/Schema/Grammars/PostgresGrammar.php" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/database/Illuminate/Database/Schema/Grammars/PostgresGrammar.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/database/Illuminate/Database/Query/Processors/PostgresProcessor.php" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/database/Illuminate/Database/Query/Processors/PostgresProcessor.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/database/Illuminate/Database/Query/Processors/Processor.php" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/database/Illuminate/Database/Query/Processors/Processor.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/support/Illuminate/Support/Facades/Queue.php" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/support/Illuminate/Support/Facades/Queue.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/database/Illuminate/Database/README.md" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/database/Illuminate/Database/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/support/Illuminate/Support/Facades/Redirect.php" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/support/Illuminate/Support/Facades/Redirect.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/support/Illuminate/Support/Facades/Redis.php" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/support/Illuminate/Support/Facades/Redis.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/database/Illuminate/Database/Console/Migrations/RefreshCommand.php" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/database/Illuminate/Database/Console/Migrations/RefreshCommand.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/database/Illuminate/Database/Eloquent/Relations/Relation.php" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/database/Illuminate/Database/Eloquent/Relations/Relation.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/support/Illuminate/Support/Contracts/RenderableInterface.php" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/support/Illuminate/Support/Contracts/RenderableInterface.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/support/Illuminate/Support/Facades/Request.php" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/support/Illuminate/Support/Facades/Request.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/database/Illuminate/Database/Console/Migrations/ResetCommand.php" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/database/Illuminate/Database/Console/Migrations/ResetCommand.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/support/Illuminate/Support/Facades/Response.php" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/support/Illuminate/Support/Facades/Response.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/support/Illuminate/Support/Contracts/ResponsePreparerInterface.php" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/support/Illuminate/Support/Contracts/ResponsePreparerInterface.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/database/Illuminate/Database/Console/Migrations/RollbackCommand.php" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/database/Illuminate/Database/Console/Migrations/RollbackCommand.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/support/Illuminate/Support/Facades/Route.php" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/support/Illuminate/Support/Facades/Route.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/database/Illuminate/Database/SQLiteConnection.php" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/database/Illuminate/Database/SQLiteConnection.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/database/Illuminate/Database/Connectors/SQLiteConnector.php" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/database/Illuminate/Database/Connectors/SQLiteConnector.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/database/Illuminate/Database/Query/Grammars/SQLiteGrammar.php" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/database/Illuminate/Database/Query/Grammars/SQLiteGrammar.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/database/Illuminate/Database/Schema/Grammars/SQLiteGrammar.php" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/database/Illuminate/Database/Schema/Grammars/SQLiteGrammar.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/support/Illuminate/Support/Facades/Schema.php" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/support/Illuminate/Support/Facades/Schema.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/database/Illuminate/Database/Console/SeedCommand.php" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/database/Illuminate/Database/Console/SeedCommand.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/database/Illuminate/Database/SeedServiceProvider.php" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/database/Illuminate/Database/SeedServiceProvider.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/database/Illuminate/Database/Seeder.php" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/database/Illuminate/Database/Seeder.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/support/Illuminate/Support/SerializableClosure.php" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/support/Illuminate/Support/SerializableClosure.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/support/Illuminate/Support/ServiceProvider.php" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/support/Illuminate/Support/ServiceProvider.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/support/Illuminate/Support/Facades/Session.php" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/support/Illuminate/Support/Facades/Session.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/database/Illuminate/Database/SqlServerConnection.php" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/database/Illuminate/Database/SqlServerConnection.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/database/Illuminate/Database/Connectors/SqlServerConnector.php" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/database/Illuminate/Database/Connectors/SqlServerConnector.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/database/Illuminate/Database/Query/Grammars/SqlServerGrammar.php" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/database/Illuminate/Database/Query/Grammars/SqlServerGrammar.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/database/Illuminate/Database/Schema/Grammars/SqlServerGrammar.php" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/database/Illuminate/Database/Schema/Grammars/SqlServerGrammar.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/database/Illuminate/Database/Query/Processors/SqlServerProcessor.php" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/database/Illuminate/Database/Query/Processors/SqlServerProcessor.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/nesbot/carbon/tests/StartEndOfTest.php" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/nesbot/carbon/tests/StartEndOfTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/support/Illuminate/Support/Str.php" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/support/Illuminate/Support/Str.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/nesbot/carbon/tests/StringsTest.php" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/nesbot/carbon/tests/StringsTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/events/Illuminate/Events/Subscriber.php" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/events/Illuminate/Events/Subscriber.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/nesbot/carbon/tests/TestingAidsTest.php" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/nesbot/carbon/tests/TestingAidsTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/Dion/ThemeSetup.php" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/Dion/ThemeSetup.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/support/Illuminate/Support/Facades/URL.php" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/support/Illuminate/Support/Facades/URL.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/support/Illuminate/Support/Facades/Validator.php" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/support/Illuminate/Support/Facades/Validator.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/support/Illuminate/Support/Facades/View.php" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/support/Illuminate/Support/Facades/View.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/autoload.php" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/autoload.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/composer/autoload_classmap.php" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/composer/autoload_classmap.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/composer/autoload_files.php" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/composer/autoload_files.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/composer/autoload_namespaces.php" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/composer/autoload_namespaces.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/composer/autoload_real.php" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/composer/autoload_real.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/database/Illuminate/Database/Migrations/stubs/blank.stub" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/database/Illuminate/Database/Migrations/stubs/blank.stub" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/container/Illuminate/Container/composer.json" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/container/Illuminate/Container/composer.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/database/Illuminate/Database/composer.json" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/database/Illuminate/Database/composer.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/events/Illuminate/Events/composer.json" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/events/Illuminate/Events/composer.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/support/Illuminate/Support/composer.json" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/support/Illuminate/Support/composer.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/nesbot/carbon/composer.json" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/nesbot/carbon/composer.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/database/Illuminate/Database/Migrations/stubs/create.stub" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/database/Illuminate/Database/Migrations/stubs/create.stub" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/functions.php" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/functions.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/support/Illuminate/Support/helpers.php" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/support/Illuminate/Support/helpers.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/nesbot/carbon/history.md" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/nesbot/carbon/history.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/composer/installed.json" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/composer/installed.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/nesbot/carbon/readme.md" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/nesbot/carbon/readme.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/database/Illuminate/Database/Migrations/stubs/update.stub" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/illuminate/database/Illuminate/Database/Migrations/stubs/update.stub" />
+    </list>
+    <ignored path="wordpress.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="DaemonCodeAnalyzer">
+    <disable_hints />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="wordpress" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="bower.json" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wp-content/themes/wpdiontheme/bower.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="3" column="21" selection-start="77" selection-end="77" vertical-scroll-proportion="-1.826087" vertical-offset="0" max-vertical-offset="182">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="composer.json" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wp-content/themes/wpdiontheme/composer.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="9" column="17" selection-start="174" selection-end="174" vertical-scroll-proportion="-5.478261" vertical-offset="0" max-vertical-offset="294">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="functions.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/wp-content/themes/wpdiontheme/functions.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="11" column="27" selection-start="247" selection-end="266" vertical-scroll-proportion="0.09576838" vertical-offset="83" max-vertical-offset="742">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindManager">
+    <FindUsagesManager>
+      <setting name="OPEN_NEW_TAB" value="false" />
+    </FindUsagesManager>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="changedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/wp-content/themes/wpdiontheme/.bowerrc" />
+        <option value="$PROJECT_DIR$/wp-content/themes/wpdiontheme/bower.json" />
+        <option value="$PROJECT_DIR$/wp-content/themes/wpdiontheme/composer.json" />
+        <option value="$PROJECT_DIR$/wp-content/themes/wpdiontheme/functions.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/Dion/ThemeSetup.php" />
+      </list>
+    </option>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
+  <component name="ProjectFrameBounds">
+    <option name="y" value="22" />
+    <option name="width" value="1440" />
+    <option name="height" value="837" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectReloadState">
+    <option name="STATE" value="0" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wordpress" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wordpress" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wordpress" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wordpress" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wordpress" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wp-content" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wordpress" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wordpress" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wp-content" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="themes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wordpress" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wordpress" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wp-content" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="themes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wpdiontheme" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wordpress" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wordpress" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wp-content" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="themes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wpdiontheme" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="inc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wordpress" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wordpress" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wp-content" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="themes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wpdiontheme" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="inc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Dion" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wordpress" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wordpress" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wp-content" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="themes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wpdiontheme" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="components" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modernizr" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="options.lastSelected" value="preferences.sourceCode.PHP" />
+    <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="WebServerToolWindowFactoryState" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/wp-content/themes/wpdiontheme" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/wp-content/themes/wpdiontheme" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
+      <method />
+    </configuration>
+    <list size="0" />
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="17656e48-0c7c-4e9d-a452-3d825e246632" name="Default" comment="" />
+      <created>1401457603230</created>
+      <updated>1401457603230</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="22" width="1440" height="837" extended-state="7" />
+    <editor active="false" />
+    <layout>
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32885906" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24964234" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+    </layout>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="myTodoPanelSettings">
+      <TodoPanelSettings />
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/wpdiontheme/composer.lock">
+      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3948">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/autoload.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="472">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/wpdiontheme/components/modernizr/grunt.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-1.2245762" vertical-offset="578" max-vertical-offset="1050">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/Dion/ThemeSetup.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="132" column="69" selection-start="3241" selection-end="3241" vertical-scroll-proportion="0.84187084" vertical-offset="1470" max-vertical-offset="2604">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/wpdiontheme/.bowerrc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="16" selection-start="18" selection-end="18" vertical-scroll-proportion="0.029661017" vertical-offset="0" max-vertical-offset="472">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/wpdiontheme/bower.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="21" selection-start="77" selection-end="77" vertical-scroll-proportion="-1.826087" vertical-offset="0" max-vertical-offset="182">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/wpdiontheme/composer.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="17" selection-start="174" selection-end="174" vertical-scroll-proportion="-5.478261" vertical-offset="0" max-vertical-offset="294">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/wpdiontheme/functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="27" selection-start="247" selection-end="266" vertical-scroll-proportion="0.09576838" vertical-offset="83" max-vertical-offset="742">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
+

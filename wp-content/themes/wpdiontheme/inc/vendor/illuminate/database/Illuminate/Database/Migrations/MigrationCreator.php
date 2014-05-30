@@ -59,7 +59,7 @@ class MigrationCreator {
 	 * Get the migration stub file.
 	 *
 	 * @param  string  $table
-	 * @return void
+	 * @return string
 	 */
 	protected function getStub($table, $create)
 	{
@@ -141,7 +141,7 @@ class MigrationCreator {
 	/**
 	 * Get the date prefix for the migration.
 	 *
-	 * @return int
+	 * @return string
 	 */
 	protected function getDatePrefix()
 	{

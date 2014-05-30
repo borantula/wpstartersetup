@@ -11,12 +11,31 @@
 
 use Carbon\Carbon;
 
+class MyCarbon extends Carbon {}
+
 class StringsTest extends TestFixture
 {
    public function testToString()
    {
       $d = Carbon::now();
       $this->assertSame(Carbon::now()->toDateTimeString(), ''.$d);
+   }
+   public function testSetToStringFormat()
+   {
+      Carbon::setToStringFormat('jS \o\f F, Y g:i:s a');
+      $d = Carbon::create(1975, 12, 25, 14, 15, 16);
+      $this->assertSame('25th of December, 1975 2:15:16 pm', ''.$d);
+   }
+   public function testResetToStringFormat()
+   {
+      $d = Carbon::now();
+      Carbon::setToStringFormat('123');
+      Carbon::resetToStringFormat();
+      $this->assertSame($d->toDateTimeString(), ''.$d);
+   }
+   public function testExtendedClassToString() {
+      $d = MyCarbon::now();
+      $this->assertSame($d->toDateTimeString(), ''.$d);
    }
 
    public function testToDateString()
@@ -74,7 +93,12 @@ class StringsTest extends TestFixture
    public function testToCOOKIEString()
    {
       $d = Carbon::create(1975, 12, 25, 14, 15, 16);
-      $this->assertSame('Thursday, 25-Dec-75 14:15:16 EST', $d->toCOOKIEString());
+      if( \DateTime::COOKIE === 'l, d-M-y H:i:s T' )
+          $cookieString = 'Thursday, 25-Dec-75 14:15:16 EST';
+      else
+          $cookieString = 'Thursday, 25-Dec-1975 14:15:16 EST';
+
+      $this->assertSame($cookieString, $d->toCOOKIEString());
    }
    public function testToISO8601String()
    {

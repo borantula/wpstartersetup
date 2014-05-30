@@ -26,6 +26,8 @@ class wpdf_API_request {
 
 		$save_tags = 0;
 
+		// AUSEINANDERNEHMEN UND VERSTEHEN NÖTIG !!!!!
+		
 		$items = array();		
 		foreach($counts as $module => $data) {
 		
@@ -37,7 +39,12 @@ class wpdf_API_request {
 			$limits = $this->sourceinfos["sources"][$module]["limits"];
 			if(!empty($limits["total"]) && $left > $limits["total"]) {$left = $limits["total"];}
 			
+			// WRONG ???? SHOULD BE $left ??? or does not matter?
+			
 			while(count($items[$module]) < $count && $count > 0) {
+			
+				//$ci = count($items[$module]);echo "<br>S: $stop C: $count L: $left CI: $ci<br>";
+			
 				if(!empty($options_override)) { // example: $options_override = array("amazon_public_key" => 666);
 					$options = $this->modulearray[$module]["options"];
 					foreach($options as $name => $option) {					
@@ -69,7 +76,7 @@ class wpdf_API_request {
 				$start = $start + count($newitems);
 
 				$stop++;				
-				if($stop > 4 && $module != "articlebuilder") {break;}
+				if($stop > 4) {break;}
 			}
 		}
 
@@ -155,8 +162,8 @@ class wpdf_API_request {
 
 		$xml = $this->api_content_request($keyword,$num,$start,$source,$options,$feed);		
 		
-		$thetemplate = $this->modulearray[$source]["templates"][$template_name]["content"];	
-		if(empty($thetemplate)) {global $modulearray; $thetemplate = $modulearray[$source]["templates"][$template_name]["content"];}
+		$thetemplate = $this->sourceinfos["sources"][$source]["templates"][$template_name]["content"];	
+		if(empty($thetemplate)) {global $source_infos; $thetemplate = $source_infos["sources"][$source]["templates"][$template_name]["content"];}
 	
 		if(is_array($xml) && isset($xml["error"])) {
 			return $xml;
@@ -285,6 +292,8 @@ class wpdf_API_request {
 		$user_id = get_current_user_id();	
 		$sites = get_option("cmsc_sites_".$user_id);
 		
+		//echo $request . "<br>";
+		
 		if ( function_exists('curl_init') ) {
 			$ch = curl_init();
 			curl_setopt($ch, CURLOPT_USERAGENT, "Mozilla/5.0 (compatible; Konqueror/4.0; Microsoft Windows) KHTML/4.0.80 (like Gecko)");
@@ -317,7 +326,6 @@ class wpdf_API_request {
 			if(empty($pxml)) {$return["error"] = "No content could be found.";return $return;}
 			$response = $xmlize->generateValidXmlFromObj($pxml);
 			$pxml = simplexml_load_string($response);	
-			
 		} else {
 			$pxml = simplexml_load_string($response);		
 		}		
