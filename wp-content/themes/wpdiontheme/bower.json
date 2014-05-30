@@ -2,7 +2,8 @@
     "name": "mapfreintranet",
     "version": "0.0.1",
     "dependencies": {
-        "modernizr": "latest"
+        "modernizr": "latest",
+        "bootstrap-sass-official": "latest"
     },
     "private": true
 }
