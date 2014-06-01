@@ -1,0 +1,49 @@
+
+/* BASE */
+// Base folder that includes normalize, colors, fonts, mixins, settings
+// Styles in the files like mixins, colors, fonts,settings etc do not have classes for direct use
+// Direct use starts with base.scss
+
+@import "base/normalize";
+@import "base/fonts";
+@import "base/colors";
+@import "base/base";
+@import "base/classes";
+
+//Bootstrap
+//comment this line if bootstrap is not going to be used
+//if project doesn't need bootstrap at all, its not recommended to include it
+//@import "base/bootstrap";
+
+
+/* LAYOUT */
+// Layout folder has main grid for project and other specific layout container classes
+
+@import "layout/grid";
+@import "layout/containers";
+
+
+/**
+* Modules
+*
+*/
+@import "modules/buttons";
+@import "modules/forms";
+@import "modules/lists";
+
+
+/* Non-modular */
+// Non modular and element/page specific styles goes here.
+// Usage of this styles should be kept minimal to maintain the modular structure
+// Only should be used if an element has unique properties that cannot be done with modular styles
+// _header.scss is just an example, delete and add your own styles
+@import "non-modular/header";
+@import "non-modular/footer";
+@import "non-modular/general";
+@import "non-modular/mobile";
+
+/* Shame
+// All your shameful additions on the css that you make in a hurry goes here.
+// This file is meant to be empty so each line on this file is a shame on you
+*/
+@import "shame";

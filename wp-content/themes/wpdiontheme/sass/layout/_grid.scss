@@ -1,0 +1,230 @@
+
+/*------------------
+  Grid Settings
+-------------------*/
+
+$rowWidth : 940px;
+$gutterWidth: 8px;
+$noOfColumns : 16;
+$isResponsive : true;
+
+////////////////////////////////////////////////////////////
+// don't change below 
+
+$rowWidth : 980px !default;
+$gutterWidth: 10px !default;
+$noOfColumns : 12 !default;
+$isResponsive : true !default; 
+
+@mixin columnWidth($col){
+  @if $isResponsive == false {
+    width:($rowWidth / $noOfColumns ) * $col;
+  } @else {
+    width:(100% / $noOfColumns ) * $col;
+  }
+
+}
+
+@mixin columnWidthPercentage($col){
+ 
+  width:(100% / $noOfColumns ) * $col;
+  
+
+}
+
+@mixin pushColumn($col){
+  @if $isResponsive == false {
+    margin-left:($rowWidth / $noOfColumns ) * $col;
+  } @else {
+
+    margin-left:(100% / $noOfColumns ) * $col;
+  }
+
+}
+
+
+
+
+*, *:before, *:after { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+/* Containers
+----------------------------------------------------------------------------------------------------*/
+.row {
+  width: $rowWidth;
+  @if $isResponsive == true {
+    max-width: 100%;
+  }
+  min-width: 768px;
+  margin: 0 auto;
+}
+.row .row {
+  width: auto;
+  max-width: none;
+  min-width: 0;
+  margin-left:  -$gutterWidth;
+  margin-right:  -$gutterWidth;
+  margin-top:0;
+  margin-bottom:0;
+  overflow:visible;
+}
+/* Grid >> Global
+----------------------------------------------------------------------------------------------------*/
+/**
+* General properties of columns
+*/
+@for $i from 1 through $noOfColumns {
+  .column-#{$i} { 
+    display:inline;
+    float: left;
+    position: relative;
+    min-height: 1px;
+    padding:0 $gutterWidth;
+  }
+}
+
+/**
+* Column widths
+*/
+@for $i from 1 through $noOfColumns {
+  //Width
+  .column-#{$i} { 
+    @include columnWidth($i);
+  }
+}
+
+.row .row {
+  
+  @for $i from 1 through $noOfColumns {
+    //Width
+    .column-#{$i} { 
+      @include columnWidthPercentage($i);
+    }
+  }
+}
+
+/**
+* Pushes
+*/
+@for $i from 1 through $noOfColumns {
+  .push-#{$i} {
+    @include pushColumn($i);
+  }
+}
+
+/**
+* for centering the columns. Should be used with column_x classes.
+* Works when only on column exists in a row
+*/
+.row > .centered {
+  float: none;
+  margin: 0 auto;
+  display:block;
+}
+
+img {
+  height: auto;
+}
+
+img, object, embed {
+  max-width: 100%;
+}
+
+
+
+//if its responsive
+@if $isResponsive == true {
+
+/**
+* For small screens
+*/
+/* Small screens */
+@media only screen and (max-width: 767px) {
+  .row {
+    width: auto;
+    min-width: 0;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+
+
+  /**
+  * Column widths
+  */
+  @for $i from 1 through $noOfColumns {
+    //Width
+    .column-#{$i} { 
+      width:100%;
+    }
+  }
+
+  .row .row {
+    
+    @for $i from 1 through $noOfColumns {
+      //Width
+      .column-#{$i} { 
+        width : 100%;
+      }
+    }
+  }
+}
+
+}
+[class*="column-"] + [class*="column-"]:last-child {
+float: left;
+}
+
+[class*="column-"] + [class*="column-"].end {
+float: left;
+}
+
+/* Clear Floated Elements
+----------------------------------------------------------------------------------------------------*/
+/* Nicolas Gallagher's micro clearfix */
+.row {
+  *zoom: 1;
+}
+.row:before, .row:after {
+  content: " ";
+  display: table;
+}
+.row:after {
+  clear: both;
+}
+/* http://sonspring.com/journal/clearing-floats */
+
+.clear {
+  clear: both;
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
+
+/* http://perishablepress.com/press/2008/02/05/lessons-learned-concerning-the-clearfix-css-hack */
+
+.clearfix:after {
+  clear: both;
+  content: ' ';
+  display: block;
+  font-size: 0;
+  line-height: 0;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
+
+.clearfix {
+  display: inline-block;
+}
+
+* html .clearfix {
+  height: 1%;
+}
+
+.clearfix {
+  display: block;
+}
+
+
+

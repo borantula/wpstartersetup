@@ -1,0 +1,13 @@
+// Buttons and anything about buttons here ..
+
+.button {
+	@include fontTitle;
+	display:inline-block;
+	margin: 5px auto 10px;
+	padding: 8px 55px;
+	text-align: center;
+	&:hover {
+	}
+	&:active {
+	}
+}

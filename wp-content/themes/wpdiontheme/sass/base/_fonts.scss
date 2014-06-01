@@ -1,0 +1,9 @@
+// Fonts and font classes here ..
+
+@mixin fontMain {
+  font-family: "Arial";
+}
+
+@mixin fontTitle{
+  font-family: "Helvetica","Verdana";
+}

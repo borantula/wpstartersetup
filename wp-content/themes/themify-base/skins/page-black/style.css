@@ -1,0 +1,144 @@
+/*  
+Skin Name: Page - Black
+Version: 1.0
+Description: Skin for Base
+*/
+
+body {
+	color: #888;
+	background-color: #333;
+}
+
+a {
+	color: #fff;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	color: #fff;
+}
+
+/* form input */
+input[type=text], input[type=password], textarea, input[type=search] {
+	background-color: #101010;
+	border-color: #000;
+	color: #ccc;
+}
+
+/* form input:focus */
+textarea:focus, input[type=password]:focus, input[type=text]:focus, input[type=search]:focus {
+	background-color: #222;
+}
+
+/* form button */
+input[type=reset], input[type=submit] {
+	background: #000;
+	color: #fff;
+}
+
+/************************************************************************************
+STRUCTURE
+*************************************************************************************/
+#pagewrap {
+	border: solid 1px #000;
+	width: 1230px;
+	max-width: 98%;
+	margin: 20px auto 40px;
+}
+
+#body {
+	padding: 0 3%;
+	background: #222;
+}
+
+
+/************************************************************************************
+HEADER
+*************************************************************************************/
+#headerwrap {
+	background-color: #000;
+}
+#header {
+	border: none;
+}
+#site-logo a {
+	color: #fff;
+}
+#site-description {
+	color: #ccc;
+}
+
+/************************************************************************************
+MAIN NAVIGATION
+*************************************************************************************/
+/* mobile nav button and menu links*/
+.mobile-button,
+#main-nav a {
+	color: #fff;
+}
+
+/* current link */
+#main-nav a:hover,
+#main-nav .current_page_item a,
+#main-nav .current-menu-item a,
+#main-nav .current_page_item a:hover,
+#main-nav .current-menu-item a:hover {
+	color: #999;
+}
+
+/* dropdown ul */
+#main-nav ul,
+#main-nav.active {
+	border-color: #fff;
+}
+#main-nav ul:before,
+#main-nav.active:before {
+	border-bottom-color: #fff;
+}
+#main-nav ul ul:before {
+	border-right-color: #fff;
+}
+
+/************************************************************************************
+POST
+*************************************************************************************/
+/* post title */
+.post-title, .post-title a {
+	color: #fff;
+}
+
+/* post date and meta */
+.post-date,
+.post-meta a {
+	color: #ccc;
+	color: rgba(255,255,255,.4);
+}
+
+/* meta divider */
+.post-meta .post-author:after,
+.post-meta .post-category:after,
+.post-meta .post-tag:after {
+	background: rgba(255,255,255,.4);
+}
+
+/************************************************************************************
+COMMENTS
+*************************************************************************************/
+.commentlist,
+.commentlist .commententry {
+	border-color: #292929;
+}
+
+/************************************************************************************
+FOOTER
+*************************************************************************************/
+#footerwrap {
+	background-color: #000;
+}
+#footer {
+	border: none;
+}
+
+/* back to top */
+.back-top a {
+	color: #fff;
+}
