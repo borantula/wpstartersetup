@@ -12,13 +12,14 @@
 
 //Bootstrap
 //comment this line if bootstrap is not going to be used
-//if project doesn't need bootstrap at all, its not recommended to include it
-@import "base/bootstrap";
+//if project doesn't need bootstrap at all, comment out bootstrap/loader line
+//You can also exclude any part of bootstrap by commenting out lines from loader
+@import "bootstrap/loader";
 
 
 /* LAYOUT */
 // Layout folder has main grid for project and other specific layout container classes
-
+// You should comment out the grid if you are using bootstrap grid(or some other grid)
 @import "layout/grid";
 @import "layout/containers";
 

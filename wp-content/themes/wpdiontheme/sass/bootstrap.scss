@@ -1,7 +1,5 @@
-//
-// This file is for bootstrap import from components folder
-// We will not use all of the bootstrap but only the parts we need
-//
-//
+//Bootstrap
+//comment this line if bootstrap is not going to be used
+//if project doesn't need bootstrap at all, exclude bootstrap line from main.scss file
 
-@import '../components/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap.scss';
+@import "bootstrap/loader";

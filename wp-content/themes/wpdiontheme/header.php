@@ -37,3 +37,11 @@
 
 	<div id="main" class="site-main">
 	<!-- / ÖRNEK HEADER: SİLİNEBİLİR-->
+
+        <div class="row">
+            <?php for($i = 1;$i <= 4;$i++):?>
+            <div class="column-2">
+                <img src="http://placehold.it/500x100" alt=""/>
+            </div>
+            <?php endfor;?>
+        </div>
