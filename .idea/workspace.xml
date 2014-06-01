@@ -2,27 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="17656e48-0c7c-4e9d-a452-3d825e246632" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/sass/base/_base.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/sass/base/_bootstrap.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/sass/modules/_buttons.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/sass/base/_classes.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/sass/base/_colors.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/sass/layout/_containers.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/sass/base/_fonts.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/sass/non-modular/_footer.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/sass/modules/_forms.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/sass/non-modular/_general.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/sass/layout/_grid.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/sass/non-modular/_header.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/sass/modules/_lists.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/sass/non-modular/_mobile.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/sass/base/_normalize.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/sass/_shame.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/sass/bootstrap.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/sass/main.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/wordpress.iml" afterPath="$PROJECT_DIR$/.idea/wordpress.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/functions.php" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/functions.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/css/main.css" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/css/main.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/sass/main.scss" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/sass/main.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="wordpress.iws" />
@@ -55,13 +35,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="functions.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="functions.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/wpdiontheme/functions.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="0" selection-start="315" selection-end="315" vertical-scroll-proportion="0.28242075" vertical-offset="0" max-vertical-offset="798">
+            <state line="14" column="0" selection-start="315" selection-end="315" vertical-scroll-proportion="-8.521739" vertical-offset="0" max-vertical-offset="798">
               <folding>
                 <element signature="e#6#30#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.scss" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/wp-content/themes/wpdiontheme/sass/main.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="15" column="0" selection-start="483" selection-end="483" vertical-scroll-proportion="0.2971698" vertical-offset="84" max-vertical-offset="756">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -106,8 +95,8 @@
         <option value="$PROJECT_DIR$/wp-content/themes/wpdiontheme/sass/base/_bootstrap.scss" />
         <option value="$PROJECT_DIR$/wp-content/themes/wpdiontheme/sass/base/_base.scss" />
         <option value="$PROJECT_DIR$/wp-content/themes/wpdiontheme/sass/bootstrap.scss" />
-        <option value="$PROJECT_DIR$/wp-content/themes/wpdiontheme/sass/main.scss" />
         <option value="$PROJECT_DIR$/wp-content/themes/wpdiontheme/functions.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/wpdiontheme/sass/main.scss" />
       </list>
     </option>
   </component>
@@ -238,37 +227,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="inc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wordpress" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wordpress" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wp-content" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="themes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wpdiontheme" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="inc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Dion" />
+              <option name="myItemId" value="sass" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -319,10 +278,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1440" height="837" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32885906" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32885906" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32885906" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -465,13 +424,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/wpdiontheme/sass/main.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="1" selection-start="484" selection-end="484" vertical-scroll-proportion="-4.375" vertical-offset="0" max-vertical-offset="756">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/wpdiontheme/sass/bootstrap.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="9" selection-start="146" selection-end="146" vertical-scroll-proportion="0.13003096" vertical-offset="0" max-vertical-offset="646">
@@ -542,10 +494,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/wpdiontheme/functions.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="0" selection-start="315" selection-end="315" vertical-scroll-proportion="0.28242075" vertical-offset="0" max-vertical-offset="798">
+        <state line="14" column="0" selection-start="315" selection-end="315" vertical-scroll-proportion="-8.521739" vertical-offset="0" max-vertical-offset="798">
           <folding>
             <element signature="e#6#30#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/wpdiontheme/sass/main.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="0" selection-start="483" selection-end="483" vertical-scroll-proportion="0.2971698" vertical-offset="84" max-vertical-offset="756">
+          <folding />
         </state>
       </provider>
     </entry>
