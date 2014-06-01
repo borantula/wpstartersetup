@@ -3,8 +3,10 @@
 // Base folder that includes normalize, colors, fonts, mixins, settings
 // Styles in the files like mixins, colors, fonts,settings etc do not have classes for direct use
 // Direct use starts with base.scss
-
 @import "base/normalize";
+@import "layout/grid";
+
+
 @import "base/fonts";
 @import "base/colors";
 @import "base/base";
@@ -20,7 +22,7 @@
 /* LAYOUT */
 // Layout folder has main grid for project and other specific layout container classes
 // You should comment out the grid if you are using bootstrap grid(or some other grid)
-@import "layout/grid";
+
 @import "layout/containers";
 
 

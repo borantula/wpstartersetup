@@ -9,3 +9,64 @@ License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: light
 */
+
+
+/* =WordPress Core
+-------------------------------------------------------------- */
+.alignnone {
+}
+
+.aligncenter,
+div.aligncenter {
+}
+
+.alignright {
+}
+
+.alignleft {
+}
+
+.aligncenter {
+}
+
+a img.alignright {
+}
+
+a img.alignnone {
+}
+
+a img.alignleft {
+}
+
+a img.aligncenter {
+}
+
+.wp-caption {
+}
+
+.wp-caption.alignnone {
+}
+
+.wp-caption.alignleft {
+}
+
+.wp-caption.alignright {
+}
+
+.wp-caption img {
+}
+
+.wp-caption p.wp-caption-text {
+
+}
+
+.sticky {
+
+}
+.gallery-caption{
+
+}
+
+.bypostauthor {
+
+}
