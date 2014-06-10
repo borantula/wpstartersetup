@@ -1,5 +1,5 @@
 === Disable Updates Manager ===
-Contributors: kidsguide
+Contributors: kidsguide, shazahm1@hotmail.com
 Tags: Disable All Updates, Disable Plugin Updates, Disable Theme Updates, Disable WordPress Core Updates, Disable Core Updates, Disable Updates Settings, Disable Updates, Disable All WordPress Updates, Disable All WordPress Updates Settings, Disable Updates Manager, Disable All Updates Manager, Disable Updates Manager Settings, Update Check
 Requires at least: 3.0
 Tested up to: 3.9.1
@@ -14,7 +14,7 @@ This plugin is configurable! Check the updates you would like to disable in the 
 
 = Features =
 <ol>
-<li>Disables plugins individually.</li>
+<li>Disables plugins and themes individually.</li>
 <li>Disables plugin updates.</li>
 <li>Disables theme updates.</li>
 <li>Disable WordPress core updates.</li>
@@ -29,7 +29,7 @@ To see more features view the <a href="http://wordpress.org/plugins/stops-core-t
 = Video Tutorials =
 [youtube http://www.youtube.com/watch?v=ppCxjREhF9g]
 
-[youtube http://www.youtube.com/watch?v=TbqYfkDlhCg]
+[youtube http://www.youtube.com/watch?v=jPHyG2YYeo4]
 
 
 == Frequently Asked Questions ==
@@ -39,16 +39,16 @@ A: Their are a couple of differences.
 <li>They do not disable WordPress automatic updates.</li>
 <li>They do not have video tutorials and screenshots.</li>
 <li>They do not have settings to make it configurable.</li>
-<li>They do not disable plugins individually.</li>
+<li>They do not disable plugins and themes individually.</li>
 </ol>
 
 = Q: If I remove this plugin from my website will I be able to update my plugins, themes, and WordPress core again? =
 A: Yes, this plugin just disables the update. We has also recently made an uninstall.php for this plugin.
 
-= Q: Is it possible to disable one plugin? =
-A: This plugin can disable plugins individually. Watch the tutorial below for help on how to do it.
+= Q: Is it possible to disable one plugin or theme? =
+A: This plugin can disable plugins and themes individually. Watch the tutorial below for help on how to do it.
 
-[youtube http://www.youtube.com/watch?v=TbqYfkDlhCg]
+[youtube http://www.youtube.com/watch?v=jPHyG2YYeo4]
 
 = Q: Does this plugin work with WordPress Multisite? =
 A: This plugin doesn't yet, but we are working on this.
@@ -59,25 +59,27 @@ A: This plugin doesn't yet, but we are working on this.
 3. Disable Plugins Individually
 
 == Installation ==
-Their are two way to install Disable Updates Manager.
+Installing Disable Updates Manager.
 
-<strong>1)</strong>
-<ol>
-<li>Push the button above to download the latest version of Disable Updates Manager.</li>
-<li>Go in your websites admin to the Plugins> Add New> page and push Upload.</li>
-
-<li>Upload the zip file and push install.</li>
-<li>Go to the Plugins section in your admin dashboard and activate.</li>
-</ol>
-
-<strong>2)</strong> <u><strong>Recommended</strong></u>
-<ol>
-<li>Go in your websites admin to the Plugins> Add New> page and push on the search bar.</li>
-<li>Search Disable Updates Manager and push install.</li>
-<li>Go to the Plugins section in your admin dashboard and activate.</li>
-</ol>
+1.Install Disable Updates Manager either via the WordPress.org plugin directory, or by uploading the files to your server
+2.After activating Disable Updates Manager by Websiteguy, you will be able to go to the Disable Updates Manager page under the settings.
+3.That's it. You're ready to go!
 
 == Changelog ==
+= 4.1.0 =
+* <strong>BIG:</strong> code clean-up (moved code, fixed code, etc.). - Thanks <a href="https://github.com/Websiteguy/disable-updates-manager/pull/4">GitHub Pull Request</a> and other help!!!
+* Added: version 4.1.0 on GitHub (including the lang file).
+* Added: website! http://webguywp.wordpress.com/
+* New Contributor: shazahm1!
+* New: video tutroial.
+* New: disable themes individually.
+* New: wp-cli compatiblity. - Thanks <a href="https://github.com/Websiteguy/disable-updates-manager/issues/2">GitHub Issue</a>!
+* Fixed: changelog footnote star error.
+* Updated: disable plugin updates.
+* Updated: installation section.
+* Updated: screenshots.
+* Renamed: files. - Thanks <a href="https://github.com/Websiteguy/disable-updates-manager/issues/11">GitHub Issue</a>!
+
 = 4.0.3 =
 * Fixed: FAQ spelling mistakes.
 * Fixed: changelog star error.
@@ -327,4 +329,4 @@ Their are two way to install Disable Updates Manager.
 = Note =
 Versions 0.2 to 0.9 are not listed in this changelog.
 
-= * = versions not available for download.
+= * versions not available for download. =

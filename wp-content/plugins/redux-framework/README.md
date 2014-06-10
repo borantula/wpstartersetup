@@ -1,14 +1,18 @@
-# [docs.reduxframework.com](http://docs.reduxframework.com)
-Need a little help with Redux?  Come check out our brand new documentation site, chock full of tutorials and examples!
- 
-
---------
-
-
-
 ## Redux Options Framework [![Build Status](https://travis-ci.org/ReduxFramework/redux-framework.png?branch=master)](https://travis-ci.org/ReduxFramework/redux-framework) [![Stories in Ready](https://badge.waffle.io/ReduxFramework/redux-framework.png?label=ready)](https://waffle.io/ReduxFramework/redux-framework) [![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/)
 
 WordPress options framework which uses the [WordPress Settings API](http://codex.wordpress.org/Settings_API "WordPress Settings API"), Custom Error/Validation Handling, Custom Field/Validation Types, and import/export functionality.
+
+## Kickstart Your Development ##
+
+Are you authoring a theme, or plugin?  Visit the  [Redux Builder](http://build.reduxframework.com) site and get started!
+
+## Demo Your Products ##
+We help you create a seamless user experience for your users to demo your WordPress products.  Not only that, we help you make sure they’re engaged, turning them into a potential customer.  Visit [wpdemo.io/](http://wpdemo.io/)
+
+## Documentation ##
+
+Need a little help with Redux?  Come check out our brand new documentation site at  [docs.reduxframework.com](http://docs.reduxframework.com), chock full of tutorials and examples!
+ 
 
 ## SMOF (Simple Modified Option Users) Converter! ##
 
@@ -74,6 +78,101 @@ Send me an email at ghost1227@reduxframework.com so I can add you to our user sp
 
 ### Master ###
 
+= 3.3.0.1 =
+* Fixed:      #1330 - Required not working on all fields.
+
+= 3.3.0 =
+* Added:      #1329 - `'preview' = array('always_display' => true)` argument to typography, to determine if preview field show always be shown.
+
+= 3.2.9.38 =
+* Fixed:      #1322 - Sections not folding with required argument.
+* Modified:   Portions of core javascript rewritten into object code.
+
+= 3.2.9.37 =
+* Fixed:      #1270 - Editor field compiler hook not firing in visual mode.
+
+= 3.2.9.36 =
+* Added:      `hide_reset` argument, to hide the Reset All and Reset Section buttons.        
+
+= 3.2.9.35 =
+* Fixed:      select2 dependency in select_image, and other fields.
+
+= 3.2.9.34 =
+* Fixed:      Filter out `@eaDir` directories in extensions folder.
+* Added:      `content_title` argument to slides field.  Thanks @psaikali!
+
+= 3.2.9.33 =
+* Fixed:      Fixed the image_select presets to work again. Also now will function even if import/export is disabled.
+
+= 3.2.9.32 =
+* Fixed:      Minor tweaks for metabox update.
+
+= 3.2.9.31 =
+* Fixed:      #1297 - Missing space in image_select class.
+* Fixed:      Slider field tweaked for metaboxes.
+
+= 3.2.9.30 =  
+* Fixed:      #1291 - Change of font-family would not trigger preview, or show in open preview.  
+
+= 3.2.9.29 =  
+* Fixed:      #1289 - Typography not retaining size/height/spacing/word/letter spacing settings.
+
+= 3.2.9.28 =
+* Fixed:      #1288 - Background color-picker dependency missing.  Thanks @farhanwazir.
+
+= 3.2.9.27 =
+* Fixed:      Search extension failed do to dependency issue from the core.
+
+= 3.2.9.26 =
+* Fixed:      #1281 - color field output/compiler outputting incorrect selector when only one array present.
+
+= 3.2.9.25 =
+* Fixed:      Update check only appears once if multiple instances of Redux are loaded in the same wordpress instance.
+
+= 3.2.9.24 =
+* Fixed:      Changing font-family in typography didn't trigger 'save changes' notification.
+* Fixed:      More typography: Back up font appearing in font-family when opening selector.
+* Fixed:      Typography: undefined message when NOT using google fonts.  Thanks @farhanwazir
+
+= 3.2.9.23 =
+* Added:      `customizer_only` argument for fields & sections, contributed by @andreilupu.
+
+= 3.2.9.22 =
+* Fixed:      Typography font backup not in sync with font-family.
+* Fixed:      Typography not saving font-family after switching back and forth between standard
+              and google fonts.
+* Fixed:      Background field selects not properly aligned.
+
+= 3.2.9.21 =
+* Added:      select2 args for spacing field.
+* Modified:   All field javascript rewritten using jQuery objects (versus standard function).
+              Prepping for another crack at group field.
+
+= 3.2.9.20 =
+* Added:      select2 args for the following fields: typography, background, border, dimensions and slider.
+* Fixed:      Removed select field dependency from background field.
+
+= 3.2.9.19 =
+* Fixed:      #1264 - Color-picker/transparent checkbox functionality.
+* Fixed:      Typography fine-tuning.
+
+= 3.2.9.18 =
+* Modified:   Typography field rewritten to fill out font-family field dynamically, versus on page load.
+* Fixed:      All typography select fields render as select2.
+
+= 3.2.9.17 =
+* Fixed:      Switching between transparency on and off now restores the last chosen color in all color fields. 
+
+= 3.2.9.16 =
+* Fixed:      Redux uploads dir should NOT be ~/wp-content/uploads, but just wp-content. As per Otto.
+* Fixed:      Navigation no longer has that annoying outline around the links. Yuk.
+
+= 3.2.9.15 =
+* Fixed:      #1218 - Select2 multi select not accepting any keyboard input.
+
+= 3.2.9.14 =
+* Fixed:      #1228 - CSS fixes
+
 = 3.2.9.13 =
 * Fixed:      #1255 - button_set multi field not saving when all buttons not selected.
 
@@ -111,7 +210,9 @@ Send me an email at ghost1227@reduxframework.com so I can add you to our user sp
 * Fixed:      `permissions` argument for fields and sections erasing saved field data.  See #1231
 
 = 3.2.9.4 =
-* Modified:   Woohoo! Nearly fully responsive. Yanked out all SMOF and NHP field customizations. Lots of little fixes on all browser screens. This will also greatly benefit Metaboxes and other areas of Redux.
+* Modified:   Woohoo! Nearly fully responsive. Yanked out all SMOF and NHP field customizations.
+              Lots of little fixes on all browser screens. This will also greatly benefit Metaboxes
+              and other areas of Redux.
 * Fixed:      In dev_mode panel CSS was being loaded 2x.
 
 = 3.2.9.3 =
@@ -127,7 +228,8 @@ Send me an email at ghost1227@reduxframework.com so I can add you to our user sp
 * Fixed:      CSS fix for typography.  Color picker would interfere with save/reset bar.
 
 = 3.2.8.21 =
-* Added:      Network admin support! Set argument 'database' to network and data will be saved site-wide. Also two new arguments: network_admin & network_sites for where to show the panel.
+* Added:      Network admin support! Set argument 'database' to network and data will be saved site-wide.
+              Also two new arguments: network_admin & network_sites for where to show the panel.
 
 = 3.2.8.20 =
 * Fixed:      Redux now ignores any directories that begin with `.` in the extension folder.  See #1213.
@@ -150,24 +252,28 @@ Send me an email at ghost1227@reduxframework.com so I can add you to our user sp
 ```
 
 = 3.2.8.15 =
-* Added:      Customizer hook that can be used to simulate the customizer for live preview in the customizer. `redux/customizer/live_preview`
+* Added:      Customizer hook that can be used to simulate the customizer for live preview in the customizer.
+              `redux/customizer/live_preview`
 
 = 3.2.8.14 =
 * Fixed:      'Cannot send header' issues with typography.
 * Modified:   Google CSS moved into HEAD via WP enqueue.
 
 = 3.2.8.13 =
-* Added:      `class` argument to the Redux Arguments, section array, and metabox array. If set, a class will be appended to whichever level is used. This allows further customization for our users.
+* Added:      `class` argument to the Redux Arguments, section array, and metabox array. If set, a class will be
+              appended to whichever level is used. This allows further customization for our users.
 
 = 3.2.8.12 =
-* Fixed:      Small fix for validation if subsection parent is free of errors, remove the red highlight when not expanded.
+* Fixed:      Small fix for validation if subsection parent is free of errors, remove the red highlight when
+              not expanded.
 * Fixed:      Small CSS classes for flashing fonts where web-font-loader.
 * Fixed:      ASync Flash on fonts. FINALLY. What a pain.
 * Modified:   Now do a trim on all fields before validating. No need to alert because of a space...
 
 = 3.2.8.11 =
 * Modified:   Typography field CSS completely rewritten. All thanks to @eplanetdesign!
-* Modified:   Validation now works in metaboxes as well as updates numbers as changes occur. Validation for subsections is SO hot now.
+* Modified:   Validation now works in metaboxes as well as updates numbers as changes occur. Validation for
+              subsections is SO hot now.
 * Modified:   Various CSS fixes and improvements.
 * Fixed:      3+ JavaScript errors found in the background field. Now works flawlessly.
 * Added:      disable_save_warn flags to the arguments to disable the "you should save" slidedown.
@@ -260,7 +366,8 @@ Send me an email at ghost1227@reduxframework.com so I can add you to our user sp
 = 3.2.3.1 =
 * Fixed:      Sortable field not saving properly.
 * Fixed:      Erroneous data in admin.less
-* Updated:    sample-config.php.  Sortable checkbox field example now uses true/false instead of text meant for textbox example.
+* Updated:    sample-config.php.  Sortable checkbox field example now uses true/false instead of text
+              meant for textbox example.
 
 = 3.2.3 =
 * Fixed:      Responsive issues with spacing and dimension fields.
@@ -618,8 +725,7 @@ Send me an email at ghost1227@reduxframework.com so I can add you to our user sp
 * Removed:  EDD extension. It never belonged in Core and will be re-released as a
             downloadable extension shortly
 * Removed:  Group field, temporarily.
-* Removed:  wp_get_current_user check.  See
-            https://github.com/ReduxFramework/ReduxFramework/wiki/How-to-fix-%22Fatal-error%3A-Call-to-undefined-function-wp_get_current_user%28%29-%22
+* Removed:  wp_get_current_user check.
  
 = 3.1.5 =
 * Typography font arrays may not contain comma spaces.
@@ -702,7 +808,8 @@ Send me an email at ghost1227@reduxframework.com so I can add you to our user sp
 * Fix Issue 238 - Fix for conditional output. Thanks @partnuz.
 * Fix Issue 211 - Google Web font wasn't loading at first init of theme.
 * Fix Issue 210 - Elusive Icons update. Changed classes to force use of full elusive name.
-* Fix Issue 247 - Media thumbnails were not showing. Also fixed media to keep the largest file, but display the small version in the panel as a thumb. Thanks @kwayyinfotech.
+* Fix Issue 247 - Media thumbnails were not showing. Also fixed media to keep the largest file, but display the small
+                  version in the panel as a thumb. Thanks @kwayyinfotech.
 * Fix Issue 144 - JS error when no item found in slider.
 * Fix Issue 246 - Typography output errors.
 * Feature & Issue 259 - Multi-Text now support validation!
@@ -747,7 +854,8 @@ Send me an email at ghost1227@reduxframework.com so I can add you to our user sp
 * Feature - Completely redone spacing field. Choose to apply to sides or all at once with CSS output!
 * Feature - Completely redone border field. Choose to apply to sides or all at once with CSS output!
 * Feature - Added opt-in anonymous tracking, allowing us to further analyze usage.
-* Feature - Enable weekly updates of the Google Webfonts cache is desired. Also remove the Google Webfont files from shipping with Redux. Will re-download at first panel run to ensure users always have the most recent copy.
+* Feature - Enable weekly updates of the Google Webfonts cache is desired. Also remove the Google Webfont files from
+            shipping with Redux. Will re-download at first panel run to ensure users always have the most recent copy.
 * Language translation of german updated alone with ReduxFramework pot file.
 * Fix Issue 146 - Spacing field not storing data.
 * Fix - Firefox field description rendering bug.
@@ -756,16 +864,20 @@ Send me an email at ghost1227@reduxframework.com so I can add you to our user sp
 = 3.0.6 =
 * Hide customizer fields by default while still under development.
 * Fix Issue 123 - Language translations to actually function properly embedded as well as in the plugin.
-* Fix Issue 151 - Media field uses thumbnail not full image for preview. Also now storing the thumbnail URL. Uses the smallest available size as the thumb regardless of the name.
+* Fix Issue 151 - Media field uses thumbnail not full image for preview. Also now storing the thumbnail URL. Uses
+                  the smallest available size as the thumb regardless of the name.
 * Fix Issue 147 - Option to pass params to select2. Contributed by @andreilupu. Thanks!
 * Added trim function to ace editor value to prevent whitespace before and after value keep being added
 * htmlspecialchars() value in pre editor for ace. to prevent html tags being hidden in editor and rendered in dom
 * Feature: Added optional 'add_text' argument for multi_text field so users can define button text.
 * Added consistent remove button on multi text, and used sanitize function for section id
 * Feature: Added roles as data for field data
-* Feature: Adding data layout options for multi checkbox and radio, we now have quarter, third, half, and full column layouts for these fields.
-* Feature: Eliminate REDUX_DIR and REDUX_URL constants and instead created static ReduxFramework::$\_url and ReduxFramework::$\_dir for cleaner code.
-* Feature: Code at bottom of sample-config.php to hide plugin activation text about a demo plugin as well as code to demo how to hide the plugin demo_mode link.
+* Feature: Adding data layout options for multi checkbox and radio, we now have quarter, third, half, and full
+           column layouts for these fields.
+* Feature: Eliminate REDUX_DIR and REDUX_URL constants and instead created static ReduxFramework::$\_url and
+           ReduxFramework::$\_dir for cleaner code.
+* Feature: Code at bottom of sample-config.php to hide plugin activation text about a demo plugin as well as
+           code to demo how to hide the plugin demo_mode link.
 * Started work on class definitions of each field and class. Preparing for the panel builder we are planning to make.
 
 = 3.0.5 =
@@ -789,8 +901,10 @@ Send me an email at ghost1227@reduxframework.com so I can add you to our user sp
 
 = 3.0.3 =
 * Fixed Issue #129: Spacing field giving an undefined.
-* Fixed Issue #131: Google Fonts stylesheet appending to body and also to the top of the header. Now properly placed both at the end of the head tag as to overload any theme stylesheets.
-* Fixed issue #132 (See #134, thanks @andreilupu): Could not have multiple WordPress Editors (wp_editor) as the same ID was shared. Also fixed various styles to match WordPress for this field.
+* Fixed Issue #131: Google Fonts stylesheet appending to body and also to the top of the header. Now properly placed
+                    both at the end of the head tag as to overload any theme stylesheets.
+* Fixed issue #132 (See #134, thanks @andreilupu): Could not have multiple WordPress Editors (wp_editor) as the
+                    same ID was shared. Also fixed various styles to match WordPress for this field.
 * Fixed Issue #133: Issue when custom admin stylesheet was used, a JS error resulted.
 
 = 3.0.2 =
@@ -879,6 +993,3 @@ Redux is now hosted on WordPress.org! Update in order to get proper, stable upda
 * Made text domain a constant
 * Removed PHP closing tags to prevent issues with newlines
 * Added option to define custom start tab
-
-
-[![githalytics.com alpha](https://cruel-carlota.pagodabox.com/dbb3b94f2607cb4a119a7863c230a98e "githalytics.com")](http://githalytics.com/ReduxFramework/ReduxFramework)

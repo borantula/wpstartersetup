@@ -2,7 +2,244 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="17656e48-0c7c-4e9d-a452-3d825e246632" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/Dion/Admin/ReduxConfig.php" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/spinner/vendor/jquery.typewatch.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/typography/googlefonts.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/.gitignore" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/languages/ar.mo" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/languages/ar.mo" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/languages/bn_BD.mo" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/languages/bn_BD.mo" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/languages/de_DE.mo" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/languages/de_DE.mo" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/languages/es_ES.mo" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/languages/es_ES.mo" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/languages/es_MX.mo" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/languages/es_MX.mo" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/languages/fr_FR.mo" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/languages/fr_FR.mo" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/languages/he_IL.mo" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/languages/he_IL.mo" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/languages/hi_IN.mo" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/languages/hi_IN.mo" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/languages/hr.mo" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/languages/hr.mo" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/languages/hu_HU.mo" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/languages/hu_HU.mo" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/languages/id_ID.mo" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/languages/id_ID.mo" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/languages/it_IT.mo" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/languages/it_IT.mo" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/languages/km.mo" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/languages/km.mo" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/languages/ne_NP.mo" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/languages/ne_NP.mo" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/languages/pl_PL.mo" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/languages/pl_PL.mo" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/languages/pt_BR.mo" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/languages/pt_BR.mo" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/languages/pt_PT.mo" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/languages/pt_PT.mo" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/languages/ro_RO.mo" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/languages/ro_RO.mo" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/languages/ru_RU.mo" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/languages/ru_RU.mo" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/google-sitemap-generator/lang/sitemap-de_DE.mo" afterPath="$PROJECT_DIR$/wp-content/plugins/google-sitemap-generator/lang/sitemap-de_DE.mo" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/languages/sv_SE.mo" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/languages/sv_SE.mo" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/languages/th.mo" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/languages/th.mo" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/languages/tr_TR.mo" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/languages/tr_TR.mo" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/languages/zh_CN.mo" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/languages/zh_CN.mo" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/stops-core-theme-and-plugin-updates/Function.php" afterPath="$PROJECT_DIR$/wp-content/plugins/stops-core-theme-and-plugin-updates/Function.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/Gruntfile.js" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/Gruntfile.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/stops-core-theme-and-plugin-updates/License.txt" afterPath="$PROJECT_DIR$/wp-content/plugins/stops-core-theme-and-plugin-updates/License.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/README.md" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/README.txt" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/README.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/assets/css/admin.css" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/assets/css/admin.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/assets/css/admin.less" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/assets/css/admin.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/autoload.php" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/autoload.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/composer/autoload_classmap.php" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/composer/autoload_classmap.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/composer/autoload_files.php" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/composer/autoload_files.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/composer/autoload_namespaces.php" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/composer/autoload_namespaces.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/composer/autoload_real.php" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/composer/autoload_real.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/browser.php" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/browser.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/class.redux-plugin.php" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/class.redux-plugin.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/class.redux_functions.php" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/class.redux_functions.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/class.redux_helpers.php" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/class.redux_helpers.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/class.redux_instances.php" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/class.redux_instances.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/assets/js/color-picker/color-picker.js" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/assets/js/color-picker/color-picker.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/assets/js/color-picker/color-picker.min.js" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/assets/js/color-picker/color-picker.min.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/composer.json" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/composer.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/debug.php" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/debug.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/google-sitemap-generator/documentation.txt" afterPath="$PROJECT_DIR$/wp-content/plugins/google-sitemap-generator/documentation.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/select/elusive-icons.php" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/select/elusive-icons.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/extensions/customizer/extension_customizer.php" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/extensions/customizer/extension_customizer.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/ace_editor/field_ace_editor.js" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/ace_editor/field_ace_editor.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/ace_editor/field_ace_editor.less" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/ace_editor/field_ace_editor.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/ace_editor/field_ace_editor.min.js" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/ace_editor/field_ace_editor.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/ace_editor/field_ace_editor.php" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/ace_editor/field_ace_editor.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/ace_editor/field_ace_editor.scss" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/ace_editor/field_ace_editor.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/background/field_background.css" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/background/field_background.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/background/field_background.js" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/background/field_background.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/background/field_background.less" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/background/field_background.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/background/field_background.min.js" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/background/field_background.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/background/field_background.php" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/background/field_background.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/background/field_background.scss" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/background/field_background.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/border/field_border.js" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/border/field_border.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/border/field_border.min.js" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/border/field_border.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/border/field_border.php" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/border/field_border.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/border/field_border.scss" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/border/field_border.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/button_set/field_button_set.js" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/button_set/field_button_set.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/button_set/field_button_set.min.js" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/button_set/field_button_set.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/button_set/field_button_set.php" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/button_set/field_button_set.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/checkbox/field_checkbox.less" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/checkbox/field_checkbox.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/checkbox/field_checkbox.php" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/checkbox/field_checkbox.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/checkbox/field_checkbox.scss" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/checkbox/field_checkbox.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/color/field_color.css" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/color/field_color.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/color/field_color.less" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/color/field_color.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/color/field_color.php" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/color/field_color.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/color/field_color.scss" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/color/field_color.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/color_gradient/field_color_gradient.less" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/color_gradient/field_color_gradient.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/color_gradient/field_color_gradient.php" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/color_gradient/field_color_gradient.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/color_rgba/field_color_rgba.js" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/color_rgba/field_color_rgba.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/color_rgba/field_color_rgba.less" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/color_rgba/field_color_rgba.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/color_rgba/field_color_rgba.min.js" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/color_rgba/field_color_rgba.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/color_rgba/field_color_rgba.php" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/color_rgba/field_color_rgba.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/color_rgba/field_color_rgba.scss" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/color_rgba/field_color_rgba.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/date/field_date.js" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/date/field_date.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/date/field_date.min.js" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/date/field_date.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/date/field_date.php" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/date/field_date.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/dimensions/field_dimensions.js" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/dimensions/field_dimensions.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/dimensions/field_dimensions.min.js" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/dimensions/field_dimensions.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/dimensions/field_dimensions.php" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/dimensions/field_dimensions.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/dimensions/field_dimensions.scss" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/dimensions/field_dimensions.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/divide/field_divide.php" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/divide/field_divide.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/editor/field_editor.less" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/editor/field_editor.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/editor/field_editor.php" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/editor/field_editor.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/editor/field_editor.scss" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/editor/field_editor.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/gallery/field_gallery.js" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/gallery/field_gallery.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/gallery/field_gallery.min.js" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/gallery/field_gallery.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/gallery/field_gallery.php" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/gallery/field_gallery.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/group/field_group.js" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/group/field_group.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/group/field_group.less" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/group/field_group.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/group/field_group.php" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/group/field_group.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/group/field_group.scss" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/group/field_group.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/image_select/field_image_select.js" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/image_select/field_image_select.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/image_select/field_image_select.less" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/image_select/field_image_select.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/image_select/field_image_select.min.js" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/image_select/field_image_select.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/image_select/field_image_select.php" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/image_select/field_image_select.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/image_select/field_image_select.scss" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/image_select/field_image_select.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/import_export/field_import_export.js" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/import_export/field_import_export.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/import_export/field_import_export.less" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/import_export/field_import_export.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/import_export/field_import_export.min.js" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/import_export/field_import_export.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/import_export/field_import_export.php" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/import_export/field_import_export.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/info/field_info.less" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/info/field_info.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/info/field_info.php" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/info/field_info.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/info/field_info.scss" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/info/field_info.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/link_color/field_link_color.less" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/link_color/field_link_color.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/link_color/field_link_color.php" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/link_color/field_link_color.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/media/field_media.css" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/media/field_media.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/media/field_media.js" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/media/field_media.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/media/field_media.less" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/media/field_media.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/media/field_media.min.js" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/media/field_media.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/media/field_media.php" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/media/field_media.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/media/field_media.scss" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/media/field_media.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/multi_text/field_multi_text.js" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/multi_text/field_multi_text.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/multi_text/field_multi_text.less" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/multi_text/field_multi_text.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/multi_text/field_multi_text.min.js" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/multi_text/field_multi_text.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/multi_text/field_multi_text.php" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/multi_text/field_multi_text.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/multi_text/field_multi_text.scss" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/multi_text/field_multi_text.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/password/field_password.php" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/password/field_password.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/radio/field_radio.php" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/radio/field_radio.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/raw/field_raw.php" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/raw/field_raw.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/section/field_section.less" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/section/field_section.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/section/field_section.php" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/section/field_section.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/section/field_section.scss" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/section/field_section.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/select/field_select.css" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/select/field_select.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/select/field_select.js" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/select/field_select.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/select/field_select.less" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/select/field_select.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/select/field_select.min.js" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/select/field_select.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/select/field_select.php" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/select/field_select.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/select/field_select.scss" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/select/field_select.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/select_image/field_select_image.js" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/select_image/field_select_image.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/select_image/field_select_image.less" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/select_image/field_select_image.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/select_image/field_select_image.min.js" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/select_image/field_select_image.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/select_image/field_select_image.php" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/select_image/field_select_image.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/slider/field_slider.js" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/slider/field_slider.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/slider/field_slider.less" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/slider/field_slider.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/slider/field_slider.min.js" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/slider/field_slider.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/slider/field_slider.php" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/slider/field_slider.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/slider/field_slider.scss" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/slider/field_slider.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/slides/field_slides.js" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/slides/field_slides.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/slides/field_slides.less" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/slides/field_slides.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/slides/field_slides.min.js" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/slides/field_slides.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/slides/field_slides.php" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/slides/field_slides.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/slides/field_slides.scss" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/slides/field_slides.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/sortable/field_sortable.css" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/sortable/field_sortable.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/sortable/field_sortable.js" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/sortable/field_sortable.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/sortable/field_sortable.less" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/sortable/field_sortable.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/sortable/field_sortable.min.js" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/sortable/field_sortable.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/sortable/field_sortable.php" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/sortable/field_sortable.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/sortable/field_sortable.scss" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/sortable/field_sortable.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/sorter/field_sorter-works.js" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/sorter/field_sorter-works.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/sorter/field_sorter.js" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/sorter/field_sorter.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/sorter/field_sorter.less" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/sorter/field_sorter.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/sorter/field_sorter.min.js" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/sorter/field_sorter.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/sorter/field_sorter.php" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/sorter/field_sorter.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/sorter/field_sorter.scss" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/sorter/field_sorter.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/spacing/field_spacing.js" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/spacing/field_spacing.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/spacing/field_spacing.less" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/spacing/field_spacing.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/spacing/field_spacing.min.js" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/spacing/field_spacing.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/spacing/field_spacing.php" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/spacing/field_spacing.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/spacing/field_spacing.scss" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/spacing/field_spacing.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/spinner/field_spinner.css" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/spinner/field_spinner.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/spinner/field_spinner.js" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/spinner/field_spinner.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/spinner/field_spinner.less" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/spinner/field_spinner.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/spinner/field_spinner.min.js" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/spinner/field_spinner.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/spinner/field_spinner.php" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/spinner/field_spinner.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/spinner/field_spinner.scss" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/spinner/field_spinner.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/switch/field_switch.js" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/switch/field_switch.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/switch/field_switch.less" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/switch/field_switch.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/switch/field_switch.min.js" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/switch/field_switch.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/switch/field_switch.php" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/switch/field_switch.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/switch/field_switch.scss" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/switch/field_switch.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/text/field_text.less" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/text/field_text.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/text/field_text.php" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/text/field_text.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/text/field_text.scss" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/text/field_text.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/textarea/field_textarea.php" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/textarea/field_textarea.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/typography/field_typography.css" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/typography/field_typography.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/typography/field_typography.js" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/typography/field_typography.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/typography/field_typography.less" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/typography/field_typography.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/typography/field_typography.min.js" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/typography/field_typography.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/typography/field_typography.php" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/typography/field_typography.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/typography/field_typography.scss" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/typography/field_typography.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/framework.php" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/framework.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/functions.php" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/functions.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/typography/googlefonts.json" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/typography/googlefonts.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/import_export.php" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/import_export.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/composer/installed.json" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/composer/installed.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/lib.redux_instances.php" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/lib.redux_instances.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/raw/parsedown.php" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/raw/parsedown.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/google-sitemap-generator/readme.txt" afterPath="$PROJECT_DIR$/wp-content/plugins/google-sitemap-generator/readme.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/stops-core-theme-and-plugin-updates/readme.txt" afterPath="$PROJECT_DIR$/wp-content/plugins/stops-core-theme-and-plugin-updates/readme.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/redux-framework.php" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/redux-framework.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/languages/redux-framework.pot" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/languages/redux-framework.pot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/assets/css/redux.css" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/assets/css/redux.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/assets/js/redux.js" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/assets/js/redux.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/assets/js/redux.min.js" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/assets/js/redux.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/assets/css/rtl.css" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/assets/css/rtl.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/sample/sample-config.php" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/sample/sample-config.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/select_image/select_image.scss" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/fields/select_image/select_image.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/google-sitemap-generator/sitemap-builder.php" afterPath="$PROJECT_DIR$/wp-content/plugins/google-sitemap-generator/sitemap-builder.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/google-sitemap-generator/sitemap-core.php" afterPath="$PROJECT_DIR$/wp-content/plugins/google-sitemap-generator/sitemap-core.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/google-sitemap-generator/lang/sitemap-de_DE.po" afterPath="$PROJECT_DIR$/wp-content/plugins/google-sitemap-generator/lang/sitemap-de_DE.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/google-sitemap-generator/sitemap-loader.php" afterPath="$PROJECT_DIR$/wp-content/plugins/google-sitemap-generator/sitemap-loader.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/google-sitemap-generator/sitemap-ui.php" afterPath="$PROJECT_DIR$/wp-content/plugins/google-sitemap-generator/sitemap-ui.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/google-sitemap-generator/sitemap.php" afterPath="$PROJECT_DIR$/wp-content/plugins/google-sitemap-generator/sitemap.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/google-sitemap-generator/lang/sitemap.pot" afterPath="$PROJECT_DIR$/wp-content/plugins/google-sitemap-generator/lang/sitemap.pot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/sysinfo.php" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/sysinfo.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/tracking.php" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/tracking.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/stops-core-theme-and-plugin-updates/uninstall.php" afterPath="$PROJECT_DIR$/wp-content/plugins/stops-core-theme-and-plugin-updates/uninstall.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/validation/color/validation_color.php" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/validation/color/validation_color.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/validation/color_rgba/validation_color_rgba.php" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/validation/color_rgba/validation_color_rgba.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/validation/colorrgba/validation_colorrgba.php" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/validation/colorrgba/validation_colorrgba.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/validation/comma_numeric/validation_comma_numeric.php" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/validation/comma_numeric/validation_comma_numeric.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/validation/css/validation_css.php" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/validation/css/validation_css.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/validation/date/validation_date.php" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/validation/date/validation_date.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/validation/email/validation_email.php" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/validation/email/validation_email.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/validation/email_not_empty/validation_email_not_empty.php" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/validation/email_not_empty/validation_email_not_empty.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/validation/html/validation_html.php" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/validation/html/validation_html.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/validation/html_custom/validation_html_custom.php" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/validation/html_custom/validation_html_custom.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/validation/js/validation_js.php" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/validation/js/validation_js.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/validation/no_html/validation_no_html.php" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/validation/no_html/validation_no_html.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/validation/no_special_chars/validation_no_special_chars.php" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/validation/no_special_chars/validation_no_special_chars.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/validation/not_empty/validation_not_empty.php" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/validation/not_empty/validation_not_empty.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/validation/numeric/validation_numeric.php" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/validation/numeric/validation_numeric.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/validation/preg_replace/validation_preg_replace.php" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/validation/preg_replace/validation_preg_replace.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/validation/str_replace/validation_str_replace.php" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/validation/str_replace/validation_str_replace.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/validation/url/validation_url.php" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/validation/url/validation_url.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/assets/js/vendor.min.js" afterPath="$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/assets/js/vendor.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="wordpress.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,95 +262,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="functions.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="functions.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/wpdiontheme/functions.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="0" selection-start="315" selection-end="315" vertical-scroll-proportion="-7.304348" vertical-offset="0" max-vertical-offset="770">
+            <state line="55" column="23" selection-start="1038" selection-end="1038" vertical-scroll-proportion="0.5492662" vertical-offset="480" max-vertical-offset="1008">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="wp-config.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wp-config.php">
+      <file leaf-file-name="ReduxConfig.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/Dion/Admin/ReduxConfig.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="80" column="23" selection-start="3086" selection-end="3086" vertical-scroll-proportion="-8.782609" vertical-offset="736" max-vertical-offset="1190">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="style.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wp-content/themes/wpdiontheme/style.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="70" column="0" selection-start="766" selection-end="766" vertical-scroll-proportion="0.0" vertical-offset="312" max-vertical-offset="1078">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="composer.json" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/wp-content/themes/wpdiontheme/composer.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="0" selection-start="77" selection-end="77" vertical-scroll-proportion="0.15418503" vertical-offset="0" max-vertical-offset="454">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name=".gitignore" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wp-content/themes/wpdiontheme/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="10" selection-start="10" selection-end="10" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="84">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_variables.scss" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wp-content/themes/wpdiontheme/components/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap/_variables.scss">
-          <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="0" selection-start="812" selection-end="827" vertical-scroll-proportion="0.0" vertical-offset="266" max-vertical-offset="12026">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="header.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wp-content/themes/wpdiontheme/header.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="43" column="52" selection-start="1448" selection-end="1448" vertical-scroll-proportion="0.0" vertical-offset="602" max-vertical-offset="728">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_grid.scss" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wp-content/themes/wpdiontheme/sass/layout/_grid.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="21" selection-start="138" selection-end="138" vertical-scroll-proportion="0.0" vertical-offset="112" max-vertical-offset="3304">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_variables.scss" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wp-content/themes/wpdiontheme/sass/bootstrap/_variables.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="51" selection-start="54" selection-end="54" vertical-scroll-proportion="0.0" vertical-offset="14" max-vertical-offset="112">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wp-content/themes/wpdiontheme/index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="686">
-              <folding />
+            <state line="69" column="10" selection-start="2094" selection-end="2196" vertical-scroll-proportion="235.56522" vertical-offset="6384" max-vertical-offset="23786">
+              <folding>
+                <element signature="e#6#90#0" expanded="true" />
+                <element signature="e#114#134#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -135,7 +300,6 @@
         <option value="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/Dion/ThemeSetup.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/wpdiontheme/bower.json" />
         <option value="$PROJECT_DIR$/wp-content/themes/wpdiontheme/sass/base/_base.scss" />
-        <option value="$PROJECT_DIR$/wp-content/themes/wpdiontheme/functions.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/wpdiontheme/sass/base/_bootstrap.scss" />
         <option value="$PROJECT_DIR$/wp-content/themes/wpdiontheme/css/main.css" />
         <option value="$PROJECT_DIR$/wp-content/themes/wpdiontheme/css/bootstrap.css" />
@@ -151,7 +315,11 @@
         <option value="$PROJECT_DIR$/wp-config.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/wpdiontheme/style.css" />
         <option value="$PROJECT_DIR$/wp-content/themes/wpdiontheme/.gitignore" />
+        <option value="$PROJECT_DIR$/wp-content/themes/wpdiontheme/admin/redux-config2.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/wpdiontheme/admin/redux-config.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/wpdiontheme/composer.json" />
+        <option value="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/Dion/Admin/ReduxConfig.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/wpdiontheme/functions.php" />
       </list>
     </option>
   </component>
@@ -187,6 +355,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -284,10 +453,77 @@
               <option name="myItemId" value="inc" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vendor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wordpress" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wordpress" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wp-content" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="themes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wpdiontheme" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="inc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Dion" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wordpress" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wordpress" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wp-content" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="themes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wpdiontheme" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="inc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Dion" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -296,15 +532,18 @@
     <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="LayoutCode.rearrangeEntriesPHP" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/wp-content/themes/wpdiontheme/admin" />
       <recent name="$PROJECT_DIR$/wp-content/themes/wpdiontheme/sass" />
       <recent name="$PROJECT_DIR$/wp-content/themes/wpdiontheme" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/wp-content/themes/wpdiontheme/sass/bootstrap" />
+      <recent name="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc" />
       <recent name="$PROJECT_DIR$/wp-content/themes/wpdiontheme" />
+      <recent name="$PROJECT_DIR$/wp-content/themes/wpdiontheme/sass/bootstrap" />
     </key>
   </component>
   <component name="RunManager">
@@ -351,15 +590,15 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1440" height="837" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2931727" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2931727" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.35193133" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1874106" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -367,11 +606,11 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32885906" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -391,49 +630,19 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/wpdiontheme/functions.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="0" selection-start="315" selection-end="315" vertical-scroll-proportion="0.0" vertical-offset="196" max-vertical-offset="798">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="80" column="23" selection-start="3086" selection-end="3086" vertical-scroll-proportion="0.0" vertical-offset="1120" max-vertical-offset="1344">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/wpdiontheme/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="70" column="0" selection-start="766" selection-end="766" vertical-scroll-proportion="0.0" vertical-offset="312" max-vertical-offset="1078">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/wpdiontheme/composer.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="35" selection-start="148" selection-end="148" vertical-scroll-proportion="0.0" vertical-offset="84" max-vertical-offset="280">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/wpdiontheme/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="10" selection-start="10" selection-end="10" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="84">
-          <folding />
-        </state>
+        <state line="6" column="35" selection-start="148" selection-end="148" vertical-scroll-proportion="0.0" vertical-offset="84" max-vertical-offset="280" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/wpdiontheme/components/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap/_variables.scss">
-      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state line="19" column="0" selection-start="812" selection-end="827" vertical-scroll-proportion="0.0" vertical-offset="266" max-vertical-offset="12026">
           <folding />
         </state>
+      </provider>
+      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/wpdiontheme/header.php">
@@ -466,9 +675,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/wpdiontheme/sass/bootstrap/_loader.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="92" selection-start="1211" selection-end="1211" vertical-scroll-proportion="0.0" vertical-offset="112" max-vertical-offset="980">
-          <folding />
-        </state>
+        <state line="25" column="92" selection-start="1211" selection-end="1211" vertical-scroll-proportion="0.0" vertical-offset="112" max-vertical-offset="980" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/wpdiontheme/sass/bootstrap.scss">
@@ -516,9 +723,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/wpdiontheme/sass/main.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="22" selection-start="803" selection-end="803" vertical-scroll-proportion="0.0" vertical-offset="308" max-vertical-offset="770">
-          <folding />
-        </state>
+        <state line="22" column="22" selection-start="803" selection-end="803" vertical-scroll-proportion="0.0" vertical-offset="308" max-vertical-offset="770" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/wpdiontheme/index.php">
@@ -526,19 +731,6 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="686">
           <folding />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/wpdiontheme/composer.lock">
-      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3948" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/autoload.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="472" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/wpdiontheme/components/modernizr/grunt.js">
@@ -590,11 +782,11 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/license.txt">
-      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5474" />
+      </provider>
+      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/Dion/ThemeSetup.php">
@@ -609,9 +801,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/wpdiontheme/css/bootstrap.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1554">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1554" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/wpdiontheme/config.rb">
@@ -620,27 +810,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/wpdiontheme/components/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap/_variables.scss">
-      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state line="19" column="0" selection-start="812" selection-end="827" vertical-scroll-proportion="0.0" vertical-offset="266" max-vertical-offset="12026">
           <folding />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/wpdiontheme/header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="52" selection-start="1448" selection-end="1448" vertical-scroll-proportion="0.0" vertical-offset="602" max-vertical-offset="728">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/wpdiontheme/sass/layout/_grid.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="21" selection-start="138" selection-end="138" vertical-scroll-proportion="0.0" vertical-offset="112" max-vertical-offset="3304">
-          <folding />
-        </state>
+      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/wpdiontheme/components/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap.scss">
@@ -655,9 +831,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/wpdiontheme/sass/bootstrap/_loader.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="92" selection-start="1211" selection-end="1211" vertical-scroll-proportion="-4.9583335" vertical-offset="112" max-vertical-offset="980">
-          <folding />
-        </state>
+        <state line="25" column="92" selection-start="1211" selection-end="1211" vertical-scroll-proportion="-4.9583335" vertical-offset="112" max-vertical-offset="980" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.htaccess">
@@ -667,16 +841,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/wpdiontheme/css/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="1092" selection-start="1092" selection-end="1092" vertical-scroll-proportion="-4.0380673" vertical-offset="2912" max-vertical-offset="17682">
-          <folding />
-        </state>
+        <state line="0" column="1092" selection-start="1092" selection-end="1092" vertical-scroll-proportion="-4.0380673" vertical-offset="2912" max-vertical-offset="17682" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/wpdiontheme/sass/main.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="0" selection-start="268" selection-end="268" vertical-scroll-proportion="0.17283951" vertical-offset="0" max-vertical-offset="798">
-          <folding />
-        </state>
+        <state line="8" column="0" selection-start="268" selection-end="268" vertical-scroll-proportion="0.17283951" vertical-offset="0" max-vertical-offset="798" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/wpdiontheme/sass/bootstrap/_variables.scss">
@@ -693,37 +863,94 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/wpdiontheme/style.css">
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/redux-framework/sample/sample-config.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="70" column="0" selection-start="766" selection-end="766" vertical-scroll-proportion="0.0" vertical-offset="312" max-vertical-offset="1078">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/wpdiontheme/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="10" selection-start="10" selection-end="10" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="673">
-          <folding />
+        <state line="18" column="47" selection-start="416" selection-end="446" vertical-scroll-proportion="-9.130435" vertical-offset="0" max-vertical-offset="27062">
+          <folding>
+            <marker date="1402344883000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1402344883000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1402344883000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1402344883000" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/wp-config.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="80" column="23" selection-start="3086" selection-end="3086" vertical-scroll-proportion="-8.782609" vertical-offset="736" max-vertical-offset="1190">
+        <state line="80" column="23" selection-start="3086" selection-end="3086" vertical-scroll-proportion="0.55726874" vertical-offset="685" max-vertical-offset="1162">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/wpdiontheme/functions.php">
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/wpdiontheme/sass/layout/_grid.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="0" selection-start="315" selection-end="315" vertical-scroll-proportion="-7.304348" vertical-offset="0" max-vertical-offset="770">
+        <state line="8" column="21" selection-start="138" selection-end="138" vertical-scroll-proportion="0.03263403" vertical-offset="98" max-vertical-offset="3304">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/wpdiontheme/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="43" column="52" selection-start="1448" selection-end="1448" vertical-scroll-proportion="0.7358491" vertical-offset="181" max-vertical-offset="658">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/wpdiontheme/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="70" column="0" selection-start="766" selection-end="766" vertical-scroll-proportion="0.898" vertical-offset="531" max-vertical-offset="1078">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/redux-framework/composer.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="500">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/wpdiontheme/composer.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="0" selection-start="77" selection-end="77" vertical-scroll-proportion="0.15418503" vertical-offset="0" max-vertical-offset="454">
+        <state line="9" column="16" selection-start="197" selection-end="197" vertical-scroll-proportion="0.26415095" vertical-offset="0" max-vertical-offset="477">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/composer/autoload_real.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="27" selection-start="353" selection-end="353" vertical-scroll-proportion="0.029350106" vertical-offset="196" max-vertical-offset="826">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/autoload.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="68" selection-start="175" selection-end="175" vertical-scroll-proportion="0.17610063" vertical-offset="0" max-vertical-offset="477">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/redux-framework/redux-framework.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="500">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/Dion/Admin/ReduxConfig.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="69" column="10" selection-start="2094" selection-end="2196" vertical-scroll-proportion="235.56522" vertical-offset="6384" max-vertical-offset="23786">
+          <folding>
+            <element signature="e#6#90#0" expanded="true" />
+            <element signature="e#114#134#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/wpdiontheme/functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="55" column="23" selection-start="1038" selection-end="1038" vertical-scroll-proportion="0.5492662" vertical-offset="480" max-vertical-offset="1008">
           <folding />
         </state>
       </provider>

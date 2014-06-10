@@ -6,5 +6,5 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname(dirname($vendorDir));
 
 return array(
-    $vendorDir . '/illuminate/support/Illuminate/Support/helpers.php',
+    $baseDir . '/inc/admin/redux-config.php',
 );

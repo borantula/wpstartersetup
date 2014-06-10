@@ -3,11 +3,16 @@
         "vendor-dir": "inc/vendor"
     },
     "require": {
-
+        "redux-framework/redux-framework" : "dev-master"
     },
     "autoload": {
         "classmap": [
-            "inc/"
+            "inc"
         ]
+    },
+    "extra": {
+        "installer-paths": {
+            "inc/vendor/{$name}/": ["type:wordpress-plugin"]
+        }
     }
 }
