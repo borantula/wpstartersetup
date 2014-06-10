@@ -22,6 +22,8 @@ require DION_THEME_DIR.'/inc/vendor/autoload.php';
 //setting up the theme
 Dion\ThemeSetup::getInstance();
 
+add_filter('redux/options/dionOpt/sections', 'dynamic_section');
+
 global $reduxConfig;
 $reduxConfig = new Dion\Admin\ReduxConfig();
 
@@ -48,12 +50,11 @@ Dion\Ajax::register('tester-event',function(){
 	
 });
 
-add_filter('redux/options/dionOpt/sections', 'dynamic_section');
+
 
 
 function dynamic_section($sections)
 {
-    var_dump($sections)
     //$sections = array();
     $sections[] = array(
         'title'  => __('Section via hook', 'redux-framework-demo'),
