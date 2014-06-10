@@ -6,5 +6,5 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname(dirname($vendorDir));
 
 return array(
-    $baseDir . '/inc/admin/redux-config.php',
+    $vendorDir . '/tgm/plugin-activation/class-tgm-plugin-activation.php',
 );

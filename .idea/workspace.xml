@@ -2,7 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="17656e48-0c7c-4e9d-a452-3d825e246632" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/autoload.php" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/autoload.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/composer/autoload_classmap.php" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/composer/autoload_classmap.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/composer/autoload_files.php" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/composer/autoload_files.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/composer/autoload_real.php" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/composer/autoload_real.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/composer.json" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/composer.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/composer.lock" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/composer.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/functions.php" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/functions.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/composer/installed.json" afterPath="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/composer/installed.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="wordpress.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,7 +36,28 @@
       <file leaf-file-name="functions.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/wpdiontheme/functions.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="0" selection-start="585" selection-end="585" vertical-scroll-proportion="0.4696017" vertical-offset="126" max-vertical-offset="1022">
+            <state line="126" column="31" selection-start="6816" selection-end="6816" vertical-scroll-proportion="0.9412998" vertical-offset="1539" max-vertical-offset="2114">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="class-tgm-plugin-activation.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/tgm/plugin-activation/class-tgm-plugin-activation.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="2203" column="1" selection-start="96268" selection-end="96268" vertical-scroll-proportion="-3.1020408" vertical-offset="30550" max-vertical-offset="31836">
+              <folding>
+                <marker date="1402390527000" expanded="true" signature="15832:16554" placeholder="..." />
+                <marker date="1402390527000" expanded="true" signature="16358:16534" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="example.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/tgm/plugin-activation/example.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="74" column="3" selection-start="3395" selection-end="8212" vertical-scroll-proportion="-3.0434783" vertical-offset="756" max-vertical-offset="1750">
               <folding />
             </state>
           </provider>
@@ -37,7 +66,7 @@
       <file leaf-file-name="ReduxConfig.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/Dion/Admin/ReduxConfig.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="69" column="10" selection-start="2094" selection-end="2196" vertical-scroll-proportion="235.56522" vertical-offset="6384" max-vertical-offset="23786">
+            <state line="69" column="10" selection-start="2094" selection-end="2196" vertical-scroll-proportion="-0.6086956" vertical-offset="952" max-vertical-offset="23786">
               <folding>
                 <element signature="e#6#90#0" expanded="true" />
                 <element signature="e#114#134#0" expanded="true" />
@@ -86,8 +115,10 @@
         <option value="$PROJECT_DIR$/wp-content/themes/wpdiontheme/.gitignore" />
         <option value="$PROJECT_DIR$/wp-content/themes/wpdiontheme/admin/redux-config2.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/wpdiontheme/admin/redux-config.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/wpdiontheme/composer.json" />
         <option value="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/Dion/Admin/ReduxConfig.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/tgm/plugin-activation/class-tgm-plugin-activation.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/tgm/plugin-activation/composer.json" />
+        <option value="$PROJECT_DIR$/wp-content/themes/wpdiontheme/composer.json" />
         <option value="$PROJECT_DIR$/wp-content/themes/wpdiontheme/functions.php" />
       </list>
     </option>
@@ -253,6 +284,44 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="vendor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tgm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="plugin-activation" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wordpress" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wordpress" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wp-content" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="themes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wpdiontheme" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="inc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="Dion" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -288,6 +357,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wordpress" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wordpress" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wp-content" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="plugins" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -359,23 +446,23 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1440" height="837" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2931727" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2931727" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32797858" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1874106" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27110156" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32885906" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -399,21 +486,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/wpdiontheme/composer.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="35" selection-start="148" selection-end="148" vertical-scroll-proportion="0.0" vertical-offset="84" max-vertical-offset="280" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/wpdiontheme/components/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap/_variables.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="0" selection-start="812" selection-end="827" vertical-scroll-proportion="0.0" vertical-offset="266" max-vertical-offset="12026">
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/wpdiontheme/header.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="43" column="52" selection-start="1448" selection-end="1448" vertical-scroll-proportion="0.0" vertical-offset="602" max-vertical-offset="728">
@@ -558,11 +630,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/Dion/ThemeSetup.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="27" selection-start="905" selection-end="905" vertical-scroll-proportion="53.565216" vertical-offset="1806" max-vertical-offset="2618" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/wpdiontheme/components/bootstrap-sass-official/vendor/assets/stylesheets/_bootstrap-mincer.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="472" />
@@ -679,13 +746,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/wpdiontheme/composer.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="16" selection-start="197" selection-end="197" vertical-scroll-proportion="0.26415095" vertical-offset="0" max-vertical-offset="477">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/composer/autoload_real.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="15" column="27" selection-start="353" selection-end="353" vertical-scroll-proportion="0.029350106" vertical-offset="196" max-vertical-offset="826">
@@ -709,7 +769,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/Dion/Admin/ReduxConfig.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="69" column="10" selection-start="2094" selection-end="2196" vertical-scroll-proportion="235.56522" vertical-offset="6384" max-vertical-offset="23786">
+        <state line="69" column="10" selection-start="2094" selection-end="2196" vertical-scroll-proportion="-0.6086956" vertical-offset="952" max-vertical-offset="23786">
           <folding>
             <element signature="e#6#90#0" expanded="true" />
             <element signature="e#114#134#0" expanded="true" />
@@ -723,9 +783,47 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/Dion/ThemeSetup.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="41" column="27" selection-start="905" selection-end="905" vertical-scroll-proportion="1.1519824" vertical-offset="51" max-vertical-offset="2604">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/wpdiontheme/composer.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="5" selection-start="389" selection-end="389" vertical-scroll-proportion="-10.347826" vertical-offset="0" max-vertical-offset="350">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/tgm/plugin-activation/class-tgm-plugin-activation.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2203" column="1" selection-start="96268" selection-end="96268" vertical-scroll-proportion="-3.1020408" vertical-offset="30550" max-vertical-offset="31836">
+          <folding>
+            <marker date="1402390527000" expanded="true" signature="15832:16554" placeholder="..." />
+            <marker date="1402390527000" expanded="true" signature="16358:16534" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/tgm/plugin-activation/composer.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="5" selection-start="895" selection-end="967" vertical-scroll-proportion="-16.434782" vertical-offset="0" max-vertical-offset="490">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/wpdiontheme/inc/vendor/tgm/plugin-activation/example.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="74" column="3" selection-start="3395" selection-end="8212" vertical-scroll-proportion="-3.0434783" vertical-offset="756" max-vertical-offset="1750">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/wpdiontheme/functions.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="0" selection-start="585" selection-end="585" vertical-scroll-proportion="0.4696017" vertical-offset="126" max-vertical-offset="1022">
+        <state line="126" column="31" selection-start="6816" selection-end="6816" vertical-scroll-proportion="0.9412998" vertical-offset="1539" max-vertical-offset="2114">
           <folding />
         </state>
       </provider>

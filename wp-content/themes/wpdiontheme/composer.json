@@ -3,11 +3,12 @@
         "vendor-dir": "inc/vendor"
     },
     "require": {
-        "redux-framework/redux-framework" : "dev-master"
+        "redux-framework/redux-framework" : "dev-master",
+        "tgm/plugin-activation" : "dev-master"
     },
     "autoload": {
         "classmap": [
-            "inc"
+            "inc/Dion"
         ]
     },
     "extra": {
