@@ -28,7 +28,7 @@
       <file leaf-file-name="functions.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/wpdiontheme/functions.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="57" column="20" selection-start="1037" selection-end="1037" vertical-scroll-proportion="0.6750524" vertical-offset="448" max-vertical-offset="1022">
+            <state line="27" column="0" selection-start="585" selection-end="585" vertical-scroll-proportion="0.4696017" vertical-offset="126" max-vertical-offset="1022">
               <folding />
             </state>
           </provider>
@@ -359,10 +359,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1440" height="837" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2931727" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2931727" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -725,7 +725,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/wpdiontheme/functions.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="20" selection-start="1037" selection-end="1037" vertical-scroll-proportion="0.6750524" vertical-offset="448" max-vertical-offset="1022">
+        <state line="27" column="0" selection-start="585" selection-end="585" vertical-scroll-proportion="0.4696017" vertical-offset="126" max-vertical-offset="1022">
           <folding />
         </state>
       </provider>

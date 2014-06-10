@@ -25,7 +25,7 @@ Dion\ThemeSetup::getInstance();
 add_filter('redux/options/dionOpt/sections', 'dynamic_section');
 
 global $reduxConfig;
-$reduxConfig = new Dion\Admin\ReduxConfig();
+//$reduxConfig = new Dion\Admin\ReduxConfig();
 
 //start ajax
 Dion\Ajax::hooks();
