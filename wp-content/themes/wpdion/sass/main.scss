@@ -1,9 +1,8 @@
 
 /* BASE */
-// Base folder that includes normalize, colors, fonts, mixins, settings
+// Base folder that includes colors, fonts, mixins, settings
 // Styles in the files like mixins, colors, fonts,settings etc do not have classes for direct use
 // Direct use starts with base.scss
-@import "base/normalize";
 @import "layout/grid";
 
 

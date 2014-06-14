@@ -96,12 +96,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/redux-framework/redux-framework.git",
-                "reference": "7a7ef73ed1316c2c8afa0666f7ec72acc5e3670b"
+                "reference": "5d69a19d4ee9801cf1ff88f2ba0ea10406743915"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/redux-framework/redux-framework/zipball/7a7ef73ed1316c2c8afa0666f7ec72acc5e3670b",
-                "reference": "7a7ef73ed1316c2c8afa0666f7ec72acc5e3670b",
+                "url": "https://api.github.com/repos/redux-framework/redux-framework/zipball/5d69a19d4ee9801cf1ff88f2ba0ea10406743915",
+                "reference": "5d69a19d4ee9801cf1ff88f2ba0ea10406743915",
                 "shasum": ""
             },
             "require": {
@@ -129,7 +129,7 @@
                 "redux",
                 "wordpress"
             ],
-            "time": "2014-06-10 01:03:32"
+            "time": "2014-06-13 22:08:24"
         },
         {
             "name": "tgm/plugin-activation",
@@ -137,12 +137,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/thomasgriffin/TGM-Plugin-Activation.git",
-                "reference": "1e98e425f4a3bc43bd0fa05fe74a4268aa624f33"
+                "reference": "aece2efaf9bf465a30a6f7cf535c698a5fe49147"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thomasgriffin/TGM-Plugin-Activation/zipball/1e98e425f4a3bc43bd0fa05fe74a4268aa624f33",
-                "reference": "1e98e425f4a3bc43bd0fa05fe74a4268aa624f33",
+                "url": "https://api.github.com/repos/thomasgriffin/TGM-Plugin-Activation/zipball/aece2efaf9bf465a30a6f7cf535c698a5fe49147",
+                "reference": "aece2efaf9bf465a30a6f7cf535c698a5fe49147",
                 "shasum": ""
             },
             "require": {
@@ -179,7 +179,7 @@
                 "theme",
                 "wordpress"
             ],
-            "time": "2014-04-06 17:27:35"
+            "time": "2014-06-13 11:57:45"
         }
     ],
     "packages-dev": [

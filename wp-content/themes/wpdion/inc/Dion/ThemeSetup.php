@@ -100,6 +100,7 @@ class ThemeSetup {
 	public function styles()
 	{
 		wp_enqueue_style( '_s-style', get_stylesheet_uri() );
+		wp_enqueue_style('normalize-css',DION_COMPONENTS_URL.'/normalize-css/normalize.css');
 		wp_enqueue_style('main-css',DION_THEME_URL.'/css/main.css');
 	}
 
