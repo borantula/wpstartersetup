@@ -1,1 +1,8 @@
 // Containers css here ..
+
+.article {
+
+    @include respondTo(smartphone) {
+        width:100%;
+    }
+}

@@ -1,30 +1,74 @@
 // static css of the project here..
 
-
+html {
+    font-size: ($base-font-size / 16px) * 1em; /* [1] */
+    line-height: $base-line-height / $base-font-size; /* [1] */
+    background-color: $base-background-color;
+    color: $base-text-color;
+    overflow-y: scroll; /* [2] */
+    min-height: 100%; /* [3] */
+}
  
 body {
 	@include fontMain;
-	color:$color_text;
-	background:$color_bg;
+    color: $base-text-color;
+	background:$base-background-color;
 }
 
 
 h1,h2,h3,h4,h5,h6{
 	@include fontTitle;
+    @include fontSize(20px);
+}
+
+/*------------------------------------*\
+    #HEADINGS
+\*------------------------------------*/
+
+
+h1,
+.alpha {
+    @include fontSize($heading-size-1);
+}
+
+h2,
+.beta{
+    @include fontSize($heading-size-2);
+}
+
+h3,
+.gamma {
+    @include fontSize($heading-size-3);
+}
+
+h4,
+.delta{
+    @include fontSize($heading-size-4);
+}
+
+h5,
+.epsilon {
+    @include fontSize($heading-size-5);
+}
+
+h6,
+.zeta {
+    @include fontSize($heading-size-6);
 }
 
 p {
-	margin:5px 0;
+	margin:0 0 1em 0;
 }
 
 ul {
-	padding:0;
-	margin:10px 0;
+	padding:0 0 2em 0;
+    margin: 0;
 }
 
 ul li {
 	list-style:none;
 }
+
 
 a {
 	text-decoration:none;

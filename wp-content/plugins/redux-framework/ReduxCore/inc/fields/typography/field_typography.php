@@ -269,8 +269,8 @@ if (!class_exists('ReduxFramework_typography')) {
 
                 $style = $this->value['font-weight'] . $this->value['font-style'];
 
-                echo '<input type="hidden" class="typography-font-weight" name="' . $this->field['name'] . '[font-weight]' . $this->field['name_suffix'] . '" val="' . $this->value['font-weight'] . '" data-id="' . $this->field['id'] . '"  /> ';
-                echo '<input type="hidden" class="typography-font-style" name="' . $this->field['name'] . '[font-style]' . $this->field['name_suffix'] . '" val="' . $this->value['font-style'] . '" data-id="' . $this->field['id'] . '"  /> ';
+                echo '<input type="hidden" class="typography-font-weight" name="' . $this->field['name'] . '[font-weight]' . $this->field['name_suffix'] . '" value="' . $this->value['font-weight'] . '" data-id="' . $this->field['id'] . '"  /> ';
+                echo '<input type="hidden" class="typography-font-style" name="' . $this->field['name'] . '[font-style]' . $this->field['name_suffix'] . '" value="' . $this->value['font-style'] . '" data-id="' . $this->field['id'] . '"  /> ';
                 echo '<select data-placeholder="' . __('Style', 'redux-framework') . '" class="redux-typography redux-typography-style select' . $this->field['class'] . '" original-title="' . __('Font style', 'redux-framework') . '" id="' . $this->field['id'] . '_style" data-id="' . $this->field['id'] . '" data-value="' . $style . '">';
 
                 if (empty($this->value['subset'])) {
@@ -475,7 +475,7 @@ if (!class_exists('ReduxFramework_typography')) {
                 $style = '';
                 if (isset($this->field['preview']['always_display'])) {
                     if (true === filter_var( $this->field['preview']['always_display'], FILTER_VALIDATE_BOOLEAN )) {
-                        $style = 'display: block;';
+                        $style = 'display: block; font-family: ' . $this->value['font-family'] . ';';
                     }
                 }
                 
@@ -504,7 +504,7 @@ if (!class_exists('ReduxFramework_typography')) {
             wp_enqueue_script(
                 'redux-field-color-js',
                 ReduxFramework::$_url . 'assets/js/color-picker/color-picker' . Redux_Functions::isMin() . '.js',
-                array('jquery', 'select2-js', 'wp-color-picker'),
+                array('jquery', 'select2-js', 'wp-color-picker', 'redux-js'),
                 time(),
                 true
             );

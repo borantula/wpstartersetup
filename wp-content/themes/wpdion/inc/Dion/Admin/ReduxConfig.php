@@ -1073,6 +1073,7 @@ class ReduxConfig
             )
         );
 
+
         $this->sections[] = array(
             'icon'   => 'el-icon-list-alt',
             'title'  => __('Select Fields', 'redux-framework-demo'),

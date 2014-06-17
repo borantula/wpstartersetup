@@ -105,7 +105,15 @@
                 wp_enqueue_script(
                     'redux-field-color-js',
                     ReduxFramework::$_url . 'assets/js/color-picker/color-picker' . Redux_Functions::isMin() . '.js',
-                    array( 'jquery', 'wp-color-picker' ),
+                    array( 'jquery', 'wp-color-picker', 'redux-js' ),
+                    time(),
+                    true
+                );
+
+                wp_enqueue_script(
+                    'redux-field-color-gradient-js',
+                    ReduxFramework::$_url . 'inc/fields/color_gradient/field_color_gradient' . Redux_Functions::isMin() . '.js',
+                    array( 'redux-field-color-js' ),
                     time(),
                     true
                 );

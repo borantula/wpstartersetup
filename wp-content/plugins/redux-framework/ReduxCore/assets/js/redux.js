@@ -283,6 +283,7 @@
     $.redux.tabCheck = function() {
         $('.redux-group-tab-link-a').click(
             function() {
+
                 var relid = $(this).data('rel'); // The group ID of interest
                 var oldid = $('.redux-group-tab-link-li.active .redux-group-tab-link-a').data('rel');
 
@@ -370,11 +371,13 @@
 
                 // Show the group
                 $('#' + oldid + '_section_group').hide();
+
                 $('#' + relid + '_section_group').fadeIn(
                     200, function() {
                         if ($('#redux-footer').length !== 0) {
                             $.redux.stickyInfo(); // race condition fix
                         }
+                        $.redux.initFields();
                     }
                 );
             }
@@ -411,6 +414,17 @@
         } else {
             sTab.click();
         }
+
+    };
+
+    $.redux.initFields = function() {
+        $(".redux-field-init:visible" ).each(function() {
+            var type = $(this).attr( 'data-type' );
+            //console.log(type);
+            if ( redux.field_objects[type]) {
+                redux.field_objects[type].init();
+            }
+        });
     };
 
     $.redux.notices = function() {
@@ -489,7 +503,9 @@
                     var currentTab = $(this).attr('href');
 
                     $('.redux-section-tabs div').hide();
-                    $(currentTab).fadeIn();
+                    $(currentTab).fadeIn('medium', function() {
+                        $.redux.initFields();
+                    });
 
                     return false;
                 }
@@ -607,6 +623,7 @@
                         if (redux.required.hasOwnProperty(child)) {
                             $.redux.check_dependencies($('#' + redux.args.opt_name + '-' + child).children().first());
                         }
+                        $.redux.initFields();
                     }
                 );
                 if (childFieldset.hasClass('redux-container-section') || childFieldset.hasClass('redux-container-info')) {
@@ -885,7 +902,9 @@
                 'margin-left': '0px'
             }, 500);
 
-            parent.find('.redux-group-tab').fadeIn();
+            parent.find('.redux-group-tab').fadeIn('medium', function() {
+                $.redux.initFields();
+            });
         }
         return false;
     };

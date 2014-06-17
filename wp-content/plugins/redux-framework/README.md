@@ -39,7 +39,7 @@ ReduxFramework has just released to the WordPress Plugins directory. Please spre
 
 If you can, please donate to help support the ongoing development of Redux Framework!
 
-[![Donate to the framework](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif "Donate to the framework")](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=N5AD7TSH8YA5U)
+[![Donate to the framework](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif "Donate to the framework")](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=MMFMHWUPKHKPW)
 
 ## Features ##
 
@@ -77,6 +77,42 @@ Send me an email at ghost1227@reduxframework.com so I can add you to our user sp
 ## Changelog ##
 
 ### Master ###
+
+= 3.3.1.5 =
+* Fixed:     #1339 - Typography would lose Font Weight and Style. value was named val in the HTML, so it would be
+             destroyed on the next save if not initialized.
+
+= 3.3.1.4 =
+* Fixed:      #1226 - W3 Total Cache was affecting validation and compiler hooks.
+* Fixed:      Menu errors weren't showing properly for non-subsectioned items.
+
+= 3.3.1.3 =
+* Fixed:      #1341 - Import/Export buttons not functioning. Also fixed sortable somehow.
+
+= 3.3.1.2 =
+* Fixed:      Slides not initializing with the last fix.
+
+= 3.3.1.1 =
+* Fixed:      Slides field was not properly initialized for the media elements. Fixed.
+
+= 3.3.0.6 =
+* Fixed:      #1337 - `redux` JS dependency loading issue.  Many thanks @tpaksu
+
+= 3.3.0.5 =
+* Modified:   Drastically changed the way JavaScript is used in the panel. Forced as-needed
+              initialization of fields. Thus reducing dramatically the overall load time of
+              the panel. The effects have been seen up to 300% speed improvement. The only
+              time a field will be initialized is if it's visible, thus reducing the processing
+              needed in DOM overall.
+
+= 3.3.0.4 =
+* Fixed:      #1336 - fixed default font in preview.
+
+= 3.3.0.3 =
+* Fixed:      #1334 - Typography not un-saving italics.
+
+= 3.3.0.2 =
+* Added:      #1332 - New validation: numeric_not_empty.
 
 = 3.3.0.1 =
 * Fixed:      #1330 - Required not working on all fields.

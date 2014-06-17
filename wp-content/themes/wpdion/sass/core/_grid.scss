@@ -1,20 +1,6 @@
-
-/*------------------
-  Grid Settings
--------------------*/
-
-$rowWidth : 940px;
-$gutterWidth: 8px;
-$noOfColumns : 8;
-$isResponsive : false;
-
 ////////////////////////////////////////////////////////////
-// don't change below 
+// don't change below
 
-$rowWidth : 980px !default;
-$gutterWidth: 10px !default;
-$noOfColumns : 12 !default;
-$isResponsive : true !default; 
 
 @mixin columnWidth($col){
   @if $isResponsive == false {
@@ -43,9 +29,15 @@ $isResponsive : true !default;
 }
 
 
-
-
-*, *:before, *:after { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+* {
+    &,
+    &:before,
+    &:after {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+}
 /* Containers
 ----------------------------------------------------------------------------------------------------*/
 .row {
