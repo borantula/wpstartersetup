@@ -46,7 +46,31 @@ Dion\Ajax::register('tester-event',function(){
 	
 });
 
+add_action('admin_init',function(){
+    return;
 
+    $content = file_get_contents(DION_THEME_DIR.'/pods.json');
+
+    //$content =   json_decode($content);
+
+    echo class_exists( 'Pods_Migrate_Packages' );
+    if ( class_exists( 'Pods_Migrate_Packages' ) ) {
+
+        $import = Pods_Migrate_Packages::import( $content ,false);
+
+    } else {
+
+
+        $classpath = WP_PLUGIN_DIR.'/pods/components/Migrate-Packages/Migrate-Packages.php';
+
+
+        include_once($classpath);
+
+        $import = Pods_Migrate_Packages::import( $content ,false);
+    }
+
+
+});
 
 
 function dynamic_section($sections)
