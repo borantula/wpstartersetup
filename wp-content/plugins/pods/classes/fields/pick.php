@@ -616,8 +616,8 @@ class PodsField_Pick extends PodsField {
     public function display ( $value = null, $name = null, $options = null, $pod = null, $id = null ) {
         $fields = null;
 
-        if ( is_object( $pod ) && isset( $pod->fields ) )
-            $fields = array_merge( $pod->fields, $pod->object_fields );
+        if ( is_object( $pod ) && isset( $pod->fields ) && isset( $pod->pod_data[ 'object_fields' ] ) )
+            $fields = array_merge( $pod->fields, $pod->pod_data[ 'object_fields' ] );
         elseif ( is_array( $pod ) && isset( $pod[ 'fields' ] ) )
             $fields = array_merge( $pod[ 'fields' ], $pod[ 'object_fields' ] );
 
@@ -729,6 +729,10 @@ class PodsField_Pick extends PodsField {
         // Bidirectional relationship requirement checks
         $related_object = pods_var( self::$type . '_object', $options, '' ); // pod, post_type, taxonomy, etc..
         $related_val = pods_var( self::$type . '_val', $options, $related_object, null, true ); // pod name, post type name, taxonomy name, etc..
+        if ( empty( $related_val ) ) {
+            $related_val = $related_object;
+        }
+
         $related_sister_id = (int) pods_var( 'sister_id', $options, 0 );
 
         $options[ 'id' ] = (int) $options[ 'id' ];

@@ -63,7 +63,7 @@
             // ATTENTION DEVS
             // Please update the build number with each push, no matter how small.
             // This will make for easier support when we ask users what version they are using.
-            public static $_version = '3.3.1.5';
+            public static $_version = '3.3.2';
             public static $_dir;
             public static $_url;
             public static $_upload_dir;
@@ -143,6 +143,7 @@
             private $show_hints = false;
             private $hidden_perm_fields = array(); //  Hidden fields specified by 'permissions' arg.
             private $hidden_perm_sections = array(); //  Hidden sections specified by 'permissions' arg.
+            public $typography_preview = array();
             public $args = array(
                 'opt_name'           => '',
                 // Must be defined by theme/plugin
@@ -1595,8 +1596,7 @@
                         'typography',
                         'color_scheme'
                         
-                    ) )
-                ) {
+                    ) ) ) {
 
                     // select2 CSS
                     wp_register_style(
@@ -1736,8 +1736,16 @@
                         'link_color',
                         'border',
                         'typography'
-                    ) )
-                ) {
+                    ) ) ) {
+
+                    wp_register_style(
+                        'color-picker-css',
+                        self::$_url . 'assets/css/color-picker/color-picker.css',
+                        array(),
+                        filemtime( self::$_dir . 'assets/css/color-picker/color-picker.css' ),
+                        'all'
+                    );                    
+                    
                     wp_enqueue_script( 'wp-color-picker' );
                     wp_enqueue_style( 'wp-color-picker' );
                 }
@@ -1802,7 +1810,7 @@
                         foreach ( $section['fields'] as $field ) {
                             // TODO AFTER GROUP WORKS - Revert IF below
                             // if( isset( $field['type'] ) && $field['type'] != 'callback' ) {
-                            if ( isset( $field['type'] ) && $field['type'] != 'callback' && $field['type'] != 'group' ) {
+                            if ( isset( $field['type'] ) && $field['type'] != 'callback') {
 
                                 $field_class = 'ReduxFramework_' . $field['type'];
 
@@ -2181,7 +2189,7 @@
                 $hint = '';
                 $th   = "";
 
-                if ( isset( $field['title'] ) && isset( $field['type'] ) && $field['type'] !== "info" && $field['type'] !== "group" && $field['type'] !== "section" ) {
+                if ( isset( $field['title'] ) && isset( $field['type'] ) && $field['type'] !== "info" && $field['type'] !== "section" ) {
                     $default_mark = ( ! empty( $field['default'] ) && isset( $this->options[ $field['id'] ] ) && $this->options[ $field['id'] ] == $field['default'] && ! empty( $this->args['default_mark'] ) && isset( $field['default'] ) ) ? $this->args['default_mark'] : '';
 
                     // If a hint is specified in the field, process it.
@@ -2365,17 +2373,17 @@
                             }
 
                             // TODO AFTER GROUP WORKS - Remove IF statement
-                            if ( $field['type'] == "group" && isset( $_GET['page'] ) && $_GET['page'] == $this->args['page_slug'] ) {
-                                if ( $this->args['dev_mode'] ) {
-                                    $this->admin_notices[] = array(
-                                        'type'    => 'error',
-                                        'msg'     => 'The <strong>group field</strong> has been <strong>removed</strong> while we retool it for improved performance.',
-                                        'id'      => 'group_err',
-                                        'dismiss' => true,
-                                    );
-                                }
-                                continue; // Disabled for now
-                            }
+//                            if ( $field['type'] == "group" && isset( $_GET['page'] ) && $_GET['page'] == $this->args['page_slug'] ) {
+//                                if ( $this->args['dev_mode'] ) {
+//                                    $this->admin_notices[] = array(
+//                                        'type'    => 'error',
+//                                        'msg'     => 'The <strong>group field</strong> has been <strong>removed</strong> while we retool it for improved performance.',
+//                                        'id'      => 'group_err',
+//                                        'dismiss' => true,
+//                                    );
+//                                }
+//                                continue; // Disabled for now
+//                            }
 
 
                             if ( isset( $field['permissions'] ) ) {
@@ -2905,7 +2913,7 @@
                     return;
                 }
 
-                if ( defined( 'WP_CACHE' ) && WP_CACHE ) {
+                if ( defined( 'WP_CACHE' ) && WP_CACHE && class_exists('W3_ObjectCache') ) {
                     //echo "here";
                     $w3 = W3_ObjectCache::instance();
                     $key = $w3->_get_cache_key( $this->args['opt_name'].'-transients', 'transient' );
@@ -3526,7 +3534,10 @@
                 // Import / Export output
                 if ( true == $this->args['show_import_export'] && false == $this->import_export->is_field ) {
                     $this->import_export->enqueue();
+                    
+                    echo '<fieldset id="' . $this->args['opt_name'] . '-import_export_core" class="redux-field-container redux-field redux-field-init redux-container-import_export" data-id="import_export_core" data-type="import_export">';
                     $this->import_export->render();
+                    echo '</fieldset>';
 
                 }
 
@@ -3887,7 +3898,7 @@
                             $field['description'] = $field['desc'];
                         }
 
-                        echo ( isset( $field['description'] ) && $field['type'] != "info" && $field['type'] !== "section" && $field['type'] != "group" && ! empty( $field['description'] ) ) ? '<div class="description field-desc">' . $field['description'] . '</div>' : '';
+                        echo ( isset( $field['description'] ) && $field['type'] != "info" && $field['type'] !== "section" && ! empty( $field['description'] ) ) ? '<div class="description field-desc">' . $field['description'] . '</div>' : '';
 
                         if ( ! isset( $field['fields'] ) || empty( $field['fields'] ) ) {
                             echo '</fieldset>';

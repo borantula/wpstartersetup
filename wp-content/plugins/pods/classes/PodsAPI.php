@@ -1354,8 +1354,9 @@ class PodsAPI {
 
         $old_fields = $old_options = array();
 
-        if ( isset( $params->name ) )
-            $params->name = pods_clean_name( $params->name );
+		if ( isset( $params->name ) && ! isset( $params->object ) ) {
+			$params->name = pods_clean_name( $params->name );
+		}
 
         if ( !empty( $pod ) ) {
             if ( isset( $params->id ) && 0 < $params->id )
@@ -2941,7 +2942,11 @@ class PodsAPI {
                 }
             }
 
-            unset( $params->data );
+			if ( $pod[ 'type' ] === 'taxonomy' && isset( $params->data )  && !empty( $params->data ) ) {
+				$term_data = $params->data;
+			}
+
+           unset( $params->data );
         }
 
 		if ( empty( $params->id ) && !in_array( 'created', $fields_active ) && isset( $fields[ 'created' ] ) && in_array( $fields[ 'created' ][ 'type' ], array( 'date', 'datetime' ) ) ) {
@@ -3293,8 +3298,10 @@ class PodsAPI {
             if ( !in_array( $pod[ 'type' ], array( 'taxonomy', 'pod', 'table', '' ) ) )
                 $params->id = $this->save_wp_object( $object_type, $object_data, array(), false, true );
             elseif ( 'taxonomy' == $pod[ 'type' ] ) {
-                $term = pods_var( $object_fields[ 'name' ][ 'name' ], $object_data, '', null, true );
-                $term_data = array();
+                $term = pods_v( $object_fields[ 'name' ][ 'name' ], $object_data, '', null, true );
+				if ( !isset( $term_data ) ) {
+					$term_data = array ();
+				}
 
                 if ( empty( $params->id ) || !empty( $term_data ) ) {
                     $taxonomy = $pod[ 'name' ];
@@ -3389,6 +3396,13 @@ class PodsAPI {
 						'search' => false
 					);
 
+					if ( empty( $search_data->field_slug ) && !empty( $search_data->field_index ) ) {
+						$find_rel_params[ 'where' ] = "`t`.`{$search_data->field_index}` = %s";
+					}
+					elseif ( empty( $search_data->field_slug ) && empty( $search_data->field_index ) ) {
+						$find_rel_params = false;
+					}
+
                     $related_limit = (int) pods_var_raw( $type . '_limit', $fields[ $field ][ 'options' ], 0 );
 
                     if ( 'single' == pods_var_raw( $type . '_format_type', $fields[ $field ][ 'options' ] ) ) {
@@ -3405,7 +3419,7 @@ class PodsAPI {
                     foreach ( $values as $v ) {
                         if ( !empty( $v ) ) {
 							if ( !is_array( $v ) ) {
-								if ( !preg_match( '/[^0-9]*/', $v ) ) {
+								if ( !preg_match( '/[^0-9]/', $v ) ) {
 									$v = (int) $v;
 								}
 								// File handling
@@ -3420,12 +3434,16 @@ class PodsAPI {
 								}
 								// Reference by slug
 								else {
-									$rel_params = $find_rel_params;
-									$rel_params[ 'where' ] = $wpdb->prepare( $rel_params[ 'where' ], array( $v, $v ) );
+									$v_data = false;
 
-									$search_data->select( $rel_params );
+									if ( false !== $find_rel_params ) {
+										$rel_params = $find_rel_params;
+										$rel_params[ 'where' ] = $wpdb->prepare( $rel_params[ 'where' ], array( $v, $v ) );
 
-									$v_data = $search_data->fetch( $v );
+										$search_data->select( $rel_params );
+
+										$v_data = $search_data->fetch( $v );
+									}
 
 									if ( !empty( $v_data ) && isset( $v_data[ $search_data->field_id ] ) ) {
 										$v = (int) $v_data[ $search_data->field_id ];
@@ -5385,15 +5403,21 @@ class PodsAPI {
 
         $the_pods = array();
 
-        $_pods = get_posts( array(
-            'post_type' => '_pods_pod',
-            'nopaging' => true,
-            'posts_per_page' => $limit,
-            'order' => $order,
-            'orderby' => $orderby,
-            'meta_query' => $meta_query,
-            'post__in' => $ids
-        ) );
+		$args = array(
+			'post_type' => '_pods_pod',
+			'nopaging' => true,
+			'posts_per_page' => $limit,
+			'order' => $order,
+			'orderby' => $orderby,
+			'meta_query' => $meta_query,
+		);
+
+		// Only set post__in if there are ids to filter (see https://core.trac.wordpress.org/ticket/28099)
+		if ( false != $ids ) {
+			$args[ 'post__in' ] = $ids;
+		}
+
+		$_pods = get_posts( $args );
 
         $export_ignore = array(
             'object_type',
@@ -5834,15 +5858,19 @@ class PodsAPI {
             if ( isset( $params->where ) && !empty( $params->where ) && is_array( $params->where ) )
                 $meta_query = array_merge( $meta_query, (array) $params->where );
 
-            $args = array(
-                'post_type' => '_pods_field',
-                'nopaging' => true,
-                'posts_per_page' => $limit,
-                'order' => $order,
-                'orderby' => $orderby,
-                'meta_query' => $meta_query,
-                'post__in' => $ids
-            );
+			$args = array(
+				'post_type' => '_pods_field',
+				'nopaging' => true,
+				'posts_per_page' => $limit,
+				'order' => $order,
+				'orderby' => $orderby,
+				'meta_query' => $meta_query,
+			);
+
+			// Only set post__in if there are ids to filter (see https://core.trac.wordpress.org/ticket/28099)
+			if ( false != $ids ) {
+				$args[ 'post__in' ] = $ids;
+			}
 
             $fields = false;
 
@@ -6061,15 +6089,21 @@ class PodsAPI {
 
         $the_objects = array();
 
-        $objects = get_posts( array(
-            'post_type' => '_pods_' . $params->type,
-            'nopaging' => true,
-            'posts_per_page' => $limit,
-            'order' => $order,
-            'orderby' => $orderby,
-            'meta_query' => $meta_query,
-            'post__in' => $ids
-        ) );
+		$args = array(
+			'post_type' => '_pods_' . $params->type,
+			'nopaging' => true,
+			'posts_per_page' => $limit,
+			'order' => $order,
+			'orderby' => $orderby,
+			'meta_query' => $meta_query,
+		);
+
+		// Only set post__in if there are ids to filter (see https://core.trac.wordpress.org/ticket/28099)
+		if ( false != $ids ) {
+			$args[ 'post__in' ] = $ids;
+		}
+
+		$objects = get_posts( $args );
 
         foreach ( $objects as $object ) {
             $object = $this->load_object( $object );
@@ -7610,6 +7644,7 @@ class PodsAPI {
 
         while ( $pod->fetch() ) {
             $data[ $pod->id() ] = $this->export_pod_item( $params, $pod );
+			$data[ $pod->id() ][ 'ID' ] = (int) $pod->id();
         }
 
         $data = $this->do_hook( 'export', $data, $pod->pod, $pod );

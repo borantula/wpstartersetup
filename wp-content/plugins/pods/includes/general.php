@@ -582,7 +582,7 @@ function pods_shortcode ( $tags, $content = null ) {
         'having' => null,
         'groupby' => null,
         'search' => true,
-        'pagination' => null,
+        'pagination' => false,
         'page' => null,
         'offset' => null,
         'filters' => false,
@@ -611,6 +611,9 @@ function pods_shortcode ( $tags, $content = null ) {
         $tags = $defaults;
 
     $tags = apply_filters( 'pods_shortcode', $tags );
+
+	$tags[ 'pagination' ] = (boolean) $tags[ 'pagination' ];
+	$tags[ 'search' ] = (boolean) $tags[ 'search' ];
 
     if ( empty( $content ) )
         $content = null;
@@ -706,17 +709,13 @@ function pods_shortcode ( $tags, $content = null ) {
 			$params[ 'limit' ] = (int) $tags[ 'limit' ];
 		}
 
-		if ( empty( $tags[ 'search' ] ) ) {
-			$params[ 'search' ] = false;
-		}
+		$params[ 'search' ] = $tags[ 'search' ];
 
 		if ( 0 < absint( $tags[ 'page' ] ) ) {
 			$params[ 'page' ] = absint( $tags[ 'page' ] );
 		}
 
-		if ( null !== $tags[ 'pagination' ] ) {
-			$params[ 'pagination' ] = (boolean) $tags[ 'pagination' ];
-		}
+		$params[ 'pagination' ] = $tags[ 'pagination' ];
 
         if ( 0 < (int) $tags[ 'offset' ] ) {
             $params[ 'offset' ] = (int) $tags[ 'offset' ];
@@ -843,7 +842,7 @@ function pods_version_notice_wp () {
 ?>
     <div class="error fade">
         <p>
-            <strong><?php _e( 'NOTICE', 'pods' ); ?>:</strong> Pods <?php echo PODS_VERSION_FULL; ?> <?php _e( 'requires a minimum of', 'pods' ); ?>
+            <strong><?php _e( 'NOTICE', 'pods' ); ?>:</strong> Pods <?php echo PODS_VERSION; ?> <?php _e( 'requires a minimum of', 'pods' ); ?>
             <strong>WordPress <?php echo PODS_WP_VERSION_MINIMUM; ?>+</strong> <?php _e( 'to function. You are currently running', 'pods' ); ?>
             <strong>WordPress <?php echo $wp_version; ?></strong> - <?php _e( 'Please upgrade your WordPress to continue.', 'pods' ); ?>
         </p>
@@ -862,7 +861,7 @@ function pods_version_notice_php () {
 ?>
     <div class="error fade">
         <p>
-            <strong><?php _e( 'NOTICE', 'pods' ); ?>:</strong> Pods <?php echo PODS_VERSION_FULL; ?> <?php _e( 'requires a minimum of', 'pods' ); ?>
+            <strong><?php _e( 'NOTICE', 'pods' ); ?>:</strong> Pods <?php echo PODS_VERSION; ?> <?php _e( 'requires a minimum of', 'pods' ); ?>
             <strong>PHP <?php echo PODS_PHP_VERSION_MINIMUM; ?>+</strong> <?php _e( 'to function. You are currently running', 'pods' ); ?>
             <strong>PHP <?php echo phpversion(); ?></strong> - <?php _e( 'Please upgrade (or have your Hosting Provider upgrade it for you) your PHP version to continue.', 'pods' ); ?>
         </p>
@@ -882,7 +881,7 @@ function pods_version_notice_mysql () {
     $mysql = $wpdb->db_version();
 ?>
     <div class="error fade">
-        <p><strong><?php _e( 'NOTICE', 'pods' ); ?>:</strong> Pods <?php echo PODS_VERSION_FULL; ?> <?php _e( 'requires a minimum of', 'pods' ); ?>
+        <p><strong><?php _e( 'NOTICE', 'pods' ); ?>:</strong> Pods <?php echo PODS_VERSION; ?> <?php _e( 'requires a minimum of', 'pods' ); ?>
             <strong>MySQL <?php echo PODS_MYSQL_VERSION_MINIMUM; ?>+</strong> <?php _e( 'to function. You are currently running', 'pods' ); ?>
             <strong>MySQL <?php echo $mysql; ?></strong> - <?php _e( 'Please upgrade (or have your Hosting Provider upgrade it for you) your MySQL version to continue.', 'pods' ); ?>
         </p>
@@ -1888,7 +1887,7 @@ function pods_session_start() {
 		// This is OK, but we don't want to check if file_exists on next statement
 	}
 	// Check if session path exists and can be written to, avoiding PHP fatal errors
-	elseif ( empty( $save_path ) || !file_exists( $save_path ) || !is_writable( $save_path ) ) {
+	elseif ( empty( $save_path ) || !@file_exists( $save_path ) || !is_writable( $save_path ) ) {
 		return false;
 	}
 	// Check if session ID is already set

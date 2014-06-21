@@ -412,7 +412,7 @@ if (!class_exists('ReduxFramework_typography')) {
                 echo '<div class="input_wrapper font-size redux-container-typography">';
                 echo '<label>' . __('Font Size', 'redux-framework') . '</label>';
                 echo '<div class="input-append"><input type="text" class="span2 redux-typography redux-typography-size mini typography-input' . $this->field['class'] . '" title="' . __('Font Size', 'redux-framework') . '" placeholder="' . __('Size', 'redux-framework') . '" id="' . $this->field['id'] . '-size" name="' . $this->field['name'] . '[font-size]' . $this->field['name_suffix'] . '" value="' . str_replace($unit, '', $this->value['font-size']) . '" data-value="' . str_replace($unit, '', $this->value['font-size']) . '"><span class="add-on">' . $unit . '</span></div>';
-                echo '<input type="hidden" class="typography-font-size" name="' . $this->field['name'] . '[font-size]" value="' . $this->value['font-size'] . '" data-id="' . $this->field['id'] . '"  />';
+                echo '<input type="hidden" class="typography-font-size" name="' . $this->field['name'] . '[font-size]' . $this->field['name_suffix'] .'" value="' . $this->value['font-size'] . '" data-id="' . $this->field['id'] . '"  />';
                 echo '</div>';
             }
 
@@ -475,7 +475,21 @@ if (!class_exists('ReduxFramework_typography')) {
                 $style = '';
                 if (isset($this->field['preview']['always_display'])) {
                     if (true === filter_var( $this->field['preview']['always_display'], FILTER_VALIDATE_BOOLEAN )) {
-                        $style = 'display: block; font-family: ' . $this->value['font-family'] . ';';
+                        
+                        $this->parent->typography_preview[$fontFamily[0]] = array(
+                            'font-style'    => array($this->value['font-weight'] . $this->value['font-style']),
+                            'subset'        => array($this->value['subset'])
+                        );
+
+                        $protocol = ( ! empty( $_SERVER['HTTPS'] ) && $_SERVER['HTTPS'] !== 'off' || $_SERVER['SERVER_PORT'] == 443 ) ? "https:" : "http:";
+                        
+                        wp_deregister_style('redux-typography-preview');
+                        wp_dequeue_style('redux-typography-preview');
+                        
+                        wp_register_style( 'redux-typography-preview', $protocol . $this->makeGoogleWebfontLink( $this->parent->typography_preview ), '', time() );
+                        wp_enqueue_style( 'redux-typography-preview' );
+                        
+                        $style = 'display: block; font-family: ' . $this->value['font-family'] . '; font-weight: ' . $this->value['font-weight'] . ';' ;
                     }
                 }
                 
@@ -502,23 +516,9 @@ if (!class_exists('ReduxFramework_typography')) {
         function enqueue() {
 
             wp_enqueue_script(
-                'redux-field-color-js',
-                ReduxFramework::$_url . 'assets/js/color-picker/color-picker' . Redux_Functions::isMin() . '.js',
-                array('jquery', 'select2-js', 'wp-color-picker', 'redux-js'),
-                time(),
-                true
-            );
-
-            wp_enqueue_style(
-                'redux-field-color-css',
-                ReduxFramework::$_url . 'inc/fields/color/field_color.css',
-                time(),
-                true
-            );
-
-            wp_enqueue_script(
-                'redux-field-typography-js', ReduxFramework::$_url . 'inc/fields/typography/field_typography' . Redux_Functions::isMin() . '.js',
-                array( 'jquery', 'wp-color-picker', 'redux-field-color-js', 'select2-js' ),
+                'redux-field-typography-js', 
+                ReduxFramework::$_url . 'inc/fields/typography/field_typography' . Redux_Functions::isMin() . '.js',
+                array( 'jquery', 'wp-color-picker', 'select2-js', 'redux-js' ),
                 time(),
                 true
             );
