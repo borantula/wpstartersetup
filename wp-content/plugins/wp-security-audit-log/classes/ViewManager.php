@@ -16,14 +16,8 @@ class WSAL_ViewManager {
 		$this->_plugin = $plugin;
 		
 		// load views
-		foreach(glob(dirname(__FILE__) . '/Views/*.php') as $file){
-			$class = $this->_plugin->GetClassFileClassName($file);
-			$tmp = new $class($this->_plugin);
-			$this->views[] = $tmp;
-		}
-		
-		// order views by weight
-		usort($this->views, array($this, 'OrderByWeight'));
+		foreach(glob(dirname(__FILE__) . '/Views/*.php') as $file)
+			$this->AddFromFile($file);
 		
 		// add menus
 		add_action('admin_menu', array($this, 'AddAdminMenus'));
@@ -39,6 +33,43 @@ class WSAL_ViewManager {
 		add_action('admin_footer', array($this, 'RenderViewFooter'));
 	}
 	
+	/**
+	 * Add new view from file inside autoloader path.
+	 * @param string $file Path to file.
+	 */
+	public function AddFromFile($file){
+		$this->AddFromClass($this->_plugin->GetClassFileClassName($file));
+	}
+	
+	/**
+	 * Add new view given class name.
+	 * @param string $class Class name.
+	 */
+	public function AddFromClass($class){
+		$this->AddInstance(new $class($this->_plugin));
+	}
+	
+	/**
+	 * Add newly created view to list.
+	 * @param WSAL_AbstractView $view The new view.
+	 */
+	public function AddInstance(WSAL_AbstractView $view){
+		$this->views[] = $view;
+	}
+	
+	/**
+	 * Order views by their declared weight.
+	 */
+	public function ReorderViews(){
+		usort($this->views, array($this, 'OrderByWeight'));
+	}
+	
+	/**
+	 * @internal This has to be public for PHP to call it.
+	 * @param WSAL_AbstractView $a
+	 * @param WSAL_AbstractView $b
+	 * @return int
+	 */
 	public function OrderByWeight(WSAL_AbstractView $a, WSAL_AbstractView $b){
 		$wa = $a->GetWeight();
 		$wb = $b->GetWeight();
@@ -52,23 +83,29 @@ class WSAL_ViewManager {
 		}
 	}
 	
+	/**
+	 * Wordpress Action
+	 */
 	public function AddAdminMenus(){
+		$this->ReorderViews();
+		
 		if($this->_plugin->settings->CurrentUserCan('view') && count($this->views)){
 			// add main menu
-			add_menu_page(
+			$this->views[0]->hook_suffix = add_menu_page(
 				'WP Security Audit Log',
 				'Audit Log',
 				'read', // no capability requirement
 				$this->views[0]->GetSafeViewName(),
 				array($this, 'RenderViewBody'),
-				$this->views[0]->GetIcon()
+				$this->views[0]->GetIcon(),
+				'2.5' // right after dashboard
 			);
 
 			// add menu items
 			foreach($this->views as $view){
-				if($view->IsVisible()){
-					add_submenu_page(
-						$this->views[0]->GetSafeViewName(),
+				if($view->IsAccessible()){
+					$view->hook_suffix = add_submenu_page(
+						$view->IsVisible() ? $this->views[0]->GetSafeViewName() : null,
 						$view->GetTitle(),
 						$view->GetName(),
 						'read', // no capability requirement
@@ -81,7 +118,12 @@ class WSAL_ViewManager {
 		}
 	}
 	
+	/**
+	 * Wordpress Filter
+	 */
 	public function AddPluginShortcuts($old_links){
+		$this->ReorderViews();
+		
 		$new_links = array();
 		foreach($this->views as $view){
 			if($view->HasPluginShortcutLink()){
@@ -97,31 +139,77 @@ class WSAL_ViewManager {
 		return array_merge($new_links, $old_links);
 	}
 	
+	/**
+	 * @return int Returns page id of current page (or false on error).
+	 */
 	protected function GetBackendPageIndex(){
 		if(isset($_REQUEST['page']))
 			foreach($this->views as $i => $view)
 				if($_REQUEST['page'] == $view->GetSafeViewName())
 					return $i;
-		return 0;
+		return false;
 	}
 	
+	/**
+	 *
+	 * @var WSAL_AbstractView|null
+	 */
+	protected $_active_view = false;
+	
+	/**
+	 * @return WSAL_AbstractView|null Returns the current active view or null if none.
+	 */
+	public function GetActiveView(){
+		if($this->_active_view === false){
+			$this->_active_view = null;
+			
+			if(isset($_REQUEST['page']))
+				foreach($this->views as $view)
+					if($_REQUEST['page'] == $view->GetSafeViewName())
+						$this->_active_view = $view;
+			
+			if($this->_active_view)
+				$this->_active_view->is_active = true;
+		}
+		return $this->_active_view;
+	}
+	
+	/**
+	 * Render header of the current view.
+	 */
 	public function RenderViewHeader(){
-		$view_id = $this->GetBackendPageIndex();
-		$this->views[$view_id]->Header();
+		if (!!($view = $this->GetActiveView())) $view->Header();
 	}
 	
+	/**
+	 * Render footer of the current view.
+	 */
 	public function RenderViewFooter(){
-		$view_id = $this->GetBackendPageIndex();
-		$this->views[$view_id]->Footer();
+		if (!!($view = $this->GetActiveView())) $view->Footer();
 	}
 	
+	/**
+	 * Render content of the current view.
+	 */
 	public function RenderViewBody(){
-		$view_id = $this->GetBackendPageIndex();
-		?><div class="wrap">
-			<div id="icon-plugins" class="icon32"><br></div>
-			<h2><?php _e($this->views[$view_id]->GetTitle(), 'wp-security-audit-log'); ?></h2>
-			<?php $this->views[$view_id]->Render(); ?>
-		</div><?php
+		$view = $this->GetActiveView();
+		?><div class="wrap"><?php
+			$view->RenderIcon();
+			$view->RenderTitle();
+			$view->RenderContent();
+		?></div><?php
+	}
+	
+	/**
+	 * Returns view instance corresponding to its class name.
+	 * @param string $className View class name.
+	 * @return WSAL_AbstractView The view or false on failure.
+	 */
+	public function FindByClassName($className){
+		foreach($this->views as $view)
+			if($view instanceof $className)
+				return $view;
+		return false;
 	}
 	
 }

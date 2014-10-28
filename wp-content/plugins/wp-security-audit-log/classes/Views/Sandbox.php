@@ -23,7 +23,7 @@ class WSAL_Views_Sandbox extends WSAL_AbstractView {
 		return 5;
 	}
 	
-	public function IsVisible(){
+	public function IsAccessible(){
 		return $this->_plugin->settings->CurrentUserCan('edit')
 				&& $this->_plugin->settings->IsSandboxPageEnabled();
 	}
@@ -34,6 +34,56 @@ class WSAL_Views_Sandbox extends WSAL_AbstractView {
 	protected $snippets = array(
 		'' => '',
 		'Current WP User' => 'return wp_get_current_user();',
+		
+		'Clean PHP Error Events' => '
+class OccurrenceCleanupTask extends WSAL_AbstractSandboxTask {
+			
+	protected $event_ids = array(0000, 0001, 0002, 0003, 0004, 0005);
+
+	protected function Execute(){
+		global $wpdb;
+		$occs = WSAL_DB_Occurrence::LoadMulti(\'alert_id IN (\'.implode(\',\', $this->event_ids).\')\');
+		$c = count($occs);
+		$this->Message($c ? (\'Removing \' . $c . \' events...\') : \'No events to remove!\');
+		foreach($occs as $i => $occ){
+			$this->Message(\'Removing Event \' . $occ->id . \'...\', true);
+			$occ->Delete();
+			$this->Progress(($i + 1) / $c * 100);
+		}
+	}
+}
+new OccurrenceCleanupTask();',
+		
+		'Multisite Site Creator' => '
+class DummySiteCreatorTask extends WSAL_AbstractSandboxTask {
+			
+	protected $sites_to_create = 100;
+	protected $site_host = \'localhost\';
+	protected $site_path = \'/wordpress-3.8/test$i/\';
+	protected $site_name = \'Test $i\';
+
+	protected function Execute(){
+		global $wpdb;
+		$l = $wpdb->get_var("SELECT blog_id FROM $wpdb->blogs ORDER BY blog_id DESC LIMIT 1") + 1;
+		$this->Message(\'Creating \' . $this->sites_to_create . \' new sites...\');
+		for($i = $l; $i <= $this->sites_to_create + $l; $i++){
+			$this->Progress(($i - $l) / $this->sites_to_create * 100);
+			wpmu_create_blog(
+				str_replace(\'$i\', $i, $this->site_host),
+				str_replace(\'$i\', $i, $this->site_path),
+				str_replace(\'$i\', $i, $this->site_name),
+			1);
+		}
+	}
+}
+new DummySiteCreatorTask();',
+		'Get Access Tokens' => '$settings = WpSecurityAuditLog::GetInstance()->settings;
+return array(
+	\'view\' => $settings->GetAccessTokens(\'view\'),
+	\'edit\' => $settings->GetAccessTokens(\'edit\'),
+);',
+		'Show Profiler Results' => 'return array_map(\'strval\', WpSecurityAuditLog::GetInstance()->profiler->GetItems());',
+		'Reset Notices' => 'foreach (WSAL_AbstractView::$AllowedNoticeNames as $name) delete_user_meta(get_current_user_id(), "wsal-notice-$name");',
 	);
 	
 	public function HandleError($code, $message, $filename = 'unknown', $lineno = 0){
@@ -89,7 +139,7 @@ class WSAL_Views_Sandbox extends WSAL_AbstractView {
 	
 	public function AjaxExecuteResponse(){
 		echo '<!DOCTYPE html><html><head>';
-		echo '<link rel="stylesheet" id="open-sans-css" href="' . $this->_plugin->GetBaseUrl() . '/css/nice_r.css" type="text/css" media="all">';
+		echo '<link rel="stylesheet" id="open-sans-css" href="' . $this->_plugin->GetBaseUrl() . '/css/nice_r.css" type="text/css" media="all"/>';
 		echo '<script type="text/javascript" src="'.$this->_plugin->GetBaseUrl() . '/js/nice_r.js"></script>';
 		echo '<style type="text/css">';
 		echo 'html, body { margin: 0; padding: 0; }';
@@ -99,11 +149,11 @@ class WSAL_Views_Sandbox extends WSAL_AbstractView {
 		echo '</style>';
 		echo '</head><body>';
 		
-		if(($e = error_get_last()) && !isset($this->exec_data['Errors']) && !count($this->exec_data['Errors']))
+		if(($e = error_get_last()) && (!isset($this->exec_data['Errors']) || !count($this->exec_data['Errors'])))
 			$this->HandleError($e['type'], $e['message'], $e['file'], $e['line']);
 		
 		if(count($this->exec_data)){
-			$result = new WSAL_Nicer($this->exec_data);
+			$result = new WSAL_Nicer($this->exec_data, true);
 			$result->render();
 		}else echo '<div class="faerror">FATAL ERROR</div>';
 		
@@ -145,14 +195,13 @@ class WSAL_Views_Sandbox extends WSAL_AbstractView {
 					<textarea name="code" id="sandbox-code"><?php echo esc_html($code); ?></textarea>
 					<iframe id="sandbox-result" name="execframe"></iframe>
 				</div>
-				<div id="sandbox-status">Ready.</div>
+				<div id="sandbox-status"><?php _e('Ready.', 'wp-security-audit-log'); ?></div>
 			</div>
 			<label for="sandbox-snippet" style="float: left; line-height: 26px; display: inline-block; margin-right: 32px; border-right: 1px dotted #CCC; padding-right: 32px;">
 				Use Snippet: 
-				<?php $code = json_encode(admin_url('admin.php?page=wsal-sandbox') . '&snippet='); ?>
-				<select id="sandbox-snippet" onchange="location = <?php echo esc_attr($code); ?> + encodeURIComponent(this.value);"><?php
+				<select id="sandbox-snippet" onchange="SandboxUseSnippet(this.value);"><?php
 					foreach(array_keys($this->snippets) as $name){
-						?><option value="<?php echo esc_attr($name); ?>"<?php if($name == $snpt)echo ' selected="selected"'; ?>><?php _e($name, 'wp-security-audit-log'); ?></option><?php
+						?><option value="<?php echo esc_attr($name); ?>"<?php if($name == $snpt)echo ' selected="selected"'; ?>><?php echo $name; ?></option><?php
 					}
 				?></select>
 			</label>
@@ -218,6 +267,12 @@ class WSAL_Views_Sandbox extends WSAL_AbstractView {
 				
 				//jQuery('#sandbox').submit();
 			});
+			
+			function SandboxUseSnippet(value){
+				jQuery('#sandbox-submit').attr('disabled', true);
+				location = <?php echo json_encode(admin_url('admin.php?page=wsal-sandbox')); ?>
+					+ '&snippet=' + encodeURIComponent(value);
+			}
 			
 			function SandboxUpdateState(data){
 				var ul = jQuery('<ul/>');

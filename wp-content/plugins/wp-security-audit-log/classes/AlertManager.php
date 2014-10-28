@@ -23,12 +23,34 @@ final class WSAL_AlertManager {
 	 */
 	public function __construct(WpSecurityAuditLog $plugin){
 		$this->plugin = $plugin;
-		foreach(glob(dirname(__FILE__) . '/Loggers/*.php') as $file){
-			$class = $plugin->GetClassFileClassName($file);
-			$this->_loggers[] = new $class($plugin);
-		}
+		foreach(glob(dirname(__FILE__) . '/Loggers/*.php') as $file)
+			$this->AddFromFile ($file);
 		
 		add_action('shutdown', array($this, '_CommitPipeline'));
+	}
+	
+	/**
+	 * Add new logger from file inside autoloader path.
+	 * @param string $file Path to file.
+	 */
+	public function AddFromFile($file){
+		$this->AddFromClass($this->plugin->GetClassFileClassName($file));
+	}
+	
+	/**
+	 * Add new logger given class name.
+	 * @param string $class Class name.
+	 */
+	public function AddFromClass($class){
+		$this->AddInstance(new $class($this->plugin));
+	}
+	
+	/**
+	 * Add newly created logger to list.
+	 * @param WSAL_AbstractLogger $logger The new logger.
+	 */
+	public function AddInstance(WSAL_AbstractLogger $logger){
+		$this->_loggers[] = $logger;
 	}
 	
 	/**
@@ -70,17 +92,20 @@ final class WSAL_AlertManager {
 		);
 	}
 	
-	
 	/**
 	 * @internal Commit an alert now.
 	 */
-	protected function _CommitItem($type, $data, $cond){
+	protected function _CommitItem($type, $data, $cond, $_retry = true){
 		if(!$cond || !!call_user_func($cond, $this)){
 			if($this->IsEnabled($type)){
 				if(isset($this->_alerts[$type])){
 					// ok, convert alert to a log entry
 					$this->_triggered_types[] = $type;
 					$this->Log($type, $data);
+				}elseif($_retry){
+					// this is the last attempt at loading alerts from default file
+					$this->plugin->LoadDefaults();
+					return $this->_CommitItem($type, $data, $cond, false);
 				}else{
 					// in general this shouldn't happen, but it could, so we handle it here :)
 					throw new Exception('Alert with code "' . $type . '" has not be registered.');
@@ -174,6 +199,13 @@ final class WSAL_AlertManager {
 	}
 	
 	/**
+	 * @return WSAL_AbstractLogger[] Returns an array of loaded loggers.
+	 */
+	public function GetLoggers(){
+		return $this->_loggers;
+	}
+	
+	/**
 	 * Converts an Alert into a Log entry (by invoking loggers).
 	 * You should not call this method directly.
 	 * @param integer $type Alert type.
@@ -184,10 +216,15 @@ final class WSAL_AlertManager {
 			$data['ClientIP'] = isset($_SERVER['REMOTE_ADDR']) ? $_SERVER['REMOTE_ADDR'] : '';
 		if(!isset($data['UserAgent']))
 			$data['UserAgent'] = isset($_SERVER['HTTP_USER_AGENT']) ? $_SERVER['HTTP_USER_AGENT'] : '';
-		if(!isset($data['CurrentUserID']))
+		if(!isset($data['Username']) && !isset($data['CurrentUserID']))
 			$data['CurrentUserID'] = function_exists('get_current_user_id') ? get_current_user_id() : 0;
-		if(!isset($data['CurrentUserRoles']) && is_user_logged_in())
-			$data['CurrentUserRoles'] = wp_get_current_user()->roles;
+		if(!isset($data['CurrentUserRoles']) && function_exists('is_user_logged_in') && is_user_logged_in())
+			$data['CurrentUserRoles'] = $this->plugin->settings->GetCurrentUserRoles();
+		
+		//if(isset($_SERVER['REMOTE_HOST']) && $_SERVER['REMOTE_HOST'] != $data['ClientIP'])
+		//	$data['ClientHost'] = $_SERVER['REMOTE_HOST'];
+		
+		//$data['OtherIPs'] = $_SERVER['REMOTE_HOST'];
 		
 		foreach($this->_loggers as $logger)
 			$logger->Log($type, $data);

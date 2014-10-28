@@ -235,10 +235,10 @@ class Custom_Featured_Image_Metabox_Admin {
 	 */
 	public function change_media_strings( $strings, $post ) {
 
-		$post_type = $post->post_type;
-		$options = get_option( $this->plugin_slug . '_' . $post_type );
+		if ( is_object( $post ) && ! empty( $post ) ) {
+			$post_type = $post->post_type;
+			$options = get_option( $this->plugin_slug . '_' . $post_type );
 
-		if ( ! empty( $post ) ) {
 			if ( isset( $options['set_text'] ) && ! empty( $options['set_text'] ) ) {
 				$strings['setFeaturedImage']      = $options['set_text'];
 				$strings['setFeaturedImageTitle'] = $options['set_text'];

@@ -8,9 +8,8 @@ class WSAL_Loggers_Database extends WSAL_AbstractLogger {
 	}
 	
 	public function Log($type, $data = array(), $date = null, $siteid = null, $migrated = false) {
-
-		// use today's date if not set up
-		if(is_null($date))$date = current_time('timestamp');
+		// is this a php alert, and if so, are we logging such alerts?
+		if ($type < 0010 && !$this->plugin->settings->IsPhpErrorLoggingEnabled()) return;
 		
 		// create new occurrence
 		$occ = new WSAL_DB_Occurrence();
@@ -27,37 +26,38 @@ class WSAL_Loggers_Database extends WSAL_AbstractLogger {
 	
 	public function CleanUp() {
 		$now = current_time('timestamp');
-		$max_count = $this->plugin->settings->GetPruningLimit();
 		$max_sdate = $this->plugin->settings->GetPruningDate();
+		$max_count = $this->plugin->settings->GetPruningLimit();
+		$is_date_e = $this->plugin->settings->IsPruningDateEnabled();
+		$is_limt_e = $this->plugin->settings->IsPruningLimitEnabled();
+		
 		$max_stamp = $now - (strtotime($max_sdate) - $now);
 		$cnt_items = WSAL_DB_Occurrence::Count();
-		if($cnt_items == $max_count)return;
 		$max_items = max(($cnt_items - $max_count) + 1, 0);
 		
-		$is_date_e = true;
-		$is_limt_e = true;
+		if (!$is_date_e && !$is_limt_e) return; // pruning disabled
 		
-		switch(true){
-			case $is_date_e && $is_limt_e:
-				$cond = 'created_on < %d ORDER BY created_on ASC LIMIT %d';
-				$args = array($max_stamp, $max_items);
-				break;
-			case $is_date_e && !$is_limt_e:
-				$cond = 'created_on < %d';
-				$args = array($max_stamp);
-				break;
-			case !$is_date_e && $is_limt_e:
-				$cond = '1 ORDER BY created_on ASC LIMIT %d';
-				$args = array($max_items);
-				break;
-		}
-		if(!isset($cond))return;
+		$query = new WSAL_DB_OccurrenceQuery('WSAL_DB_Occurrence');
+		$query->order[] = 'created_on ASC';
 		
-		$items = WSAL_DB_Occurrence::LoadMulti($cond, $args);
-		if(!count($items))return;
+		if ($is_date_e) $query->Where('created_on < %d', array($max_stamp));
+		if ($is_limt_e) $query->length = (int)$max_items;
 		
-		foreach($items as $item)$item->Delete();
-		do_action('wsal_prune', $items, vsprintf($cond, $args));
+		$count = $query->Count();
+		if (!$count) return; // nothing to delete
+		
+		// delete data
+		$query->Delete();
+		
+		// keep track of what we're doing
+		$this->plugin->alerts->Trigger(0003, array(
+				'Message' => 'Running system cleanup.',
+				'Query SQL' => $query->GetSql(),
+				'Query Args' => $query->GetArgs(),
+			), true);
+		
+		// notify system
+		do_action('wsal_prune', $count, vsprintf($query->GetSql(), $query->GetArgs()));
 	}
 	
 }

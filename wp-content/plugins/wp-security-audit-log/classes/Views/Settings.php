@@ -4,7 +4,10 @@ class WSAL_Views_Settings extends WSAL_AbstractView {
 	
 	public function __construct(WpSecurityAuditLog $plugin) {
 		parent::__construct($plugin);
-		add_action('wp_ajax_AjaxCheckSecurityToken', array($this, 'AjaxCheckSecurityToken'));
+		if (is_admin()) {
+			add_action('wp_ajax_AjaxCheckSecurityToken', array($this, 'AjaxCheckSecurityToken'));
+			add_action('wp_ajax_AjaxRunCleanup', array($this, 'AjaxRunCleanup'));
+		}
 	}
 	
 	public function HasPluginShortcutLink(){
@@ -39,12 +42,17 @@ class WSAL_Views_Settings extends WSAL_AbstractView {
 	}
 	
 	protected function Save(){
+		check_admin_referer('wsal-settings');
+		$this->_plugin->settings->SetPruningDateEnabled($_REQUEST['PruneBy'] == 'date');
 		$this->_plugin->settings->SetPruningDate($_REQUEST['PruningDate']);
+		$this->_plugin->settings->SetPruningLimitEnabled($_REQUEST['PruneBy'] == 'limit');
 		$this->_plugin->settings->SetPruningLimit($_REQUEST['PruningLimit']);
 		$this->_plugin->settings->SetWidgetsEnabled($_REQUEST['EnableDashboardWidgets']);
 		$this->_plugin->settings->SetAllowedPluginViewers(isset($_REQUEST['Viewers']) ? $_REQUEST['Viewers'] : array());
 		$this->_plugin->settings->SetAllowedPluginEditors(isset($_REQUEST['Editors']) ? $_REQUEST['Editors'] : array());
+		$this->_plugin->settings->SetRestrictAdmins(isset($_REQUEST['RestrictAdmins']));
 		$this->_plugin->settings->SetRefreshAlertsEnabled($_REQUEST['EnableAuditViewRefresh']);
+		$this->_plugin->settings->SetIncognito(isset($_REQUEST['Incognito']));
 		$this->_plugin->settings->ClearDevOptions();
 		if(isset($_REQUEST['DevOptions']))
 			foreach($_REQUEST['DevOptions'] as $opt)
@@ -57,6 +65,14 @@ class WSAL_Views_Settings extends WSAL_AbstractView {
 		if(!isset($_REQUEST['token']))
 			die('Token parameter expected.');
 		die($this->GetTokenType($_REQUEST['token']));
+	}
+	
+	public function AjaxRunCleanup(){
+		if(!$this->_plugin->settings->CurrentUserCan('view'))
+			die('Access Denied.');
+		$this->_plugin->CleanUp();
+		wp_redirect($this->GetUrl());
+		exit;
 	}
 	
 	public function Render(){
@@ -74,6 +90,7 @@ class WSAL_Views_Settings extends WSAL_AbstractView {
 		?><form id="audit-log-settings" method="post">
 			<input type="hidden" name="page" value="<?php echo esc_attr($_REQUEST['page']); ?>" />
 			<input type="hidden" id="ajaxurl" value="<?php echo esc_attr(admin_url('admin-ajax.php')); ?>" />
+			<?php wp_nonce_field('wsal-settings'); ?>
 			
 			<table class="form-table">
 				<tbody>
@@ -82,29 +99,46 @@ class WSAL_Views_Settings extends WSAL_AbstractView {
 						<td>
 							<fieldset>
 								<?php $text = __('(eg: 1 month)', 'wp-security-audit-log'); ?>
-								<!--<input type="radio" id="delete1" style="margin-top: 2px;"/>-->
-								<label for="delete1"><?php echo __('Delete alerts older than', 'wp-security-audit-log'); ?></label>
-								<input type="text" name="PruningDate" placeholder="<?php echo $text; ?>"
-									   value="<?php echo esc_attr($this->_plugin->settings->GetPruningDate()); ?>"/>
+								<?php $nbld = !($this->_plugin->settings->IsPruningDateEnabled() || $this->_plugin->settings->IsPruningLimitEnabled()); ?>
+								<label for="delete0">
+									<input type="radio" id="delete0" name="PruneBy" value="" <?php if($nbld)echo 'checked="checked"'; ?>/>
+									<?php echo __('None', 'wp-security-audit-log'); ?>
+								</label>
+							</fieldset>
+							<fieldset>
+								<?php $text = __('(eg: 1 month)', 'wp-security-audit-log'); ?>
+								<?php $nbld = $this->_plugin->settings->IsPruningDateEnabled(); ?>
+								<label for="delete1">
+									<input type="radio" id="delete1" name="PruneBy" value="date" <?php if($nbld)echo 'checked="checked"'; ?>/>
+									<?php echo __('Delete alerts older than', 'wp-security-audit-log'); ?>
+								</label>
+								<input type="text" id="PruningDate" name="PruningDate" placeholder="<?php echo $text; ?>"
+									   value="<?php echo esc_attr($this->_plugin->settings->GetPruningDate()); ?>"
+									   onfocus="jQuery('#delete1').attr('checked', true);"/>
 								<span> <?php echo $text; ?></span>
 							</fieldset>
-						</td>
-					</tr>
-					<tr>
-						<th></th>
-						<td>
 							<fieldset>
-								<?php $max = $this->_plugin->settings->GetMaxAllowedAlerts(); ?>
-								<?php $text = sprintf(__('(1 to %d alerts)', 'wp-security-audit-log'), $max); ?>
-								<!--<input type="radio" id="delete2" style="margin-top: 2px;"/>-->
-								<label for="delete2"><?php echo __('Keep up to', 'wp-security-audit-log'); ?></label>
-								<input type="text" name="PruningLimit" placeholder="<?php echo $text;?>"
-									   value="<?php echo esc_attr($this->_plugin->settings->GetPruningLimit()); ?>"/>
+								<?php $text = __('(eg: 80)', 'wp-security-audit-log'); ?>
+								<?php $nbld = $this->_plugin->settings->IsPruningLimitEnabled(); ?>
+								<label for="delete2">
+									<input type="radio" id="delete2" name="PruneBy" value="limit" <?php if($nbld)echo 'checked="checked"'; ?>/>
+									<?php echo __('Keep up to', 'wp-security-audit-log'); ?>
+								</label>
+								<input type="text" id="PruningLimit" name="PruningLimit" placeholder="<?php echo $text;?>"
+									   value="<?php echo esc_attr($this->_plugin->settings->GetPruningLimit()); ?>"
+									   onfocus="jQuery('#delete2').attr('checked', true);"/>
+								<?php echo __('alerts', 'wp-security-audit-log'); ?>
 								<span><?php echo $text; ?></span>
-								<p class="description"><?php
-									echo sprintf(__('By default we keep up to %d WordPress Security Events.', 'wp-security-audit-log'), $max);
-								?></p>
 							</fieldset>
+							<p class="description"><?php
+								echo __('Next Scheduled Cleanup is in ', 'wp-security-audit-log');
+								echo human_time_diff(current_time('timestamp'), $next = wp_next_scheduled('wsal_cleanup'));
+								echo '<!-- ' . date('dMy H:i:s', $next) . ' --> ';
+								echo sprintf(
+										__('(or %s)', 'wp-security-audit-log'),
+										'<a href="' . admin_url('admin-ajax.php?action=AjaxRunCleanup') . '">' . __('Run Manually', 'wp-security-audit-log') . '</a>'
+									);
+							?></p>
 						</td>
 					</tr>
 					<tr>
@@ -176,6 +210,21 @@ class WSAL_Views_Settings extends WSAL_AbstractView {
 						</td>
 					</tr>
 					<tr>
+						<th><label for="RestrictAdmins"><?php _e('Restrict Plugin Access', 'wp-security-audit-log'); ?></label></th>
+						<td>
+							<fieldset>
+								<input type="hidden" id="RestrictAdminsDefaultUser" value="<?php echo esc_attr(wp_get_current_user()->user_login); ?>"/>
+								<label for="RestrictAdmins">
+									<?php $ira = $this->_plugin->settings->IsRestrictAdmins(); ?>
+									<input type="checkbox" name="RestrictAdmins" id="RestrictAdmins"<?php if($ira)echo ' checked="checked"'; ?>/>
+									<span class="description">
+										<?php _e('By default all the administrators on this WordPress have access to manage this plugin.<br/>By enabling this option only the users specified in the two options above and your username will have access to view alerts and manage this plugin.', 'wp-security-audit-log'); ?>
+									</span>
+								</label>
+							</fieldset>
+						</td>
+					</tr>
+					<tr>
 						<th><label for="aroption_on"><?php _e('Refresh Audit View', 'wp-security-audit-log'); ?></label></th>
 						<td>
 							<fieldset>
@@ -198,23 +247,60 @@ class WSAL_Views_Settings extends WSAL_AbstractView {
 					<tr>
 						<th><label><?php _e('Developer Options', 'wp-security-audit-log'); ?></label></th>
 						<td>
-							<fieldset><?php
-								foreach(array(
-									WSAL_Settings::OPT_DEV_DATA_INSPECTOR => array('Data Inspector', 'View data logged for each triggered alert.'),
-									WSAL_Settings::OPT_DEV_PHP_ERRORS     => array('PHP Errors', 'Enables sensor for alerts generated from PHP.'),
-									WSAL_Settings::OPT_DEV_REQUEST_LOG    => array('Request Log', 'Enables logging request to file.'),
-									WSAL_Settings::OPT_DEV_SANDBOX_PAGE   => array('Sandbox', 'Enables sandbox for testing PHP code.'),
-								) as $opt => $info){
-									?><label for="devoption_<?php echo $opt; ?>">
-										<input type="checkbox" name="DevOptions[]" id="devoption_<?php echo $opt; ?>" <?php
-											if($this->_plugin->settings->IsDevOptionEnabled($opt))echo 'checked="checked"'; ?> value="<?php echo $opt; ?>">
-										<span><?php _e($info[0], 'wp-security-audit-log'); ?></span>
-										<?php if(isset($info[1]) && $info[1]){ ?>
-											<span class="description"> &mdash; <?php _e($info[1], 'wp-security-audit-log'); ?></span>
-										<?php }
-									?></label><br/><?php
-								}
-							?></fieldset>
+							<fieldset>
+								<?php $any = $this->_plugin->settings->IsAnyDevOptionEnabled(); ?>
+								<a href="javascript:;" style="<?php if($any)echo 'display: none;'; ?>"
+								   onclick="jQuery(this).hide().next().show();">Show Developer Options</a>
+								<div style="<?php if(!$any)echo 'display: none;'; ?>">
+									<p style="border-left: 3px solid #FFD000; padding: 2px 8px; margin-left: 6px; margin-bottom: 16px;"><?php
+										_e('Only enable these options on testing, staging and development websites. Enabling any of the settings below on LIVE websites may cause unintended side-effects including degraded performance.', 'wp-security-audit-log');
+									?></p><?php
+									foreach(array(
+										WSAL_Settings::OPT_DEV_DATA_INSPECTOR => array(
+											__('Data Inspector', 'wp-security-audit-log'),
+											__('View data logged for each triggered alert.', 'wp-security-audit-log')
+										),
+										WSAL_Settings::OPT_DEV_PHP_ERRORS     => array(
+											__('PHP Errors', 'wp-security-audit-log'),
+											__('Enables sensor for alerts generated from PHP.', 'wp-security-audit-log')
+										),
+										WSAL_Settings::OPT_DEV_REQUEST_LOG    => array(
+											__('Request Log', 'wp-security-audit-log'),
+											__('Enables logging request to file.', 'wp-security-audit-log')
+										),
+										WSAL_Settings::OPT_DEV_SANDBOX_PAGE   => array(
+											__('Sandbox', 'wp-security-audit-log'),
+											__('Enables sandbox for testing PHP code.', 'wp-security-audit-log')
+										),
+										WSAL_Settings::OPT_DEV_BACKTRACE_LOG  => array(
+											__('Backtrace', 'wp-security-audit-log'),
+											__('Log full backtrace for PHP-generated alerts.', 'wp-security-audit-log')
+										),
+									) as $opt => $info){
+										?><label for="devoption_<?php echo $opt; ?>">
+											<input type="checkbox" name="DevOptions[]" id="devoption_<?php echo $opt; ?>" <?php
+												if($this->_plugin->settings->IsDevOptionEnabled($opt))echo 'checked="checked"'; ?> value="<?php echo $opt; ?>">
+											<span><?php echo $info[0]; ?></span>
+											<?php if(isset($info[1]) && $info[1]){ ?>
+												<span class="description"> &mdash; <?php echo $info[1]; ?></span>
+											<?php }
+										?></label><br/><?php
+									}
+								?></div>
+							</fieldset>
+						</td>
+					</tr>
+					
+					<tr>
+						<th><label for="Incognito"><?php _e('Hide Plugin from Plugins Page', 'wp-security-audit-log'); ?></label></th>
+						<td>
+							<fieldset>
+								<label for="Incognito">
+									<input type="checkbox" name="Incognito" value="1" id="Incognito"<?php
+										if($this->_plugin->settings->IsIncognito())echo ' checked="checked"';
+									?>/> <?php _e('Hide', 'wp-security-audit-log'); ?>
+								</label>
+							</fieldset>
 						</td>
 					</tr>
 				</tbody>

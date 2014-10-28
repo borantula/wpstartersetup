@@ -118,6 +118,9 @@ function itro_display_popup()
 	/* this condition, control if the popup must or not by displayed in a specified page */
 	$selected_page_id = json_decode(itro_get_option('selected_page_id'));
 	$id_match = NULL;
+	/* get the page id */
+	global $wp_query;
+    $current_page_id = $wp_query->get_queried_object_id();
 	
 	switch (itro_get_option('page_selection'))
 	{
@@ -126,7 +129,7 @@ function itro_display_popup()
 			{
 				foreach ($selected_page_id as $single_id)
 				{
-					if ( $single_id == get_the_id() || ( $single_id == $woo_shop_id && $woo_shop ) ) /* if the selected id is the current page id popup will be displayed OR if the woo_shop_id has been selected and you are in the woocommerce standard shop page ($woo_shop == true), popup will be displayed.  */
+					if ( $single_id == $current_page_id || ( $single_id == $woo_shop_id && $woo_shop ) ) /* if the selected id is the current page id popup will be displayed OR if the woo_shop_id has been selected and you are in the woocommerce standard shop page ($woo_shop == true), popup will be displayed.  */
 					{
 						$id_match++;
 					}
@@ -136,7 +139,7 @@ function itro_display_popup()
 			{
 				$id_match++;
 			}
-			if( $id_match != NULL || itro_get_option('preview_id') == get_the_id() )
+			if( $id_match != NULL || itro_get_option('preview_id') == $current_page_id )
 			{
 				itro_style();
 				itro_popup_template();
@@ -149,7 +152,7 @@ function itro_display_popup()
 			itro_popup_js();
 		break;
 		case 'none':
-			if( itro_get_option('preview_id') == get_the_id() )
+			if( itro_get_option('preview_id') == $current_page_id )
 			{
 				itro_style();
 				itro_popup_template();

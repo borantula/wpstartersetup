@@ -7,9 +7,14 @@ class WSAL_DB_Occurrence extends WSAL_DB_ActiveRecord {
 	public $id = 0;
 	public $site_id = 0;
 	public $alert_id = 0;
-	public $created_on = 0;
+	public $created_on = 0.0;
 	public $is_read = false;
 	public $is_migrated = false;
+	
+	protected function GetTableOptions(){
+		return parent::GetTableOptions() . ',' . PHP_EOL
+				. '    KEY site_alert_created (site_id,alert_id,created_on)';
+	}
 	
 	protected $_meta;
 	
@@ -27,7 +32,7 @@ class WSAL_DB_Occurrence extends WSAL_DB_ActiveRecord {
 	/**
 	 * Loads a meta item given its name.
 	 * @param string $name Meta name.
-	 * @return \WSAL_DB_Meta The meta item, be sure to checked if it was loaded successfully.
+	 * @return WSAL_DB_Meta The meta item, be sure to checked if it was loaded successfully.
 	 */
 	public function GetNamedMeta($name){
 		$meta = new WSAL_DB_Meta();
@@ -38,12 +43,12 @@ class WSAL_DB_Occurrence extends WSAL_DB_ActiveRecord {
 	/**
 	 * Returns the first meta value from a given set of names. Useful when you have a mix of items that could provide a particular detail.
 	 * @param array $names List of meta names.
-	 * @return \WSAL_DB_Meta The first meta item that exists.
+	 * @return WSAL_DB_Meta The first meta item that exists.
 	 */
 	public function GetFirstNamedMeta($names){
 		$meta = new WSAL_DB_Meta();
 		$query = '(' . str_repeat('name = %s OR ', count($names)).'0)';
-		$query = 'occurrence_id = %d AND ' . $query . ' LIMIT 1';
+		$query = 'occurrence_id = %d AND ' . $query . ' ORDER BY name DESC LIMIT 1';
 		array_unshift($names, $this->id); // prepend args with occurrence id
 		$meta->Load($query, $names);
 		return $meta->IsLoaded() ? $meta : null;
@@ -102,50 +107,6 @@ class WSAL_DB_Occurrence extends WSAL_DB_ActiveRecord {
 	}
 	
 	/**
-	 * Retrieves a value for a particular meta variable expression.
-	 * @param string $expr Expression, eg: User->Name looks for a Name property for meta named User.
-	 * @return mixed The value nearest to the expression.
-	 */
-	protected function GetMetaExprValue($expr){
-		// TODO Handle function calls (and methods?)
-		$expr = explode('->', $expr);
-		$meta = array_shift($expr);
-		$meta = $this->GetMetaValue($meta, null);
-		foreach($expr as $part){
-			if(is_scalar($meta) || is_null($meta))return $meta; // this isn't 100% correct
-			$meta = is_array($meta) ? $meta[$part] : $meta->$part;
-		}
-		return is_scalar($meta) ? (string)$meta : var_export($meta, true);
-	}
-	
-	/**
-	 * Expands a message with variables by replacing variables with meta data values.
-	 * @param string $mesg The original message.
-	 * @param callable|null $metaFormatter (Optional) Callback for formatting meta values.
-	 * @param string $afterMeta (Optional) Some text to put after meta values.
-	 * @return string The expanded message.
-	 */
-	protected function GetFormattedMesg($origMesg, $metaFormatter = null){
-		// tokenize message with regex
-		$mesg = preg_split('/(%.*?%)/', (string)$origMesg, -1, PREG_SPLIT_DELIM_CAPTURE);
-		if(!is_array($mesg))return (string)$origMesg;
-		// handle tokenized message
-		foreach($mesg as $i=>$token){
-			// handle escaped percent sign
-			if($token == '%%'){
-				$mesg[$i] = '%';
-			}else
-			// handle complex expressions
-			if(substr($token, 0, 1) == '%' && substr($token, -1, 1) == '%'){
-				$mesg[$i] = $this->GetMetaExprValue(substr($token, 1, -1));
-				if($metaFormatter)$mesg[$i] = call_user_func($metaFormatter, $token, $mesg[$i]);
-			}
-		}
-		// compact message and return
-		return implode('', $mesg);
-	}
-	
-	/**
 	 * @param callable|null $metaFormatter (Optional) Meta formatter callback.
 	 * @return string Full-formatted message.
 	 */
@@ -159,7 +120,7 @@ class WSAL_DB_Occurrence extends WSAL_DB_ActiveRecord {
 				$this->_cachedmessage = $this->GetAlert()->mesg;
 			}
 			// fill variables in message
-			$this->_cachedmessage = $this->GetFormattedMesg($this->_cachedmessage, $metaFormatter);
+			$this->_cachedmessage = $this->GetAlert()->GetMessage($this->GetMetaArray(), $metaFormatter, $this->_cachedmessage);
 		}
 		return $this->_cachedmessage;
 	}
@@ -222,4 +183,19 @@ class WSAL_DB_Occurrence extends WSAL_DB_ActiveRecord {
 		return $this->GetMetaValue('CurrentUserRoles', array());
 	}
 	
+	/**
+	 * @return float Number of seconds (and microseconds as fraction) since unix Day 0.
+	 * @todo This needs some caching.
+	 */
+	protected function GetMicrotime(){
+		return microtime(true);// + get_option('gmt_offset') * HOUR_IN_SECONDS;
+	}
+	
+	public function Save(){
+		// use today's date if not set up
+		if(is_null($this->created_on))
+			$this->created_on = $this->GetMicrotime();
+		
+		return parent::Save();
+	}
 }

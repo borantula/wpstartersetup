@@ -33,7 +33,19 @@
             function __construct( $field = array(), $value = '', $parent ) {
                 $this->parent = $parent;
                 $this->field  = $field;
-                $this->value  = trim( $value );
+                $this->value  = $value;
+
+                if ( is_array( $this->value ) ) {
+                    $this->value = '';
+                } else {
+                    $this->value = trim( $this->value );
+                }
+
+                if ( ! empty( $this->field['options'] ) ) {
+                    $this->field['args'] = $this->field['options'];
+                    unset( $this->field['options'] );
+                }
+
             }
 
             /**
@@ -50,8 +62,20 @@
                 if ( ! isset( $this->field['theme'] ) ) {
                     $this->field['theme'] = 'monokai';
                 }
+
+                $params = array(
+                    'minLines' => 10,
+                    'maxLines' => 30,
+                );
+
+                if ( isset( $this->field['args'] ) && ! empty( $this->field['args'] ) && is_array( $this->field['args'] ) ) {
+                    $params = wp_parse_args( $this->field['args'], $params );
+                }
+
                 ?>
                 <div class="ace-wrapper">
+                    <input type="hidden" class="localize_data"
+                           value="<?php echo htmlspecialchars( json_encode( $params ) ); ?>"/>
                     <textarea name="<?php echo $this->field['name'] . $this->field['name_suffix']; ?>"
                               id="<?php echo $this->field['id']; ?>-textarea"
                               class="ace-editor hide <?php echo $this->field['class']; ?>"

@@ -1,6 +1,7 @@
 {
     "config": {
-        "vendor-dir": "inc/vendor"
+        "vendor-dir": "inc/vendor",
+        "preferred-install" : "dist"
     },
     "require": {
         "redux-framework/redux-framework" : "dev-master",

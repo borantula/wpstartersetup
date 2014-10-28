@@ -7754,12 +7754,14 @@ class PodsAPI {
         if ( is_user_logged_in() )
             $uid = 'user_' . get_current_user_id();
 
-        $action = 'pods_form_' . $pod . '_' . $uid . '_' . $id . '_' . $uri . '_' . wp_hash( $form );
+		$field_hash = wp_create_nonce( 'pods_fields_' . $form );
+
+        $action = 'pods_form_' . $pod . '_' . $uid . '_' . $id . '_' . $uri . '_' . $field_hash;
 
         if ( empty( $uid ) )
             return pods_error( __( 'Access denied for your session, please refresh and try again.', 'pods' ), $this );
 
-        if ( wp_verify_nonce( $nonce, $action ) )
+        if ( false === wp_verify_nonce( $nonce, $action ) )
             return pods_error( __( 'Access denied, please refresh and try again.', 'pods' ), $this );
 
         $data = array();

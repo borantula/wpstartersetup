@@ -6,39 +6,15 @@ class WSAL_Settings {
 	 */
 	protected $_plugin;
 	
-	const OPT_PRFX = 'wsal-';
-	
 	public function __construct(WpSecurityAuditLog $plugin){
 		$this->_plugin = $plugin;
-	}
-	
-	protected function IsMultisite(){
-		return function_exists('is_multisite') && is_multisite();
-	}
-	
-	protected function GetGlobalOption($option, $default = false){
-		$fn = $this->IsMultisite() ? 'get_site_option' : 'get_option';
-		return $fn($option, $default);
-	}
-	
-	protected function SetGlobalOption($option, $value){
-		$fn = $this->IsMultisite() ? 'update_site_option' : 'update_option';
-		return $fn($option, $value);
-	}
-	
-	protected function GetLocalOption($option, $default = false){
-		$result = get_user_option($option, get_current_user_id());
-		return $result === false ? $default : $result;
-	}
-	
-	protected function SetLocalOption($option, $value){
-		update_user_option(get_current_user_id(), $option, $value, false);
 	}
 	
 	const OPT_DEV_DATA_INSPECTOR = 'd';
 	const OPT_DEV_PHP_ERRORS     = 'p';
 	const OPT_DEV_REQUEST_LOG    = 'r';
 	const OPT_DEV_SANDBOX_PAGE   = 's';
+	const OPT_DEV_BACKTRACE_LOG  = 'b';
 	
 	protected $_devoption = null;
 	
@@ -56,13 +32,20 @@ class WSAL_Settings {
 	 */
 	public function IsDevOptionEnabled($option){
 		if(is_null($this->_devoption)){
-			$this->_devoption = $this->GetGlobalOption(
-				self::OPT_PRFX . 'dev-options',
+			$this->_devoption = $this->_plugin->GetGlobalOption(
+				'dev-options',
 				implode(',', $this->GetDefaultDevOptions())
 			);
 			$this->_devoption = explode(',', $this->_devoption);
 		}
 		return in_array($option, $this->_devoption);
+	}
+	
+	/**
+	 * @return boolean Whether any developer option has been enabled or not.
+	 */
+	public function IsAnyDevOptionEnabled(){
+		return !!$this->_plugin->GetGlobalOption('dev-options', null);
 	}
 	
 	/**
@@ -80,8 +63,8 @@ class WSAL_Settings {
 		if($enabled)
 			$this->_devoption[] = $option;
 		// commit option
-		$this->SetGlobalOption(
-			self::OPT_PRFX . 'dev-options',
+		$this->_plugin->SetGlobalOption(
+			'dev-options',
 			implode(',', $this->_devoption)
 		);
 	}
@@ -91,7 +74,7 @@ class WSAL_Settings {
 	 */
 	public function ClearDevOptions(){
 		$this->_devoption = array();
-		$this->SetGlobalOption(self::OPT_PRFX . 'dev-options', '');
+		$this->_plugin->SetGlobalOption('dev-options', '');
 	}
 	
 	/**
@@ -123,31 +106,38 @@ class WSAL_Settings {
 	}
 	
 	/**
+	 * @return boolean Whether to store debug backtrace for PHP alerts or not.
+	 */
+	public function IsBacktraceLoggingEnabled(){
+		return $this->IsDevOptionEnabled(self::OPT_DEV_BACKTRACE_LOG);
+	}
+	
+	/**
 	 * @return boolean Whether dashboard widgets are enabled or not.
 	 */
 	public function IsWidgetsEnabled(){
-		return !$this->GetGlobalOption(self::OPT_PRFX . 'disable-widgets');
+		return !$this->_plugin->GetGlobalOption('disable-widgets');
 	}
 	
 	/**
 	 * @param boolean $newvalue Whether dashboard widgets are enabled or not.
 	 */
 	public function SetWidgetsEnabled($newvalue){
-		$this->SetGlobalOption(self::OPT_PRFX . 'disable-widgets', !$newvalue);
+		$this->_plugin->SetGlobalOption('disable-widgets', !$newvalue);
 	}
 	
 	/**
 	 * @return boolean Whether alerts in audit log view refresh automatically or not.
 	 */
 	public function IsRefreshAlertsEnabled(){
-		return !$this->GetGlobalOption(self::OPT_PRFX . 'disable-refresh');
+		return !$this->_plugin->GetGlobalOption('disable-refresh');
 	}
 	
 	/**
 	 * @param boolean $newvalue Whether alerts in audit log view refresh automatically or not.
 	 */
 	public function SetRefreshAlertsEnabled($newvalue){
-		$this->SetGlobalOption(self::OPT_PRFX . 'disable-refresh', !$newvalue);
+		$this->_plugin->SetGlobalOption('disable-refresh', !$newvalue);
 	}
 	
 	/**
@@ -178,7 +168,7 @@ class WSAL_Settings {
 	 */
 	public function GetPruningDate(){
 		if(!$this->_pruning){
-			$this->_pruning = $this->GetGlobalOption(self::OPT_PRFX . 'pruning-date');
+			$this->_pruning = $this->_plugin->GetGlobalOption('pruning-date');
 			if(!strtotime($this->_pruning))
 				$this->_pruning = $this->GetDefaultPruningDate();
 		}
@@ -190,7 +180,7 @@ class WSAL_Settings {
 	 */
 	public function SetPruningDate($newvalue){
 		if(strtotime($newvalue)){
-			$this->SetGlobalOption(self::OPT_PRFX . 'pruning-date', $newvalue);
+			$this->_plugin->SetGlobalOption('pruning-date', $newvalue);
 			$this->_pruning = $newvalue;
 		}
 	}
@@ -199,7 +189,7 @@ class WSAL_Settings {
 	 * @return integer Maximum number of alerts to keep.
 	 */
 	public function GetPruningLimit(){
-		$val = (int)$this->GetGlobalOption(self::OPT_PRFX . 'pruning-limit');
+		$val = (int)$this->_plugin->GetGlobalOption('pruning-limit');
 		return $val ? $val : $this->GetMaxAllowedAlerts();
 	}
 	
@@ -207,8 +197,32 @@ class WSAL_Settings {
 	 * @param integer $newvalue The new maximum number of alerts.
 	 */
 	public function SetPruningLimit($newvalue){
-		$newvalue = max(min((int)$newvalue, $this->GetMaxAllowedAlerts()), 1);
-		$this->SetGlobalOption(self::OPT_PRFX . 'pruning-limit', $newvalue);
+		$newvalue = max(/*min(*/(int)$newvalue/*, $this->GetMaxAllowedAlerts())*/, 1);
+		$this->_plugin->SetGlobalOption('pruning-limit', $newvalue);
+	}
+	
+	public function SetPruningDateEnabled($enabled){
+		$this->_plugin->SetGlobalOption('pruning-date-e', $enabled);
+	}
+	
+	public function SetPruningLimitEnabled($enabled){
+		$this->_plugin->SetGlobalOption('pruning-limit-e', $enabled);
+	}
+	
+	public function IsPruningDateEnabled(){
+		return $this->_plugin->GetGlobalOption('pruning-date-e', true);
+	}
+	
+	public function IsPruningLimitEnabled(){
+		return $this->_plugin->GetGlobalOption('pruning-limit-e', true);
+	}
+	
+	public function IsRestrictAdmins(){
+		return $this->_plugin->GetGlobalOption('restrict-admins', false);
+	}
+	
+	public function SetRestrictAdmins($enable){
+		$this->_plugin->SetGlobalOption('restrict-admins', (bool)$enable);
 	}
 	
 	protected $_disabled = null;
@@ -223,7 +237,7 @@ class WSAL_Settings {
 	public function GetDisabledAlerts(){
 		if(!$this->_disabled){
 			$this->_disabled = implode(',', $this->GetDefaultDisabledAlerts());
-			$this->_disabled = $this->GetGlobalOption(self::OPT_PRFX . 'disabled-alerts', $this->_disabled);
+			$this->_disabled = $this->_plugin->GetGlobalOption('disabled-alerts', $this->_disabled);
 			$this->_disabled = explode(',', $this->_disabled);
 			$this->_disabled = array_map('intval', $this->_disabled);
 		}
@@ -235,19 +249,19 @@ class WSAL_Settings {
 	 */
 	public function SetDisabledAlerts($types){
 		$this->_disabled = array_unique(array_map('intval', $types));
-		$this->SetGlobalOption(self::OPT_PRFX . 'disabled-alerts', implode(',', $this->_disabled));
+		$this->_plugin->SetGlobalOption('disabled-alerts', implode(',', $this->_disabled));
 	}
 	
 	protected $_viewers = null;
 	
 	public function SetAllowedPluginViewers($usersOrRoles){
 		$this->_viewers = $usersOrRoles;
-		$this->SetGlobalOption(self::OPT_PRFX . 'plugin-viewers', implode(',', $this->_viewers));
+		$this->_plugin->SetGlobalOption('plugin-viewers', implode(',', $this->_viewers));
 	}
 	
 	public function GetAllowedPluginViewers(){
 		if(is_null($this->_viewers)){
-			$this->_viewers = array_unique(array_filter(explode(',', $this->GetGlobalOption(self::OPT_PRFX . 'plugin-viewers'))));
+			$this->_viewers = array_unique(array_filter(explode(',', $this->_plugin->GetGlobalOption('plugin-viewers'))));
 		}
 		return $this->_viewers;
 	}
@@ -256,12 +270,12 @@ class WSAL_Settings {
 	
 	public function SetAllowedPluginEditors($usersOrRoles){
 		$this->_editors = $usersOrRoles;
-		$this->SetGlobalOption(self::OPT_PRFX . 'plugin-editors', implode(',', $this->_editors));
+		$this->_plugin->SetGlobalOption('plugin-editors', implode(',', $this->_editors));
 	}
 	
 	public function GetAllowedPluginEditors(){
 		if(is_null($this->_editors)){
-			$this->_editors = array_unique(array_filter(explode(',', $this->GetGlobalOption(self::OPT_PRFX . 'plugin-editors'))));
+			$this->_editors = array_unique(array_filter(explode(',', $this->_plugin->GetGlobalOption('plugin-editors'))));
 		}
 		return $this->_editors;
 	}
@@ -270,12 +284,12 @@ class WSAL_Settings {
 	
 	public function SetViewPerPage($newvalue){
 		$this->_perpage = max($newvalue, 1);
-		$this->SetGlobalOption(self::OPT_PRFX . 'items-per-page', $this->_perpage);
+		$this->_plugin->SetGlobalOption('items-per-page', $this->_perpage);
 	}
 	
 	public function GetViewPerPage(){
 		if(is_null($this->_perpage)){
-			$this->_perpage = (int)$this->GetGlobalOption(self::OPT_PRFX . 'items-per-page', 10);
+			$this->_perpage = (int)$this->_plugin->GetGlobalOption('items-per-page', 10);
 		}
 		return $this->_perpage;
 	}
@@ -292,14 +306,14 @@ class WSAL_Settings {
 	 * @return string[] List of superadmin usernames.
 	 */
 	protected function GetSuperAdmins(){
-		return $this->IsMultisite() ? get_super_admins() : array();
+		return $this->_plugin->IsMultisite() ? get_super_admins() : array();
 	}
 	
 	/**
 	 * @return string[] List of admin usernames.
 	 */
 	protected function GetAdmins(){
-		if($this->IsMultisite()){
+		if($this->_plugin->IsMultisite()){
 			// see: https://gist.github.com/1508426/65785a15b8638d43a9905effb59e4d97319ef8f8
 			global $wpdb;
 			$cap = get_current_blog_id();
@@ -319,41 +333,59 @@ class WSAL_Settings {
 	}
 	
 	/**
-	 * @param integer|WP_user $user User object to check.
-	 * @param string $action Type of action, either 'view' or 'edit'.
-	 * @return boolean If user has access or not.
+	 * Returns access tokens for a particular action.
+	 * @param string $action Type of action.
+	 * @return string[] List of tokens (usernames, roles etc).
 	 */
-	public function UserCan($user, $action){
-		if(is_int($user))$user = get_userdata($user);
+	public function GetAccessTokens($action){
 		$allowed = array();
 		
 		switch($action){
 			case 'view':
 				$allowed = $this->GetAllowedPluginViewers();
 				$allowed = array_merge($allowed, $this->GetAllowedPluginEditors());
-				$allowed = array_merge($allowed, $this->GetSuperAdmins());
-				$allowed = array_merge($allowed, $this->GetAdmins());
+				if (!$this->IsRestrictAdmins()) {
+					$allowed = array_merge($allowed, $this->GetSuperAdmins());
+					$allowed = array_merge($allowed, $this->GetAdmins());
+				}
 				break;
 			case 'edit':
 				$allowed = $this->GetAllowedPluginEditors();
-				$allowed = array_merge($allowed, $this->IsMultisite() ?
-						$this->GetSuperAdmins() : $this->GetAdmins()
-					);
+				if (!$this->IsRestrictAdmins()) {
+					$allowed = array_merge($allowed, $this->_plugin->IsMultisite() ?
+							$this->GetSuperAdmins() : $this->GetAdmins()
+						);
+				}
 				break;
 			default:
 				throw new Exception('Unknown action "'.$action.'".');
 		}
 		
+		if (!$this->IsRestrictAdmins()) {
+			if(is_multisite()){
+				$allowed = array_merge($allowed, get_super_admins());
+			}else{
+				$allowed[] = 'administrator';
+			}
+		}
+		
+		return array_unique($allowed);
+	}
+	
+	/**
+	 * @param integer|WP_user $user User object to check.
+	 * @param string $action Type of action, either 'view' or 'edit'.
+	 * @return boolean If user has access or not.
+	 */
+	public function UserCan($user, $action){
+		if(is_int($user))$user = get_userdata($user);
+		
+		$allowed = $this->GetAccessTokens($action);
+		
 		$check = array_merge(
 			$user->roles,
 			array($user->user_login)
 		);
-		
-		if(is_multisite()){
-			$allowed = array_merge($allowed, get_super_admins());
-		}else{
-			$allowed[] = 'administrator';
-		}
 		
 		foreach($check as $item){
 			if(in_array($item, $allowed)){
@@ -362,5 +394,73 @@ class WSAL_Settings {
 		}
 		
 		return false;
+	}
+	
+	public function GetCurrentUserRoles($baseRoles = null){
+		if ($baseRoles == null) $baseRoles = wp_get_current_user()->roles;
+		if (function_exists('is_super_admin') && is_super_admin()) $baseRoles[] = 'superadmin';
+		return $baseRoles;
+	}
+	
+	public function IsIncognito(){
+		return $this->_plugin->GetGlobalOption('hide-plugin');
+	}
+	
+	public function SetIncognito($enabled){
+		return $this->_plugin->SetGlobalOption('hide-plugin', $enabled);
+	}
+	
+	public function GetLicenses(){
+		return $this->_plugin->GetGlobalOption('licenses');
+	}
+	
+	public function GetLicense($name){
+		$data = $this->GetLicenses();
+		$name = sanitize_key(basename($name));
+		return isset($data[$name]) ? $data[$name] : array();
+	}
+	
+	public function SetLicenses($data){
+		$this->_plugin->SetGlobalOption('licenses', $data);
+	}
+	
+	public function GetLicenseKey($name){
+		$data = $this->GetLicense($name);
+		return isset($data['key']) ? $data['key'] : '';
+	}
+	
+	public function GetLicenseStatus($name){
+		$data = $this->GetLicense($name);
+		return isset($data['sts']) ? $data['sts'] : '';
+	}
+	
+	public function GetLicenseErrors($name){
+		$data = $this->GetLicense($name);
+		return isset($data['err']) ? $data['err'] : '';
+	}
+	
+	public function SetLicenseKey($name, $key){
+		$data = $this->GetLicenses();
+		if (!isset($data[$name])) $data[$name] = array();
+		$data[$name]['key'] = $key;
+		$this->SetLicenses($data);
+	}
+	
+	public function SetLicenseStatus($name, $status){
+		$data = $this->GetLicenses();
+		if (!isset($data[$name])) $data[$name] = array();
+		$data[$name]['sts'] = $status;
+		$this->SetLicenses($data);
+	}
+	
+	public function SetLicenseErrors($name, $errors){
+		$data = $this->GetLicenses();
+		if (!isset($data[$name])) $data[$name] = array();
+		$data[$name]['err'] = $errors;
+		$this->SetLicenses($data);
+	}
+	
+	public function ClearLicenses(){
+		$this->SetLicenses(array());
 	}
 }

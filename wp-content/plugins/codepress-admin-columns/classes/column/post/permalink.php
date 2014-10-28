@@ -1,25 +1,30 @@
 <?php
 /**
- * CPAC_Column_Post_ID
+ * Columng displaying full item permalink (including URL).
  *
- * @since 2.0.0
+ * @since 2.0
  */
 class CPAC_Column_Post_Permalink extends CPAC_Column {
 
-	public function __construct( $storage_model ) {
+	/**
+	 * @see CPAC_Column::init()
+	 * @since 2.2.1
+	 */
+	public function init() {
 
+		parent::init();
+
+		// Properties
 		$this->properties['type']	 	= 'column-permalink';
 		$this->properties['label']	 	= __( 'Permalink', 'cpac' );
 
-		// define additional options
+		// Options
 		$this->options['link_to_post'] = false;
-
-		parent::__construct( $storage_model );
 	}
 
 	/**
 	 * @see CPAC_Column::get_value()
-	 * @since 2.0.0
+	 * @since 2.0
 	 */
 	public function get_value( $post_id ) {
 
@@ -74,5 +79,4 @@ class CPAC_Column_Post_Permalink extends CPAC_Column {
 		</tr>
 		<?php
 	}
-
 }

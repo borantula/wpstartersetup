@@ -147,3 +147,57 @@ add_action( 'tgmpa_register', function(){
     tgmpa( $plugins, $config );
 
 });
+
+
+
+
+function getTermFamily($termId,$taxonomy = 'category', $childArgs = array(),$level = 0)
+{
+    //get this items first then recurse into children
+    $current = new Dion\TaxonomyHierarchy($termId,$taxonomy,$childArgs);
+
+    ?>
+    <p style="padding-left:<?=($level+1)*10;?>px;"  >
+        <a href="<?=get_term_link($current->tree['current']);?>"><?=$current->tree['current']->name;?></a>
+    </p>
+        <?php
+        //get child term list
+        if($current->hasChildren) {
+            $newLevel = $level + 1;
+
+            foreach ($current->tree['children'] as $childTerm) {
+                getTermFamily($childTerm->term_id,$childTerm->taxonomy,array(),$newLevel);
+            }
+
+        }
+        ?>
+
+    <?php
+}
+
+
+function archivePartial($pageId,$level = 0)
+{
+
+    $hierarchy = new \Dion\Content\PostHierarchy($pageId);
+    $tree = $hierarchy->tree;
+    ?>
+    <?php if( !$hierarchy->hasParent ):?>
+    <p>
+        <a href="<?= get_permalink($tree['current']);?>">
+            <?php echo get_the_title($tree['current']);?>
+        </a>
+    </p>
+<?php endif;?>
+    <?php if( $hierarchy->hasChildren ):?>
+    <?php foreach( $tree['children']  as $childId):?>
+        <p style="padding-left:<?=($level+1)*10;?>px"  >
+            <a href="<?= get_permalink($childId);?>">
+                <?php echo get_the_title($childId);?>
+            </a>
+        </p>
+        <?php archivePartial($childId,($level + 1) );?>
+    <?php endforeach;?>
+<?php endif;?>
+<?php
+}

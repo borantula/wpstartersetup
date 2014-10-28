@@ -1,7 +1,7 @@
 <?php 
 function itro_popup_template()
 { ?>
-	<div id="itro_popup" style="visibility:hidden">
+	<div id="itro_popup" style="visibility:hidden; display: none;">
 	<?php
 		if( itro_get_option('age_restriction') == NULL ) /* age restriction off */
 		{

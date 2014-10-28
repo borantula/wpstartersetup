@@ -39,40 +39,50 @@ abstract class WSAL_DB_ActiveRecord {
 	protected function _GetInstallQuery(){
 		global $wpdb;
 		
-		$copy = get_class($this);
-		$copy = new $copy();
+		$class = get_class($this);
+		$copy = new $class();
 		
 		$sql = 'CREATE TABLE ' . $this->GetTable() . ' (' . PHP_EOL;
+		
 		foreach($this->GetColumns() as $key) {
+			$sql .= '    ';
 			switch(true) {
 				case $key == $copy->_idkey:
-					$sql .= $key . ' BIGINT NOT NULL AUTO_INCREMENT,'.PHP_EOL;
+					$sql .= $key . ' BIGINT NOT NULL AUTO_INCREMENT,' . PHP_EOL;
 					break;
 				case is_integer($copy->$key):
-					$sql .= $key . ' BIGINT NOT NULL,'.PHP_EOL;
+					$sql .= $key . ' BIGINT NOT NULL,' . PHP_EOL;
 					break;
 				case is_float($copy->$key):
-					$sql .= $key . ' FLOAT NOT NULL,'.PHP_EOL;
+					$sql .= $key . ' DOUBLE NOT NULL,' . PHP_EOL;
 					break;
 				case is_string($copy->$key):
-					$sql .= $key . ' TEXT NOT NULL,'.PHP_EOL;
+					$maxlenght = $key . '_maxlength';
+					if(property_exists($class, $maxlenght)){
+						$sql .= $key . ' VARCHAR(' . intval($class::$$maxlenght) . ') NOT NULL,' . PHP_EOL;
+					}else{
+						$sql .= $key . ' TEXT NOT NULL,' . PHP_EOL;
+					}
 					break;
 				case is_bool($copy->$key):
-					$sql .= $key . ' BIT NOT NULL,'.PHP_EOL;
+					$sql .= $key . ' BIT NOT NULL,' . PHP_EOL;
 					break;
 				case is_array($copy->$key):
 				case is_object($copy->$key):
-					$sql .= $key . ' LONGTEXT NOT NULL,'.PHP_EOL;
+					$sql .= $key . ' LONGTEXT NOT NULL,' . PHP_EOL;
 					break;
 			}
 		}
-		$sql .= 'CONSTRAINT PK_' . $this->GetTable().'_'.$this->_idkey
-			. ' PRIMARY KEY (' . $this->_idkey . ')' . PHP_EOL
-			. ' )';
+		
+		$sql .= $this->GetTableOptions() . PHP_EOL;
+		
+		$sql .= ')';
+		
 		if ( ! empty($wpdb->charset) )
 			$sql .= ' DEFAULT CHARACTER SET ' . $wpdb->charset;
 		if ( ! empty($wpdb->collate) )
 			$sql .= ' COLLATE ' . $wpdb->collate;
+		
 		return $sql;
 	}
 	
@@ -110,6 +120,13 @@ abstract class WSAL_DB_ActiveRecord {
 	}
 	
 	/**
+	 * @return string SQL table options (constraints, foreign keys, indexes etc).
+	 */
+	protected function GetTableOptions(){
+		return '    PRIMARY KEY  (' . $this->_idkey . ')';
+	}
+	
+	/**
 	 * @return array Returns this records' columns.
 	 */
 	public function GetColumns(){
@@ -123,6 +140,7 @@ abstract class WSAL_DB_ActiveRecord {
 	}
 	
 	/**
+	 * @deprecated
 	 * @return boolean Returns whether table structure is installed or not.
 	 */
 	public function IsInstalled(){
@@ -135,20 +153,16 @@ abstract class WSAL_DB_ActiveRecord {
 	 * Install this ActiveRecord structure into DB.
 	 */
 	public function Install(){
-		if(!$this->IsInstalled()) {
-			require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
-			dbDelta($this->_GetInstallQuery());
-		}
+		require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
+		dbDelta($this->_GetInstallQuery());
 	}
 	
 	/**
 	 * Remove this ActiveRecord structure into DB.
 	 */
 	public function Uninstall(){
-		if($this->IsInstalled()) {
-			require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
-			dbDelta($this->_GetUninstallQuery());
-		}
+		require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
+		dbDelta($this->_GetUninstallQuery());
 	}
 	
 	/**
@@ -259,17 +273,31 @@ abstract class WSAL_DB_ActiveRecord {
 	}
 	
 	/**
+	 * Delete records in DB matching a query.
+	 * @param string $query Full SQL query.
+	 * @param array $args (Optional) Query arguments.
+	 */
+	public static function DeleteQuery($query, $args = array()){
+		global $wpdb;
+		$sql = count($args) ? $wpdb->prepare($query, $args) : $query;
+		$wpdb->query($sql);
+	}
+	
+	/**
 	 * Load multiple records from DB.
-	 * @param string $cond (Optional) Load condition.
-	 * @param array $args (Optional) Load condition arguments.
+	 * @param string $cond (Optional) Load condition (eg: 'some_id = %d' ).
+	 * @param array $args (Optional) Load condition arguments (rg: array(45) ).
 	 * @return self[] List of loaded records.
 	 */
-	public static function LoadMulti($cond = '%d', $args = array(1)){
+	public static function LoadMulti($cond, $args = array()){
 		global $wpdb;
 		$class = get_called_class();
 		$result = array();
 		$temp = new $class();
-		$sql = $wpdb->prepare('SELECT * FROM ' . $temp->GetTable() . ' WHERE '.$cond, $args);
+		$sql = (!is_array($args) || !count($args)) // do we really need to prepare() or not?
+			? ('SELECT * FROM ' . $temp->GetTable() . ' WHERE ' . $cond)
+			: $wpdb->prepare('SELECT * FROM ' . $temp->GetTable() . ' WHERE ' . $cond, $args)
+		;
 		foreach($wpdb->get_results($sql, ARRAY_A) as $data){
 			$result[] = new $class($data);
 		}
@@ -298,12 +326,25 @@ abstract class WSAL_DB_ActiveRecord {
 	 * If no parameters are given, this counts the number of records in the DB table.
 	 * @param string $cond (Optional) Query condition.
 	 * @param array $args (Optional) Condition arguments.
+	 * @return int Number of matching records.
 	 */
 	public static function Count($cond = '%d', $args = array(1)){
 		global $wpdb;
 		$class = get_called_class();
 		$temp = new $class();
-		$sql = $wpdb->prepare('SELECT COUNT(*) FROM ' . $temp->GetTable() . ' WHERE '.$cond, $args);
+		$sql = $wpdb->prepare('SELECT COUNT(*) FROM ' . $temp->GetTable() . ' WHERE ' . $cond, $args);
+		return (int)$wpdb->get_var($sql);
+	}
+	
+	/**
+	 * Count records in the DB matching a query.
+	 * @param string $query Full SQL query.
+	 * @param array $args (Optional) Query arguments.
+	 * @return int Number of matching records.
+	 */
+	public static function CountQuery($query, $args = array()){
+		global $wpdb;
+		$sql = count($args) ? $wpdb->prepare($query, $args) : $query;
 		return (int)$wpdb->get_var($sql);
 	}
 	
@@ -317,7 +358,7 @@ abstract class WSAL_DB_ActiveRecord {
 		global $wpdb;
 		$class = get_called_class();
 		$result = array();
-		$sql = $wpdb->prepare($query, $args);
+		$sql = count($args) ? $wpdb->prepare($query, $args) :  $query;
 		foreach($wpdb->get_results($sql, ARRAY_A) as $data){
 			$result[] = new $class($data);
 		}
@@ -331,7 +372,7 @@ abstract class WSAL_DB_ActiveRecord {
 		$plugin = WpSecurityAuditLog::GetInstance();
 		foreach(glob(dirname(__FILE__) . '/*.php') as $file){
 			$class = $plugin->GetClassFileClassName($file);
-			if($class != __CLASS__){
+			if(is_subclass_of($class, __CLASS__)){
 				$class = new $class();
 				$class->Install();
 			}
@@ -345,7 +386,7 @@ abstract class WSAL_DB_ActiveRecord {
 		$plugin = WpSecurityAuditLog::GetInstance();
 		foreach(glob(dirname(__FILE__) . '/*.php') as $file){
 			$class = $plugin->GetClassFileClassName($file);
-			if($class != __CLASS__){
+			if(is_subclass_of($class, __CLASS__)){
 				$class = new $class();
 				$class->Uninstall();
 			}

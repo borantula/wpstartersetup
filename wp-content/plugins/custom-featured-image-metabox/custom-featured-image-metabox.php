@@ -7,14 +7,14 @@
  * @package   Custom_Featured_Image_Metabox
  * @author    1fixdotio <1fixdotio@gmail.com>
  * @license   GPL-2.0+
- * @link      http://1fix.io
+ * @link      http://1fix.io/custom-featured-image-metabox
  * @copyright 2014 1Fix.io
  *
  * @wordpress-plugin
  * Plugin Name:       Custom Featured Image Metabox
- * Plugin URI:        http://1fix.io
+ * Plugin URI:        http://1fix.io/custom-featured-image-metabox
  * Description:       Custom the title, content and set / remove link text in the Featured Image metabox.
- * Version:           1.0.0
+ * Version:           1.0.1
  * Author:            1fixdotio
  * Author URI:        http://1fix.io
  * Text Domain:       cfim

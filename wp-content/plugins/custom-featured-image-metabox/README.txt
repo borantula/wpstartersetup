@@ -4,8 +4,8 @@ Contributors: 1fixdotio, yoren
 Donate link: http://1fix.io/
 Tags: featured image, metabox
 Requires at least: 3.5
-Tested up to: 3.9.1
-Stable tag: 1.0.0
+Tested up to: 4.0
+Stable tag: 1.0.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -50,6 +50,9 @@ With this plugin, you can custom the Featured Image metabox by:
 2. A customized Featured Image metabox
 
 == Changelog ==
+
+= 1.0.1 =
+Update the change_media_strings function
 
 = 1.0.0 =
 * The first version

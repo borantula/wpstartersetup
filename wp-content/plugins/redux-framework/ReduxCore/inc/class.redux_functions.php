@@ -6,6 +6,7 @@
      * @package     Redux_Framework
      * @subpackage  Core
      */
+
 // Exit if accessed directly
     if ( ! defined( 'ABSPATH' ) ) {
         exit;
@@ -48,7 +49,7 @@
                     return;
                 } else { //if ( count( $cssArray ) >= 1 ) {
                     $css = '';
-                    
+
                     foreach ( $cssArray as $element => $selector ) {
 
                         // The old way
@@ -82,7 +83,7 @@
              * @access      public
              * @return      void
              */
-            static public function initWpFilesystem() {
+            public static function initWpFilesystem() {
                 global $wp_filesystem;
 
                 // Initialize the Wordpress filesystem, no more using file_put_contents function
@@ -99,14 +100,14 @@
              * @access      public
              * @return      void
              */
-            static public function modRewriteCheck() {
+            public static function modRewriteCheck() {
                 if ( function_exists( 'apache_get_modules' ) ) {
                     if ( ! in_array( 'mod_rewrite', apache_get_modules() ) ) {
                         self::$_parent->admin_notices[] = array(
                             'type'    => 'error',
                             'msg'     => '<strong><center>The Apache mod_rewrite module is not enabled on your server.</center></strong>
-                                  <br/>
-                                  Both Wordpress and Redux require the enabling of the Apache mod_rewrite module to function properly.  Please contact whomever provides support for your server and ask them to enable the mod_rewrite module',
+                              <br/>
+                              Both Wordpress and Redux require the enabling of the Apache mod_rewrite module to function properly.  Please contact whomever provides support for your server and ask them to enable the mod_rewrite module',
                             'id'      => 'mod_rewrite_notice_',
                             'dismiss' => false
                         );
@@ -121,7 +122,7 @@
              * @access      private
              * @return      string $ver
              */
-            static private function verFromGit() {
+            private static function verFromGit() {
                 // Get the raw framework.php from github
                 $gitpage = wp_remote_get(
                     'https://raw.github.com/ReduxFramework/redux-framework/master/ReduxCore/framework.php', array(
@@ -180,7 +181,7 @@
              *
              * @return      void - Admin notice is diaplyed if new version is found
              */
-            static public function updateCheck( $curVer ) {
+            public static function updateCheck( $curVer ) {
 
                 // If no cookie, check for new ver
                 if ( ! isset( $_COOKIE['redux_update_check'] ) ) { // || 1 == strcmp($_COOKIE['redux_update_check'], self::$_version)) {
@@ -197,10 +198,11 @@
                 }
 
                 // Set up admin notice on new version
-                if ( 1 == strcmp( $ver, $curVer ) ) {
+                //if ( 1 == strcmp( $ver, $curVer ) ) {
+                if ( version_compare( $ver, $curVer, '>' ) ) {
                     self::$_parent->admin_notices[] = array(
                         'type'    => 'updated',
-                        'msg'     => '<strong>A new build of Redux is now available!</strong><br/><br/>Your version:  <strong>' . $curVer . '</strong><br/>New version:  <strong><span style="color: red;">' . $ver . '</span></strong><br/><br/><a href="https://github.com/ReduxFramework/redux-framework">Get it now</a>&nbsp;&nbsp;|',
+                        'msg'     => '<strong>A new build of Redux is now available!</strong><br/><br/>Your version:  <strong>' . $curVer . '</strong><br/>New version:  <strong><span style="color: red;">' . $ver . '</span></strong><br/><br/><em>If you are not a developer, your theme/plugin author shipped with <code>dev_mode</code> on. Contact them to fix it, but in the meantime you can use our <a href="' . 'https://' . 'wordpress.org/plugins/redux-developer-mode-disabler/" target="_blank">dev_mode disabler</a>.</em><br /><br /><a href="' . 'https://' . 'github.com/ReduxFramework/redux-framework">Get it now</a>&nbsp;&nbsp;|',
                         'id'      => 'dev_notice_' . $ver,
                         'dismiss' => true,
                     );
@@ -214,7 +216,7 @@
              * @access      public
              * @return      void
              */
-            static public function adminNotices() {
+            public static function adminNotices() {
                 global $current_user, $pagenow;
 
                 // Check for an active admin notice array
@@ -269,7 +271,7 @@
              * @access      public
              * @return      void
              */
-            static public function dismissAdminNotice() {
+            public static function dismissAdminNotice() {
                 global $current_user;
 
                 // Verify the dismiss and id parameters are present.

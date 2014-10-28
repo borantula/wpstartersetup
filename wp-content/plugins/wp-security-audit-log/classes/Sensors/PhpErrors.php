@@ -8,6 +8,8 @@ class WSAL_Sensors_PhpErrors extends WSAL_AbstractSensor {
 		0001 => array(1,4,16,64,256,4096),		// errors
 		0002 => array(2,32,128,512),			// warnings
 		0003 => array(8,1024,2048,8192,16384),	// notices
+		0004 => array(),						// exceptions
+		0005 => array(),						// shutdown
 	);
 	
 	protected $_maybe_last_error = null;
@@ -27,12 +29,20 @@ class WSAL_Sensors_PhpErrors extends WSAL_AbstractSensor {
 	public function EventError($errno, $errstr, $errfile = 'unknown', $errline = 0, $errcontext = array()){
 		if($this->_avoid_error_recursion)return;
 		
+		$errbacktrace = 'No Backtrace';
+		if($this->plugin->settings->IsBacktraceLoggingEnabled()){
+			ob_start();
+			debug_print_backtrace();
+			$errbacktrace = ob_get_clean();
+		}
+		
 		$data = array(
 			'Code'    => $errno,
 			'Message' => $errstr,
 			'File'    => $errfile,
 			'Line'    => $errline,
 			'Context' => $errcontext,
+			'Trace'   => $errbacktrace,
 		);
 		
 		$type = 0002; // default (middle ground)
@@ -52,13 +62,18 @@ class WSAL_Sensors_PhpErrors extends WSAL_AbstractSensor {
 	public function EventException(Exception $ex){
 		if($this->_avoid_error_recursion)return;
 		
+		$errbacktrace = 'No Backtrace';
+		if($this->plugin->settings->IsBacktraceLoggingEnabled()){
+			$errbacktrace = $ex->getTraceAsString();
+		}
+		
 		$data = array(
 			'Class'   => get_class($ex),
 			'Code'    => $ex->getCode(),
 			'Message' => $ex->getMessage(),
 			'File'    => $ex->getFile(),
 			'Line'    => $ex->getLine(),
-			'Trace'   => $ex->getTraceAsString(),
+			'Trace'   => $errbacktrace,
 		);
 		
 		if(method_exists($ex, 'getContext'))
