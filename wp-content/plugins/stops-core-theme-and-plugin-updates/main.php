@@ -1,14 +1,14 @@
 <?php
-/**
+ /*
  * @package Disable Updates Manager
  * @author MPS Plugins
  * @email mpsplugins@gmail.com
- * @version 4.4.1.2
+ * @version 4.6.0
  */
 /*
 Plugin Name: Disable Updates Manager
 Plugin URI: http://www.mpswp.wordpress.com
-Version: 4.4.1.2
+Version: 4.6.0
 Description: A configurable plugin that disables updates for you. Easy, clean and helpful.
 Author: MPS Plugins
 Author URI: http://www.mpswp.wordpress.com
@@ -38,7 +38,7 @@ Go to the license.txt in the trunk for more information.
 class Disable_Updates {
 
 	// Define version.
-	const VERSION = '4.4.1.2';
+	const VERSION = '4.6.0';
 
 	private static $page_hook = '';
 
@@ -183,7 +183,6 @@ static function validate_settings( $value ) {
 			return array_merge(
 				$links,
 				array( '<a href="http://www.wordpress.org/support/plugin/stops-core-theme-and-plugin-updates">Support</a>' ),
-				array( '<a href="http://www.wordpress.org/plugins/stops-core-theme-and-plugin-updates/faq/">FAQ</a>' ),
 				array( '<a href="https://github.com/Websiteguy/disable-updates-manager">GitHub</a>' )
 			);
 		}
@@ -309,23 +308,23 @@ static function validate_settings( $value ) {
 					
 				/* 
 				Version Added: 4.4.0
-				Last Version Edited: 4.4.0
+				Last Version Edited: 4.5.0
 				Description: Disables minor core updates in the Disable Updates Manager settings.
 				*/
 				case 'minor-core-updates' :
 				
-				    add_filter( 'allow_minor_auto_core_updates', '__return_false' );
+				    //TO BE ADDED
 				
 				    break;
 					
 				/* 
 				Version Added: 4.4.0
-				Last Version Edited: 4.4.1
+				Last Version Edited: 4.5.0
 				Description: Disables major core updates in the Disable Updates Manager settings.
 				*/
 				case 'major-core-updates' :
 				
-				    add_filter( 'allow_major_auto_core_updates', '__return_false' );
+				    //TO BE ADDED
 				
 				    break;
 					
@@ -393,7 +392,7 @@ static function validate_settings( $value ) {
 
 		if ( ! isset( $plugins->response ) || count( $plugins->response ) == 0 ) {
 
-			return $plugins;
+			return $plugins;
 		}
 
 		$blocked = (array) get_option( 'disable_updates_blocked' );
@@ -558,11 +557,11 @@ static function validate_settings( $value ) {
 
 		if ( $blocked !== FALSE && array_key_exists( $plugin_file, $blocked ) ) {
 
-			$actions[] = '<a class="delete" href="plugins.php?_wpnonce=' . wp_create_nonce( 'disable_updates' ) . '&disable_updates&unblock=' . $plugin_file . '">Unblock Updates</a>';
+			$actions[] = '<a class="delete" href="plugins.php?_wpnonce=' . wp_create_nonce( 'disable_updates' ) . '&disable_updates&unblock=' . $plugin_file . '"><small>Updates Blocked</a>';
 
 		} else {
 
-			$actions[] = '<a class="delete" href="plugins.php?_wpnonce=' . wp_create_nonce( 'disable_updates' ) . '&disable_updates&block=' . $plugin_file . '">Block Updates</a>';
+			$actions[] = '<a class="delete" href="plugins.php?_wpnonce=' . wp_create_nonce( 'disable_updates' ) . '&disable_updates&block=' . $plugin_file . '"><small>Updates Allowed</small></a>';
 		}
 
 		return $actions;
@@ -656,10 +655,6 @@ static function validate_settings( $value ) {
 This is the Disable Updates Manager settings help tab. In here you will find helpful information on what Disable Updates Manager does and how to use it.
 </p>
 
-<div class="updated" id="update">	
-	<p>Please take the time to <a href="https://wordpress.org/support/view/plugin-reviews/stops-core-theme-and-plugin-updates?rate=5#postform">rate this plugin</a> according.</p>
-</div>
-
 <div class="error" id="error">			
 	<p><strong>Please Note! - </strong>If either your WordPress core, theme, or plugins get too out
 	   of date, you may run into compatibility problems. Check the capability tab for more information.</p>
@@ -669,12 +664,12 @@ CONTENT1;
 
 		$content2 = <<<CONTENT2
 <div><br></div>
-<div id="column1">
+<div id="acolumn1">
 <iframe width="310" height="174" src="//www.youtube.com/embed/VYEQg-hZd58?rel=0" frameborder="0" allowfullscreen></iframe>
 <iframe width="310" height="174" src="//www.youtube.com/embed/Kd4s3EOcUtw?rel=0" frameborder="0" allowfullscreen></iframe>
 </div>
 
-<div id="column2">
+<div id="acolumn2">
 <iframe width="310" height="174" src="//www.youtube.com/embed/1R-be48AvrE?rel=0" frameborder="0" allowfullscreen></iframe>
 <iframe width="310" height="174" src="//www.youtube.com/embed/mYznDVsbVBk?rel=0" frameborder="0" allowfullscreen></iframe>
 </div>
@@ -682,30 +677,26 @@ CONTENT1;
 CONTENT2;
 
 		$content3 = <<<CONTENT3
-<p>
-    <a href="http://mpswp.wordpress.com">Our Website</a>
-	<br>
-	<a href="http://wordpress.org/support/plugin/stops-core-theme-and-plugin-updates">Support on WordPress</a>
-	<br>
-	<a href="http://wordpress.org/plugins/stops-core-theme-and-plugin-updates/faq/">FAQ</a>
-	<br>
-	<a href="https://github.com/Websiteguy/disable-updates-manager">GitHub Repository</a>
-</p>
+	<p>
+        <a href="http://mpswp.wordpress.com" class="button">Our Website</a>
+	    <a href="http://wordpress.org/support/plugin/stops-core-theme-and-plugin-updates" class="button">Support on WordPress</a>
+	    <a href="https://github.com/Websiteguy/disable-updates-manager" class="button">GitHub Repository</a>
+    </p>
 
 CONTENT3;
 
 		$content4 = <<<CONTENT4
 <p>
-You can use the following controls to arrange the settings to suit your workflow. 
+Use the following features to customize the settings page as to suit your work-flow. 
 <br>
 <br>
-<strong>Screen Options</strong> - Use the Screen Options tab to choose which boxes to show.
+<strong>Screen Options</strong> - Use the Screen Options tab to choose which metaboxes you would like to display.
 <br>
 <br>
-<strong>Drag and Drop</strong> - To rearrange the boxes, drag and drop by clicking on the title bar of the selected box and releasing when you see a gray dotted-line rectangle appear in the location you want to place the box.
+<strong>Drag and Drop</strong> - To rearrange the boxes, drag and drop by clicking on the title bar of the selected metabox and releasing when you see a gray dotted-line appear in the location you want to place the box.
 <br>
 <br>
-<strong>Box Controls</strong> - Click the title bar of the box to expand or collapse it.
+<strong>Box Controls</strong> - Click the title bar of the box to expand or collapse the contents.
 <br>
 <br>
 <strong>Chosen</strong> - Check the Disable Themes Individually setting and/or the Disable Plugins Individually settings to enable the chosen multiply select box.
@@ -732,13 +723,13 @@ CONTENT5;
 
 		$content6 = <<<CONTENT6
 <p>	
-WordPress encourages you to update your plugins, themes, and core to make sure that there are no bugs. Even though you most likely want to disable all the updates and never update again, you should update every once in a while.
+WordPress encourages you to update your plugins, themes, and core to make sure that there are no bugs. Even though you most likely want to disable all the updates and never think about updating again, you should still consider updating every once in a while to avoid major bugs and errors on your WordPress website.
 
 <h3>This plugin is tested so there are no problems.</h3>
 <ul>
-<li>Tested with WordPress 4.0</li>
-<li>Tested with popular plugins for no conflicts</li>
-<li>Tested with popular themes for no conflicts</li>
+<li>Tested with WordPress 4.0.1 and 4.1beta1.</li>
+<li>Tested with popular plugins to ensure that there are no conflicts.</li>
+<li>Tested with popular themes to ensure that there are no conflicts.</li>
 </ul>
 </p>
 
@@ -827,25 +818,9 @@ CONTENT6;
 						   <?php disabled( 1, ( isset( $status['all'] ) ? (int) $status['all'] : 0 ) ) ?>> <?php _e( 'Disable All WordPress Core Update', 'disable-updates-manager' ) ?>
 				</label>
 			</div>
-		<div style="padding-left:20px;">	
-			<br>
-			<div>
-				<label for="minor-core-updates_notify">
-					<input type="checkbox" <?php checked( 1, ( isset( $status['minor-core-updates'] ) && ! isset( $status['core'] ) ? (int) $status['minor-core-updates'] : 0 ), TRUE ); ?>
-						   value="1" id="minor-core-updates_notify"
-						   name="_disable_updates[minor-core-updates]"
-						   <?php disabled( 1, ( isset( $status['core'] ) ? (int) $status['core'] : 0 ) ) ?>> <?php _e( 'Disable Minor', 'disable-updates-manager' ) ?>
-				</label>
-			</div>
-			<br>
-			<div>
-				<label for="major-core-updates_notify">
-					<input type="checkbox" <?php checked( 1, ( isset( $status['major-core-updates'] ) && ! isset( $status['core'] ) ? (int) $status['major-core-updates'] : 0 ), TRUE ); ?>
-						   value="1" id="major-core-updates_notify"
-						   name="_disable_updates[major-core-updates]"
-						   <?php disabled( 1, ( isset( $status['core'] ) ? (int) $status['core'] : 0 )) ?>> <?php _e( 'Disable Major', 'disable-updates-manager' ) ?>
-				</label>
-			</div>
+		<div style="padding-left:20px;">
+		<br>
+	<small>Disable major and minor core feature coming soon...<small>
 			</p>
 		</div>	
 		</div>
@@ -1064,7 +1039,9 @@ CONTENT6;
 					<?php settings_fields( '_disable_updates' ); ?>
 
 					<p class="submit clear">
-						<input type="submit" class="button-primary" value="<?php _e( 'Update Settings' ) ?>"/>
+						<input type="submit" class="button-primary" value="<?php _e( 'Update Settings' ) ?>"/> 
+						<a href="https://wordpress.org/support/view/plugin-reviews/stops-core-theme-and-plugin-updates?#postform" style="background-color:#ffff7f" class="button">Rate Plugin</a>	
+						<a href="http://sparrowkids2.polldaddy.com/s/disable-updates-manager-feedbeck" class="button">Feedback Survey</a>				
 					</p>
 
 				</form>

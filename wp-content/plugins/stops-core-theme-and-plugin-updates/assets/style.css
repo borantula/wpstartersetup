@@ -35,13 +35,13 @@ a.viewdescription:hover {
 }
 
 /* Settings Page - Tutorial Columns */
-#column1 {
+#acolumn1 {
     width: 40%;
     padding: 0 5pt 0 0;
     float: left;
 }
 
-#column2 {
+#acolumn2 {
     width: 40%;
     padding: 0 5pt 0 0;
     float: right;
