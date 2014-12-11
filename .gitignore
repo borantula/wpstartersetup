@@ -15,22 +15,4 @@ sitemap.xml.gz
 .DS_Store
 php_errorlog
 *.scssc
-
-#ALSO FOR ENGLISH SITE
-en/.htaccess
-en/wp-config.php
-en/wp-content/uploads/
-en/wp-content/blogs.dir/
-en/wp-content/upgrade/
-en/wp-content/backup-db/
-en/wp-content/backupwordpress*
-en/wp-content/advanced-cache.php
-en/wp-content/wp-cache-config.php
-en/sitemap.xml
-en/*.log
-en/wp-content/cache/
-en/wp-content/backups/
-en/sitemap.xml.gz
-en/.DS_Store
-en/php_errorlog
-en/*.scssc
+.sass-cache/
